@@ -70,6 +70,20 @@
   "subscribe": "Subscribe",
   "from": "from",
   "bookNow": "Book now",
+  "popularDestinations": "Popular Destinations",
+  "popularDestinationsSubtitle": "Discover our most popular regions for your next dream vacation",
+  "properties": "Properties",
+  "testimonialsTitle": "What our guests say",
+  "testimonialsSubtitle": "Real reviews from real guests – authentic and transparent",
+  "ctaTitle": "Find your perfect vacation rental",
+  "ctaText": "Browse thousands of handpicked properties worldwide. Book safely, flexibly, and at the best price.",
+  "ctaAdvice": "Request advice",
+  "stats": {
+    "propertiesWorldwide": "Properties worldwide",
+    "happyGuests": "Happy guests",
+    "countries": "Countries",
+    "customerService": "Customer service"
+  },
   "status": {
     "pending": "Pending",
     "confirmed": "Confirmed",
