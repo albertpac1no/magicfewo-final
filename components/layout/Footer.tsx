@@ -100,8 +100,8 @@ export async function Footer() {
   ]
 
   return (
-    <footer className="bg-white pt-12 md:pt-16 pb-6 md:pb-8">
-      <div className="container px-4 md:px-6">
+    <footer className="bg-gray-50/50 border-t border-gray-100 pt-14 md:pt-20 pb-8">
+      <div className="container mx-auto px-4 md:px-6">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mb-8 md:mb-12">
           {/* Company Info */}
@@ -209,17 +209,19 @@ export async function Footer() {
         </div>
 
         {/* Trust Badges */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-6 md:py-8 border-t border-gray-100">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-8 border-t border-gray-200/60">
           {trustBadges.map((badge, index) => (
-            <div key={index} className="flex items-center justify-center">
-              <badge.icon className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
-              <span className="text-sm text-gray-custom">{badge.label}</span>
+            <div key={index} className="flex items-center justify-center gap-2.5 py-2">
+              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <badge.icon className="w-4 h-4 text-primary" />
+              </div>
+              <span className="text-sm font-medium text-gray-600">{badge.label}</span>
             </div>
           ))}
         </div>
 
         {/* Bottom Footer */}
-        <div className="pt-6 md:pt-8 border-t border-gray-100">
+        <div className="pt-6 md:pt-8 border-t border-gray-200/60">
           <div className="flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:justify-between">
             {/* Copyright */}
             <p className="text-gray-custom text-sm text-center md:text-left">

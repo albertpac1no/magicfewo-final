@@ -33,46 +33,42 @@ export interface TopHeaderProps {
 
 export function TopHeader({ settings }: TopHeaderProps) {
   return (
-    <div className="bg-secondary text-white py-2.5 text-sm">
+    <div className="bg-secondary text-white/90 py-2 text-xs">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <div className="hidden sm:flex items-center space-x-6">
+          <div className="hidden sm:flex items-center gap-6">
             {settings?.company_phone && (
               <a
                 href={`tel:${settings.company_phone}`}
-                className="flex items-center hover:text-primary transition-colors"
+                className="flex items-center gap-1.5 hover:text-white transition-colors"
               >
-                <Phone className="w-4 h-4 mr-2" />
-                {settings.company_phone}
+                <Phone className="w-3 h-3 opacity-70" />
+                <span>{settings.company_phone}</span>
               </a>
             )}
             {settings?.company_email && (
               <a
                 href={`mailto:${settings.company_email}`}
-                className="flex items-center hover:text-primary transition-colors"
+                className="flex items-center gap-1.5 hover:text-white transition-colors"
               >
-                <Mail className="w-4 h-4 mr-2" />
-                {settings.company_email}
+                <Mail className="w-3 h-3 opacity-70" />
+                <span>{settings.company_email}</span>
               </a>
             )}
           </div>
 
-          <div className="flex items-center space-x-4 ml-auto">
-            <div className="flex items-center space-x-3 mr-6">
-              <span className="hover:text-primary transition-colors cursor-pointer" aria-label="Facebook">
-                <FacebookIcon className="w-4 h-4" />
-              </span>
-              <span className="hover:text-primary transition-colors cursor-pointer" aria-label="Instagram">
-                <InstagramIcon className="w-4 h-4" />
-              </span>
-              <span className="hover:text-primary transition-colors cursor-pointer" aria-label="Twitter">
-                <TwitterIcon className="w-4 h-4" />
-              </span>
+          <div className="flex items-center gap-4 ml-auto">
+            <div className="flex items-center gap-2.5">
+              <a href="#" className="w-6 h-6 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors" aria-label="Facebook">
+                <FacebookIcon className="w-3 h-3" />
+              </a>
+              <a href="#" className="w-6 h-6 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors" aria-label="Instagram">
+                <InstagramIcon className="w-3 h-3" />
+              </a>
+              <a href="#" className="w-6 h-6 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors" aria-label="Twitter">
+                <TwitterIcon className="w-3 h-3" />
+              </a>
             </div>
-            <select className="bg-transparent text-sm focus:outline-none hover:text-primary transition-colors cursor-pointer">
-              <option value="de">Deutsch</option>
-              <option value="en">English</option>
-            </select>
           </div>
         </div>
       </div>

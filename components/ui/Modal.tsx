@@ -34,24 +34,27 @@ export function Modal({ open, onClose, title, className, children }: ModalProps)
   if (!open) return null
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50 animate-fade-in" onClick={onClose} />
+      <div
+        className="absolute inset-0 bg-black/40 backdrop-blur-sm animate-fade-in"
+        onClick={onClose}
+      />
 
       {/* Panel */}
       <div
         className={cn(
-          'relative z-10 w-full max-w-lg mx-4 bg-white rounded-2xl shadow-xl animate-fade-in',
+          'relative z-10 w-full max-w-lg bg-white rounded-2xl shadow-2xl animate-scale-in',
           className,
         )}
       >
         {/* Header */}
         {title && (
-          <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+          <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
             <h2 className="text-lg font-semibold text-secondary">{title}</h2>
             <button
               onClick={onClose}
-              className="p-1 rounded-full text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors"
+              className="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-all duration-150"
             >
               <X className="w-5 h-5" />
             </button>
@@ -59,13 +62,13 @@ export function Modal({ open, onClose, title, className, children }: ModalProps)
         )}
 
         {/* Body */}
-        <div className="px-6 py-4">{children}</div>
+        <div className="px-6 py-5">{children}</div>
 
         {/* Close button if no title */}
         {!title && (
           <button
             onClick={onClose}
-            className="absolute top-3 right-3 p-1 rounded-full text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors"
+            className="absolute top-4 right-4 p-1.5 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-all duration-150"
           >
             <X className="w-5 h-5" />
           </button>

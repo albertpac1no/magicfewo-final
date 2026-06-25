@@ -2,17 +2,21 @@ import { forwardRef, type ButtonHTMLAttributes } from 'react'
 import { cn } from '@/lib/utils'
 
 const variantStyles = {
-  primary: 'bg-primary text-white hover:opacity-90 shadow-sm hover:shadow-md',
-  secondary: 'bg-secondary text-white hover:opacity-90 shadow-sm hover:shadow-md',
-  outline: 'border border-primary text-primary bg-white hover:bg-primary/5',
-  ghost: 'text-gray-700 hover:bg-gray-100',
-  danger: 'bg-red-600 text-white hover:bg-red-700 shadow-sm hover:shadow-md',
+  primary:
+    'bg-primary text-white hover:brightness-110 hover:shadow-lg hover:shadow-primary/25 shadow-sm',
+  secondary:
+    'bg-secondary text-white hover:brightness-110 hover:shadow-lg hover:shadow-secondary/25 shadow-sm',
+  outline:
+    'border border-gray-200 text-gray-700 bg-white hover:border-primary hover:text-primary hover:bg-primary/5',
+  ghost: 'text-gray-700 hover:bg-gray-50 hover:text-gray-900',
+  danger:
+    'bg-red-500 text-white hover:bg-red-600 hover:shadow-lg hover:shadow-red-500/25 shadow-sm',
 }
 
 const sizeStyles = {
-  sm: 'px-3 py-1.5 text-xs rounded-full',
-  md: 'px-6 py-2.5 text-sm rounded-full',
-  lg: 'px-8 py-3 text-base rounded-full',
+  sm: 'px-3.5 py-1.5 text-xs gap-1.5 rounded-lg',
+  md: 'px-5 py-2.5 text-sm gap-2 rounded-xl',
+  lg: 'px-7 py-3 text-base gap-2.5 rounded-xl',
 }
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -28,7 +32,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         disabled={disabled || loading}
         className={cn(
-          'inline-flex items-center justify-center font-medium transition-all focus:outline-none focus:ring-2 focus:ring-primary/20 disabled:opacity-50 disabled:cursor-not-allowed',
+          'inline-flex items-center justify-center font-medium transition-all duration-200',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-2',
+          'active:scale-[0.97] disabled:opacity-50 disabled:pointer-events-none',
           variantStyles[variant],
           sizeStyles[size],
           className,
@@ -37,7 +43,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {loading && (
           <svg
-            className="mr-2 h-4 w-4 animate-spin"
+            className="h-4 w-4 animate-spin"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
