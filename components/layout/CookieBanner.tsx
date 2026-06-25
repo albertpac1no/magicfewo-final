@@ -105,51 +105,47 @@ export function CookieBanner() {
       role="dialog"
       aria-modal="true"
       aria-label={t('bannerTitle')}
-      className="fixed bottom-0 inset-x-0 z-[9999] flex justify-center px-3 pb-3 sm:pb-4 sm:px-4 pointer-events-none"
+      className="fixed bottom-0 inset-x-0 z-[9999] flex justify-center px-2 pb-2 sm:px-4 sm:pb-4 pointer-events-none"
     >
-      <div className="pointer-events-auto w-full max-w-2xl animate-slide-up">
-        {/* ── Main Banner ── */}
+      <div className="pointer-events-auto w-full max-w-5xl animate-slide-up">
+        {/* ── Main Banner (slim wide bar) ── */}
         {panel === 'banner' && (
-          <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
-            {/* compact mobile bar */}
-            <div className="flex items-start gap-3 p-3 sm:p-5">
-              <div className="shrink-0 mt-0.5 hidden sm:flex items-center justify-center w-9 h-9 rounded-full bg-primary/10">
-                <Cookie className="w-5 h-5 text-primary" />
-              </div>
-
-              <div className="flex-1 min-w-0">
-                {/* title only on sm+ */}
-                <p className="hidden sm:block text-sm font-semibold text-gray-900 mb-1">{t('bannerTitle')}</p>
-                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed line-clamp-2 sm:line-clamp-none">
-                  {t('bannerText')}{' '}
-                  <Link href="/datenschutz" className="underline underline-offset-2 hover:text-primary transition-colors whitespace-nowrap">
+          <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg border border-gray-100 px-3 py-2.5 sm:px-5 sm:py-3">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+              {/* message */}
+              <div className="flex items-center gap-2.5 flex-1 min-w-0">
+                <Cookie className="hidden sm:block w-5 h-5 text-primary shrink-0" />
+                <p className="text-[11px] leading-snug sm:text-sm text-gray-600 sm:truncate">
+                  <span className="font-semibold text-gray-900">{t('bannerTitle')}.</span>{' '}
+                  <span className="hidden sm:inline">{t('bannerText')} </span>
+                  <Link href="/datenschutz" className="underline underline-offset-2 hover:text-primary transition-colors">
                     {t('privacyLink')}
                   </Link>
                   .
                 </p>
               </div>
-            </div>
 
-            {/* actions */}
-            <div className="flex flex-wrap items-center gap-2 px-3 pb-3 sm:px-5 sm:pb-4">
-              <button
-                onClick={acceptAll}
-                className="btn-primary flex-1 sm:flex-none text-xs sm:text-sm py-2 sm:py-2.5 px-4 sm:px-5"
-              >
-                {t('acceptAll')}
-              </button>
-              <button
-                onClick={rejectAll}
-                className="btn-secondary flex-1 sm:flex-none text-xs sm:text-sm py-2 sm:py-2.5 px-4 sm:px-5"
-              >
-                {t('rejectAll')}
-              </button>
-              <button
-                onClick={() => setPanel('customize')}
-                className="flex-1 sm:flex-none text-xs sm:text-sm py-2 sm:py-2.5 px-4 sm:px-5 rounded-full border border-gray-200 text-gray-600 hover:border-gray-300 hover:text-gray-800 transition-colors"
-              >
-                {t('customize')}
-              </button>
+              {/* actions */}
+              <div className="flex items-center gap-2 shrink-0">
+                <button
+                  onClick={() => setPanel('customize')}
+                  className="flex-1 sm:flex-none text-[11px] sm:text-sm py-1.5 sm:py-2 px-3 sm:px-4 rounded-full border border-gray-200 text-gray-600 hover:border-gray-300 hover:text-gray-800 transition-colors whitespace-nowrap"
+                >
+                  {t('customize')}
+                </button>
+                <button
+                  onClick={rejectAll}
+                  className="btn-secondary flex-1 sm:flex-none text-[11px] sm:text-sm py-1.5 sm:py-2 px-3 sm:px-4 whitespace-nowrap"
+                >
+                  {t('rejectAll')}
+                </button>
+                <button
+                  onClick={acceptAll}
+                  className="btn-primary flex-1 sm:flex-none text-[11px] sm:text-sm py-1.5 sm:py-2 px-3 sm:px-4 whitespace-nowrap"
+                >
+                  {t('acceptAll')}
+                </button>
+              </div>
             </div>
           </div>
         )}
