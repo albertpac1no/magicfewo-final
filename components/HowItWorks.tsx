@@ -32,10 +32,7 @@ export async function HowItWorks() {
         <div className="w-16 h-1 bg-primary/30 rounded-full mx-auto" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
-        {/* Connector line (desktop) */}
-        <div className="hidden md:block absolute top-14 left-[16.5%] right-[16.5%] h-px bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20" />
-
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {steps.map(({ icon: Icon, label, title, text }, idx) => (
           <div key={idx} className="relative text-center group">
             <div className="relative inline-flex items-center justify-center w-28 h-28 rounded-full bg-gradient-to-br from-primary/5 to-primary/15 mb-6 group-hover:scale-105 transition-transform duration-300">
