@@ -63,7 +63,7 @@ export default async function AmerikaPage() {
   const t = await getTranslations('common')
   return (
     <DestinationPage
-      heroImage="https://images.unsplash.com/photo-1534008757030-27299c4371b6"
+      heroImage="/images/destination-amerika-hero.jpg"
       heroAlt="Amerika"
       title={t('destinations.amerika.title')}
       subtitle={t('destinations.amerika.subtitle')}

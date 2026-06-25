@@ -6,20 +6,20 @@ import { useTranslations } from 'next-intl'
 
 const heroImages = [
   {
-    url: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800',
-    alt: 'Berglandschaft',
+    url: '/images/hero-villa-pool.jpg',
+    alt: 'Luxuriöse Villa mit Infinity-Pool am Mittelmeer',
   },
   {
-    url: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1',
-    alt: 'Tropischer Strand',
+    url: '/images/hero-coastal-village.jpg',
+    alt: 'Malerisches Küstendorf mit türkisblauem Meer',
   },
   {
-    url: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6',
-    alt: 'Luxuriöses Ferienhaus',
+    url: '/images/hero-apartment-interior.jpg',
+    alt: 'Elegantes Ferienapartment mit Meerblick',
   },
   {
-    url: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470',
-    alt: 'Naturlandschaft',
+    url: '/images/hero-mountain-retreat.jpg',
+    alt: 'Gemütliches Bergchalet am Alpensee',
   },
 ]
 

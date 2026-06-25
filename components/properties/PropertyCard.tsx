@@ -3,7 +3,7 @@ import { Link } from '@/i18n/navigation'
 import { MapPin, Bed, Bath, Users, Star } from 'lucide-react'
 import type { Property } from '@/lib/types'
 
-const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800'
+const FALLBACK_IMAGE = '/images/hero-apartment-interior.jpg'
 
 interface PropertyCardProps {
   property: Property

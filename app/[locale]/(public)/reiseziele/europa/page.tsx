@@ -63,7 +63,7 @@ export default async function EuropaPage() {
   const t = await getTranslations('common')
   return (
     <DestinationPage
-      heroImage="https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3"
+      heroImage="/images/hero-coastal-village.jpg"
       heroAlt="Europa"
       title={t('destinations.europa.title')}
       subtitle={t('destinations.europa.subtitle')}

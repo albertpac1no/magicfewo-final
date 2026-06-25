@@ -247,10 +247,8 @@ function AuthContent() {
       <div className="hidden lg:block relative w-0 flex-1">
         <Image
           className="absolute inset-0 h-full w-full object-cover"
-          src={isSignIn
-            ? 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9'
-            : 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e'}
-          alt={isSignIn ? 'New York Skyline' : 'Tropical Beach'}
+          src="/images/auth-vacation-entrance.jpg"
+          alt="Willkommen bei Ihrer Traumunterkunft"
           fill
           sizes="50vw"
           priority

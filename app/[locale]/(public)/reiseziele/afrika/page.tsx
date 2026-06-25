@@ -63,7 +63,7 @@ export default async function AfrikaPage() {
   const t = await getTranslations('common')
   return (
     <DestinationPage
-      heroImage="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5"
+      heroImage="/images/destination-afrika-hero.jpg"
       heroAlt="Afrika"
       title={t('destinations.afrika.title')}
       subtitle={t('destinations.afrika.subtitle')}

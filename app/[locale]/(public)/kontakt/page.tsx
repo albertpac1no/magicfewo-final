@@ -55,7 +55,7 @@ export default async function KontaktPage() {
       {/* Hero Section */}
       <div className="relative h-[400px]">
         <Image
-          src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a"
+          src="/images/contact-hero.jpg"
           alt="MagicFewo Kundenservice – Kontaktieren Sie unser Team"
           fill
           className="object-cover"

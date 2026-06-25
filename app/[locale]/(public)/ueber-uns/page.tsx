@@ -55,7 +55,7 @@ export default async function UeberUnsPage() {
       {/* Hero Section */}
       <div className="relative h-[400px]">
         <Image
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+          src="/images/about-team-hero.jpg"
           alt="Das MagicFewo Team – Ihr Partner für Ferienwohnungen"
           fill
           className="object-cover"

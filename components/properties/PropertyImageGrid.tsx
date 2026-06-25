@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
-const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800'
+const FALLBACK_IMAGE = '/images/hero-apartment-interior.jpg'
 
 interface PropertyImageGridProps {
   images: string[]

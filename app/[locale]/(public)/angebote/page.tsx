@@ -46,7 +46,7 @@ export default async function AngebotePage() {
       {/* Hero Section */}
       <div className="relative h-[400px]">
         <Image
-          src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1"
+          src="/images/offers-hero.jpg"
           alt="Aktuelle Sonderangebote für Ferienwohnungen bei MagicFewo"
           fill
           className="object-cover"
