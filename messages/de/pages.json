@@ -298,9 +298,9 @@
       { "label": "Reiseziele", "value": "100+" }
     ],
     "team": [
-      { "name": "Anna Schmidt", "position": "CEO & Gründerin", "image": "/images/team/anna-schmidt.jpg", "description": "Mit über 20 Jahren Erfahrung in der Reisebranche leitet Anna unser Unternehmen mit Leidenschaft und Vision." },
-      { "name": "Michael Weber", "position": "Reiseberater", "image": "/images/team/michael-weber.jpg", "description": "Michael ist unser Experte für außergewöhnliche Reiseerlebnisse und maßgeschneiderte Urlaubsplanung." },
-      { "name": "Laura Müller", "position": "Kundenservice", "image": "/images/team/laura-mueller.jpg", "description": "Laura sorgt dafür, dass unsere Kunden rundum betreut werden und ihre Reise reibungslos verläuft." }
+      { "name": "Liang Li", "position": "CEO & Gründer", "image": "/images/team/liang-li.jpg", "description": "Mit über 20 Jahren Erfahrung in der Reisebranche leitet Liang unser Unternehmen mit Leidenschaft und Vision." },
+      { "name": "Tobias Krüger", "position": "Reiseberater", "image": "/images/team/tobias-krueger.jpg", "description": "Tobias ist unser Experte für außergewöhnliche Reiseerlebnisse und maßgeschneiderte Urlaubsplanung." },
+      { "name": "Lena Hoffmann", "position": "Kundenservice", "image": "/images/team/lena-hoffmann.jpg", "description": "Lena sorgt dafür, dass unsere Kunden rundum betreut werden und ihre Reise reibungslos verläuft." }
     ],
     "heroAlt": "Das Gesino Reisen Team – Ihr Reisebüro in Frankfurt",
     "breadcrumb": "Über uns",
