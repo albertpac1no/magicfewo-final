@@ -298,9 +298,9 @@
       { "label": "Destinations", "value": "100+" }
     ],
     "team": [
-      { "name": "Anna Schmidt", "position": "CEO & Founder", "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330", "description": "With over 20 years of experience in the travel industry, Anna leads our company with passion and vision." },
-      { "name": "Michael Weber", "position": "Travel Consultant", "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e", "description": "Michael is our expert for extraordinary travel experiences and tailor-made vacation planning." },
-      { "name": "Laura Müller", "position": "Customer Service", "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80", "description": "Laura ensures that our customers are well taken care of and their trip goes smoothly." }
+      { "name": "Anna Schmidt", "position": "CEO & Founder", "image": "/images/team/anna-schmidt.jpg", "description": "With over 20 years of experience in the travel industry, Anna leads our company with passion and vision." },
+      { "name": "Michael Weber", "position": "Travel Consultant", "image": "/images/team/michael-weber.jpg", "description": "Michael is our expert for extraordinary travel experiences and tailor-made vacation planning." },
+      { "name": "Laura Müller", "position": "Customer Service", "image": "/images/team/laura-mueller.jpg", "description": "Laura ensures that our customers are well taken care of and their trip goes smoothly." }
     ],
     "heroAlt": "The Gesino Reisen Team – Your travel agency in Frankfurt",
     "breadcrumb": "About us",

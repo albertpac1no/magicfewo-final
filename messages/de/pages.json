@@ -298,9 +298,9 @@
       { "label": "Reiseziele", "value": "100+" }
     ],
     "team": [
-      { "name": "Anna Schmidt", "position": "CEO & Gründerin", "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330", "description": "Mit über 20 Jahren Erfahrung in der Reisebranche leitet Anna unser Unternehmen mit Leidenschaft und Vision." },
-      { "name": "Michael Weber", "position": "Reiseberater", "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e", "description": "Michael ist unser Experte für außergewöhnliche Reiseerlebnisse und maßgeschneiderte Urlaubsplanung." },
-      { "name": "Laura Müller", "position": "Kundenservice", "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80", "description": "Laura sorgt dafür, dass unsere Kunden rundum betreut werden und ihre Reise reibungslos verläuft." }
+      { "name": "Anna Schmidt", "position": "CEO & Gründerin", "image": "/images/team/anna-schmidt.jpg", "description": "Mit über 20 Jahren Erfahrung in der Reisebranche leitet Anna unser Unternehmen mit Leidenschaft und Vision." },
+      { "name": "Michael Weber", "position": "Reiseberater", "image": "/images/team/michael-weber.jpg", "description": "Michael ist unser Experte für außergewöhnliche Reiseerlebnisse und maßgeschneiderte Urlaubsplanung." },
+      { "name": "Laura Müller", "position": "Kundenservice", "image": "/images/team/laura-mueller.jpg", "description": "Laura sorgt dafür, dass unsere Kunden rundum betreut werden und ihre Reise reibungslos verläuft." }
     ],
     "heroAlt": "Das Gesino Reisen Team – Ihr Reisebüro in Frankfurt",
     "breadcrumb": "Über uns",
