@@ -1,108 +1,108 @@
 {
   "home": {
-    "title": "MagicFewo – Book Vacation Rentals & Accommodations",
-    "description": "Find the perfect vacation rental for your next holiday. Compare holiday apartments, villas and accommodations worldwide – best deals, secure booking at MagicFewo.",
-    "keywords": "vacation rental, holiday apartment, book accommodation, cheap vacation rental, holiday deals, compare rentals"
+    "title": "Gesino Reisen – Book Vacation Rentals & Travel Packages",
+    "description": "Find the perfect vacation rental or travel package for your next holiday. Compare holiday apartments, villas and accommodations worldwide – best deals, secure booking at Gesino Reisen.",
+    "keywords": "vacation rental, holiday apartment, book accommodation, travel packages, holiday deals, compare rentals"
   },
   "properties": {
-    "title": "Vacation Rentals & Accommodations | MagicFewo",
-    "description": "Browse and compare vacation rentals, holiday homes and accommodations worldwide. Filter by price, location, amenities and guests – book now at MagicFewo.",
+    "title": "Vacation Rentals & Accommodations | Gesino Reisen",
+    "description": "Browse and compare vacation rentals, holiday homes and accommodations worldwide. Filter by price, location, amenities and guests – book now at Gesino Reisen.",
     "keywords": "search vacation rental, compare accommodations, book holiday home, cheap vacation rental"
   },
   "propertyDetail": {
-    "title": "{title} | MagicFewo",
-    "description": "Book {title} in {location} – comfortable vacation rental from {price} € per night. Photos, amenities, reviews and instant availability at MagicFewo."
+    "title": "{title} | Gesino Reisen",
+    "description": "Book {title} in {location} – comfortable vacation rental from {price} € per night. Photos, amenities, reviews and instant availability at Gesino Reisen."
   },
   "booking": {
-    "title": "Complete Your Booking | MagicFewo",
-    "description": "Complete your booking securely at MagicFewo. Flexible payment methods and free cancellation."
+    "title": "Complete Your Booking | Gesino Reisen",
+    "description": "Complete your booking securely at Gesino Reisen. Flexible payment methods and free cancellation."
   },
   "bookingSuccess": {
-    "title": "Booking Successful! | MagicFewo",
+    "title": "Booking Successful! | Gesino Reisen",
     "description": "Your booking has been successfully submitted. You will receive a confirmation email shortly."
   },
   "dashboard": {
-    "title": "My Dashboard | MagicFewo",
-    "description": "Manage your bookings, profile and settings at MagicFewo."
+    "title": "My Dashboard | Gesino Reisen",
+    "description": "Manage your bookings, profile and settings at Gesino Reisen."
   },
   "admin": {
-    "title": "Admin Dashboard | MagicFewo",
-    "description": "Administration area for MagicFewo – manage properties, bookings and users."
+    "title": "Admin Dashboard | Gesino Reisen",
+    "description": "Administration area for Gesino Reisen – manage properties, bookings and users."
   },
   "auth": {
-    "title": "Sign In or Register | MagicFewo",
-    "description": "Sign in to MagicFewo or create a free account to book vacation rentals and manage your trips."
+    "title": "Sign In or Register | Gesino Reisen",
+    "description": "Sign in to Gesino Reisen or create a free account to book vacation rentals and manage your trips."
   },
   "about": {
-    "title": "About Us – Who is MagicFewo? | MagicFewo",
-    "description": "Learn more about MagicFewo, our team and our mission: finding the best vacation rentals and accommodations for your dream holiday."
+    "title": "About Us – Who is Gesino Reisen? | Gesino Reisen",
+    "description": "Learn more about Gesino Reisen, our team and our mission: finding the best vacation rentals and travel packages for your dream holiday."
   },
   "contact": {
-    "title": "Contact – Help & Support | MagicFewo",
-    "description": "Have questions? Contact the MagicFewo team. We help with bookings, cancellations and all travel inquiries."
+    "title": "Contact – Help & Support | Gesino Reisen",
+    "description": "Have questions? Contact the Gesino Reisen team. We help with bookings, cancellations and all travel inquiries."
   },
   "offers": {
-    "title": "Special Offers & Last-Minute Deals | MagicFewo",
-    "description": "Discover current special offers, discounts and last-minute deals on vacation rentals and accommodations at MagicFewo."
+    "title": "Special Offers & Last-Minute Deals | Gesino Reisen",
+    "description": "Discover current special offers, discounts and last-minute deals on vacation rentals and accommodations at Gesino Reisen."
   },
   "destinations": {
     "europa": {
-      "title": "Book Vacation Rentals in Europe | MagicFewo",
-      "description": "Discover stunning vacation rentals in Europe – from Mediterranean villas to Alpine chalets. Book now at MagicFewo."
+      "title": "Book Vacation Rentals in Europe | Gesino Reisen",
+      "description": "Discover stunning vacation rentals in Europe – from Mediterranean villas to Alpine chalets. Book now at Gesino Reisen."
     },
     "asien": {
-      "title": "Book Vacation Rentals in Asia | MagicFewo",
-      "description": "Find exotic vacation rentals and accommodations in Asia – Bali, Thailand, Japan and more. Book now at MagicFewo."
+      "title": "Book Vacation Rentals in Asia | Gesino Reisen",
+      "description": "Find exotic vacation rentals and accommodations in Asia – Bali, Thailand, Japan and more. Book now at Gesino Reisen."
     },
     "amerika": {
-      "title": "Book Vacation Rentals in the Americas | MagicFewo",
-      "description": "Discover vacation rentals in North and South America – from New York to Rio de Janeiro. Book now at MagicFewo."
+      "title": "Book Vacation Rentals in the Americas | Gesino Reisen",
+      "description": "Discover vacation rentals in North and South America – from New York to Rio de Janeiro. Book now at Gesino Reisen."
     },
     "afrika": {
-      "title": "Book Vacation Rentals in Africa | MagicFewo",
-      "description": "Experience Africa in unique vacation rentals – safari lodges, beach villas and more. Book now at MagicFewo."
+      "title": "Book Vacation Rentals in Africa | Gesino Reisen",
+      "description": "Experience Africa in unique vacation rentals – safari lodges, beach villas and more. Book now at Gesino Reisen."
     }
   },
   "footer": {
     "agb": {
-      "description": "Read MagicFewo's Terms and Conditions – booking terms, cancellation rules and your rights."
+      "description": "Read Gesino Reisen's Terms and Conditions – booking terms, cancellation rules and your rights."
     },
     "datenschutz": {
-      "description": "Learn about data protection at MagicFewo – how we protect and use your personal data."
+      "description": "Learn about data protection at Gesino Reisen – how we protect and use your personal data."
     },
     "faq": {
-      "description": "Answers to frequently asked questions about booking, payment, cancellation and travel details at MagicFewo."
+      "description": "Answers to frequently asked questions about booking, payment, cancellation and travel details at Gesino Reisen."
     },
     "buchungsprozess": {
-      "description": "How booking works at MagicFewo: step-by-step guide from search to confirmation of your vacation rental."
+      "description": "How booking works at Gesino Reisen: step-by-step guide from search to confirmation of your vacation rental."
     },
     "zahlungsmethoden": {
-      "description": "All payment methods at MagicFewo – credit card, PayPal, bank transfer. Pay securely and flexibly."
+      "description": "All payment methods at Gesino Reisen – credit card, PayPal, bank transfer. Pay securely and flexibly."
     },
     "bewertungen": {
-      "description": "Read real customer reviews and experiences about vacation rentals and MagicFewo's service."
+      "description": "Read real customer reviews and experiences about vacation rentals and Gesino Reisen's service."
     },
     "hotelbuchung": {
-      "description": "Book hotels and accommodations worldwide through MagicFewo – best prices, top selection and secure booking."
+      "description": "Book hotels and accommodations worldwide through Gesino Reisen – best prices, top selection and secure booking."
     },
     "flugbuchung": {
-      "description": "Find and book cheap flights worldwide through MagicFewo. Compare airlines and secure the best prices."
+      "description": "Find and book cheap flights worldwide through Gesino Reisen. Compare airlines and secure the best prices."
     },
     "reisepakete": {
-      "description": "Discover complete travel packages at MagicFewo – accommodation, flights and activities in one package at a great price."
+      "description": "Discover complete travel packages at Gesino Reisen – accommodation, flights and activities in one package at a great price."
     },
     "reiseversicherung": {
-      "description": "Protect your trip with travel insurance from MagicFewo – trip cancellation, health insurance and more."
+      "description": "Protect your trip with travel insurance from Gesino Reisen – trip cancellation, health insurance and more."
     }
   },
   "notFound": {
-    "title": "404 - Page Not Found | MagicFewo",
+    "title": "404 - Page Not Found | Gesino Reisen",
     "heading": "Page Not Found",
     "description": "The page you're looking for doesn't exist.",
     "backHome": "Back to Home"
   },
   "error": {
-    "title": "Error | MagicFewo",
+    "title": "Error | Gesino Reisen",
     "heading": "Something went wrong",
     "description": "An unexpected error occurred.",
     "retry": "Try again"

@@ -63,11 +63,11 @@ export async function Footer() {
   const currentYear = new Date().getFullYear()
 
   const contactInfo = [
-    { icon: Phone, label: settings?.company_phone || '+49 123 456789' },
-    { icon: Mail, label: settings?.company_email || 'info@magicfewo.de' },
+    ...(settings?.company_phone ? [{ icon: Phone, label: settings.company_phone }] : []),
+    { icon: Mail, label: settings?.company_email || 'info@gesino-reisen.com' },
     {
       icon: MapPin,
-      label: `${settings?.company_address || 'Ferienstraße 123'}, ${settings?.company_postal_code || '10115'} ${settings?.company_city || 'Berlin'}`,
+      label: `${settings?.company_address || 'Mart-Stam-Str. 59'}, ${settings?.company_postal_code || '60438'} ${settings?.company_city || 'Frankfurt am Main'}`,
     },
     { icon: Clock, label: t('businessHours') },
   ]
@@ -225,7 +225,7 @@ export async function Footer() {
           <div className="flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:justify-between">
             {/* Copyright */}
             <p className="text-gray-custom text-sm text-center md:text-left">
-              {t('copyright', { year: currentYear, company: settings?.company_name || 'MagicFeWo GmbH' })}
+              {t('copyright', { year: currentYear, company: settings?.company_name || 'GeSino GmbH' })}
             </p>
 
             {/* Social Links */}

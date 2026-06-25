@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import { Star, Shield, CheckCircle, ChevronRight, Minus, Plus } from 'lucide-react'
 import { PriceBreakdown } from './PriceBreakdown'
 import type { Property } from '@/lib/types'
@@ -20,6 +21,7 @@ export function BookingCard({
   freeCancellationHours,
 }: BookingCardProps) {
   const router = useRouter()
+  const t = useTranslations('properties')
   const [checkIn, setCheckIn] = useState('')
   const [checkOut, setCheckOut] = useState('')
   const [guests, setGuests] = useState(1)
@@ -63,14 +65,14 @@ export function BookingCard({
             <span className="text-gray-400 line-through text-sm">
               {property.price_per_night} €
             </span>
-            <span className="text-gray-500 text-sm">/ Nacht</span>
+            <span className="text-gray-500 text-sm">{t('perNight')}</span>
           </div>
         ) : (
           <div className="flex items-baseline gap-1">
             <span className="text-2xl font-bold text-secondary">
               {property.price_per_night} €
             </span>
-            <span className="text-gray-500 text-sm">/ Nacht</span>
+            <span className="text-gray-500 text-sm">{t('perNight')}</span>
           </div>
         )}
         {property.review_overall_rating != null && (
@@ -119,7 +121,7 @@ export function BookingCard({
         </div>
         <div className="border-t border-gray-200 p-3">
           <label className="block text-xs font-semibold text-gray-700 mb-1 uppercase tracking-wide">
-            Gäste
+            {t('gaesteLabel')}
           </label>
           <div className="flex items-center gap-3">
             <button
@@ -130,7 +132,7 @@ export function BookingCard({
               <Minus className="w-3 h-3" />
             </button>
             <span className="text-sm font-medium text-gray-700 w-16 text-center">
-              {guests} {guests === 1 ? 'Gast' : 'Gäste'}
+              {guests} {guests === 1 ? t('guestSingular') : t('guestPlural')}
             </span>
             <button
               type="button"
@@ -166,22 +168,22 @@ export function BookingCard({
             : 'bg-gray-200 text-gray-400 cursor-not-allowed'
         }`}
       >
-        {canBook ? 'Jetzt buchen' : 'Daten auswählen'}
+        {canBook ? t('bookNow') : t('selectDates')}
       </button>
 
       <p className="text-center text-xs text-gray-400 mt-3">
-        Keine Abbuchung bis zur Bestätigung
+        {t('noChargeUntilConfirmed')}
       </p>
 
       {/* Trust Badges */}
       <div className="mt-4 pt-4 border-t border-gray-100 space-y-2">
         <div className="flex items-center gap-2 text-xs text-gray-500">
           <Shield className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-          <span>Kostenlose Stornierung bis {freeCancellationHours}h vor Check-in</span>
+          <span>{t('freeCancellation', { hours: freeCancellationHours })}</span>
         </div>
         <div className="flex items-center gap-2 text-xs text-gray-500">
           <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-          <span>Sichere &amp; verschlüsselte Zahlung</span>
+          <span>{t('securePayment')}</span>
         </div>
       </div>
     </>
@@ -202,22 +204,22 @@ export function BookingCard({
               onClick={() => setMobileExpanded(false)}
               className="mb-3 text-sm text-gray-500 hover:text-gray-700"
             >
-              ← Schließen
+              {t('closeMobile')}
             </button>
             {bookingContent}
           </div>
         ) : (
           <div className="flex items-center justify-between p-4">
             <div>
-              <span className="text-sm text-gray-500">Ab </span>
+              <span className="text-sm text-gray-500">{t('fromPrice')}</span>
               <span className="text-lg font-bold text-secondary">{effectivePrice} €</span>
-              <span className="text-sm text-gray-500"> / Nacht</span>
+              <span className="text-sm text-gray-500"> {t('perNight')}</span>
             </div>
             <button
               onClick={() => setMobileExpanded(true)}
               className="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-all flex items-center gap-1"
             >
-              Jetzt buchen
+              {t('bookNow')}
               <ChevronRight className="w-4 h-4" />
             </button>
           </div>

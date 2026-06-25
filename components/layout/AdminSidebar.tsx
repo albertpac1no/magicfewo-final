@@ -63,7 +63,7 @@ export function AdminSidebar({ profile }: AdminSidebarProps) {
             <Home className="w-7 h-7 text-white" />
             <Sparkles className="w-3.5 h-3.5 text-white/80 absolute -top-1 -right-1 animate-pulse" />
           </div>
-          <span className="text-xl font-bold text-white">MagicFewo</span>
+          <span className="text-xl font-bold text-white">Gesino Reisen</span>
         </Link>
       </div>
 

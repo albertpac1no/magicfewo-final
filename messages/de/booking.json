@@ -73,5 +73,17 @@
     "paypalInfo": "Mit PayPal-Käuferschutz. Sie werden zu PayPal weitergeleitet.",
     "firstBookingWarning": "Bei Ihrer ersten Buchung ist nur Banküberweisung als Zahlungsmethode verfügbar. Nach erfolgreicher Buchung werden weitere Zahlungsmethoden freigeschaltet.",
     "lockedMethod": "Verfügbar nach Ihrer ersten erfolgreichen Buchung"
+  },
+  "errors": {
+    "notLoggedIn": "Sie sind nicht angemeldet",
+    "invalidInput": "Ungültige Eingabe",
+    "paymentMethodRestricted": "Diese Zahlungsmethode ist erst nach einer erfolgreichen Buchung verfügbar.",
+    "propertyNotFound": "Unterkunft nicht gefunden",
+    "maxGuestsExceeded": "Maximal {count} Gäste erlaubt",
+    "invalidDates": "Ungültige Daten",
+    "dateAlreadyBooked": "Der gewählte Zeitraum ist bereits gebucht. Bitte wählen Sie andere Daten.",
+    "bookingNotFound": "Buchung nicht gefunden",
+    "unauthorized": "Keine Berechtigung",
+    "onlyPendingCanBeCancelled": "Nur ausstehende Buchungen können storniert werden"
   }
 }

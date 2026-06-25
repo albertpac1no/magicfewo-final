@@ -1,9 +1,9 @@
-# MagicFewo
+# Gesino Reisen
 
-> MagicFewo is a vacation rental booking platform offering holiday apartments, villas, and accommodations across Europe, Asia, the Americas, and Africa. We help travelers find the perfect vacation rental at the best price with secure online booking.
+> Gesino Reisen is a travel agency (Reisebüro) based in Frankfurt am Main, Germany, operated by GeSino GmbH. We offer vacation rentals, travel packages, hotel bookings, flight bookings, and travel insurance for destinations across Europe, Asia, the Americas, and Africa. Secure online booking with multiple payment options.
 
 ## About
-MagicFewo connects travelers with vacation rentals worldwide. We offer a curated selection of holiday apartments, beach houses, mountain chalets, city apartments, and luxury villas. Our platform supports German and English with secure payment options including bank transfer, credit card, and PayPal.
+Gesino Reisen connects travelers with vacation rentals and travel packages worldwide. We offer a curated selection of holiday apartments, beach houses, mountain chalets, city apartments, and luxury villas, as well as complete travel packages. Our platform supports German and English with secure payment options including bank transfer, credit card, and PayPal.
 
 ## Key Pages
 - /properties - Browse and search all vacation rentals with filters for location, price, guests, bedrooms, and amenities
@@ -13,7 +13,7 @@ MagicFewo connects travelers with vacation rentals worldwide. We offer a curated
 - /reiseziele/amerika - Vacation rentals in the Americas (USA, Caribbean, South America)
 - /reiseziele/afrika - Vacation rentals in Africa (Safari lodges, beach villas)
 - /kontakt - Contact our customer service team
-- /ueber-uns - About MagicFewo and our team
+- /ueber-uns - About Gesino Reisen and our team
 - /faq - Frequently asked questions about booking, payment, and cancellation
 - /buchungsprozess - Step-by-step booking guide
 - /zahlungsmethoden - Available payment methods
@@ -38,6 +38,12 @@ MagicFewo connects travelers with vacation rentals worldwide. We offer a curated
 - Multi-language support (German, English)
 - 24/7 customer service
 
+## Company
+- Name: GeSino GmbH
+- Address: Mart-Stam-Str. 59, 60438 Frankfurt am Main, Germany
+- Register: Amtsgericht Frankfurt am Main HRB 119093
+- USt-IdNr.: DE329335447
+
 ## Contact
-- Website: https://magicfewo.de
-- Email: info@magicfewo.de
+- Website: https://gesino-reisen.com
+- Email: info@gesino-reisen.com

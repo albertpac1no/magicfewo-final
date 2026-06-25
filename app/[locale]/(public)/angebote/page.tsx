@@ -39,7 +39,10 @@ async function getSpecialOffers(): Promise<Property[]> {
 
 export default async function AngebotePage() {
   const specialOffers = await getSpecialOffers()
-  const t = await getTranslations('common')
+  const [tC, tP] = await Promise.all([
+    getTranslations('common'),
+    getTranslations('pages'),
+  ])
 
   return (
     <div>
@@ -47,7 +50,7 @@ export default async function AngebotePage() {
       <div className="relative h-[400px]">
         <Image
           src="/images/offers-hero.jpg"
-          alt="Aktuelle Sonderangebote für Ferienwohnungen bei MagicFewo"
+          alt={tP('offers.heroAlt')}
           fill
           className="object-cover"
           sizes="100vw"
@@ -55,9 +58,9 @@ export default async function AngebotePage() {
         />
         <div className="absolute inset-0 bg-black/40">
           <div className="container mx-auto px-4 h-full flex flex-col justify-center">
-            <h1 className="text-white text-3xl md:text-5xl font-bold mb-4">{t('offers.heroTitle')}</h1>
+            <h1 className="text-white text-3xl md:text-5xl font-bold mb-4">{tC('offers.heroTitle')}</h1>
             <p className="text-white/90 text-lg md:text-xl max-w-2xl">
-              {t('offers.heroSubtitle')}
+              {tC('offers.heroSubtitle')}
             </p>
           </div>
         </div>
@@ -65,12 +68,12 @@ export default async function AngebotePage() {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
-        <Breadcrumbs items={[{ label: 'Angebote', href: '/angebote' }]} />
+        <Breadcrumbs items={[{ label: tP('offers.breadcrumb'), href: '/angebote' }]} />
         {specialOffers.length === 0 ? (
           <div className="text-center py-12">
-            <h2 className="text-2xl font-bold text-secondary mb-4">{t('offers.noOffersTitle')}</h2>
+            <h2 className="text-2xl font-bold text-secondary mb-4">{tC('offers.noOffersTitle')}</h2>
             <p className="text-gray-600">
-              {t('offers.noOffersText')}
+              {tC('offers.noOffersText')}
             </p>
           </div>
         ) : (

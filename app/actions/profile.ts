@@ -3,15 +3,17 @@
 import { z } from 'zod'
 import { createSupabaseServer } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
+import { getTranslations } from 'next-intl/server'
 
 export async function uploadAvatar(formData: FormData) {
+  const t = await getTranslations('dashboard')
   const supabase = await createSupabaseServer()
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) return { error: 'Nicht angemeldet' }
+  if (!user) return { error: t('errors.notLoggedIn') }
 
   const file = formData.get('file') as File
-  if (!file || file.size === 0) return { error: 'Keine Datei ausgewählt' }
-  if (file.size > 5 * 1024 * 1024) return { error: 'Datei ist zu groß (max. 5 MB)' }
+  if (!file || file.size === 0) return { error: t('errors.noFileSelected') }
+  if (file.size > 5 * 1024 * 1024) return { error: t('errors.fileTooLarge') }
 
   const ext = file.name.split('.').pop()?.toLowerCase() ?? 'jpg'
   const filePath = `${user.id}/avatar-${Date.now()}.${ext}`
@@ -48,13 +50,14 @@ const ProfileSchema = z.object({
 })
 
 export async function updateProfile(formData: FormData) {
+  const t = await getTranslations('dashboard')
   const supabase = await createSupabaseServer()
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) return { error: 'Nicht angemeldet' }
+  if (!user) return { error: t('errors.notLoggedIn') }
 
   const raw = Object.fromEntries(formData)
   const parsed = ProfileSchema.safeParse(raw)
-  if (!parsed.success) return { error: 'Ungültige Eingabe' }
+  if (!parsed.success) return { error: t('errors.invalidInput') }
 
   const { error } = await supabase
     .from('profiles')

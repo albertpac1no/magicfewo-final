@@ -21,32 +21,37 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function KontaktPage() {
   const settings = await getSettings()
-  const t = await getTranslations('common')
+  const [tC, tP] = await Promise.all([
+    getTranslations('common'),
+    getTranslations('pages'),
+  ])
+
+  const hours = tP.raw('contact.hours') as string[]
 
   const contactInfo = [
     {
       icon: Phone,
-      title: t('contact.phone'),
+      title: tC('contact.phone'),
       details: [settings.company_phone],
       action: `tel:${settings.company_phone}`,
     },
     {
       icon: Mail,
-      title: t('contact.email'),
+      title: tC('contact.email'),
       details: [settings.company_email],
       action: `mailto:${settings.company_email}`,
     },
     {
       icon: MapPin,
-      title: t('contact.address'),
+      title: tC('contact.address'),
       details: [settings.company_address, `${settings.company_postal_code} ${settings.company_city}`],
       action: `https://maps.google.com/maps?q=${encodeURIComponent(`${settings.company_address}, ${settings.company_postal_code} ${settings.company_city}, ${settings.company_country}`)}`,
       external: true,
     },
     {
       icon: Clock,
-      title: t('contact.hours'),
-      details: ['Mo-Fr: 9:00 - 18:00', 'Sa: 10:00 - 14:00'],
+      title: tC('contact.hours'),
+      details: hours,
     },
   ]
 
@@ -56,7 +61,7 @@ export default async function KontaktPage() {
       <div className="relative h-[400px]">
         <Image
           src="/images/contact-hero.jpg"
-          alt="MagicFewo Kundenservice – Kontaktieren Sie unser Team"
+          alt={tP('contact.heroAlt')}
           fill
           className="object-cover"
           sizes="100vw"
@@ -64,9 +69,9 @@ export default async function KontaktPage() {
         />
         <div className="absolute inset-0 bg-black/40">
           <div className="container mx-auto px-4 h-full flex flex-col justify-center">
-            <h1 className="text-white text-3xl md:text-5xl font-bold mb-4">{t('contact.heroTitle')}</h1>
+            <h1 className="text-white text-3xl md:text-5xl font-bold mb-4">{tC('contact.heroTitle')}</h1>
             <p className="text-white/90 text-lg md:text-xl max-w-2xl">
-              {t('contact.heroSubtitle')}
+              {tC('contact.heroSubtitle')}
             </p>
           </div>
         </div>
@@ -74,63 +79,63 @@ export default async function KontaktPage() {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
-        <Breadcrumbs items={[{ label: 'Kontakt', href: '/kontakt' }]} />
+        <Breadcrumbs items={[{ label: tP('contact.breadcrumb'), href: '/kontakt' }]} />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <div>
-            <h2 className="text-2xl font-bold text-secondary mb-6">{t('contact.writeUs')}</h2>
+            <h2 className="text-2xl font-bold text-secondary mb-6">{tC('contact.writeUs')}</h2>
             <form className="space-y-6">
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.firstName')}</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">{tC('contact.firstName')}</label>
                   <input
                     type="text"
                     className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
-                    placeholder="Max"
+                    placeholder={tP('contact.firstNamePlaceholder')}
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.lastName')}</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">{tC('contact.lastName')}</label>
                   <input
                     type="text"
                     className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
-                    placeholder="Mustermann"
+                    placeholder={tP('contact.lastNamePlaceholder')}
                   />
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.email')}</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">{tC('contact.email')}</label>
                 <input
                   type="email"
                   className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
-                  placeholder="max@beispiel.de"
+                  placeholder={tP('contact.emailPlaceholder')}
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.subject')}</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">{tC('contact.subject')}</label>
                 <input
                   type="text"
                   className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
-                  placeholder={t('contact.subjectPlaceholder')}
+                  placeholder={tC('contact.subjectPlaceholder')}
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.message')}</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">{tC('contact.message')}</label>
                 <textarea
                   rows={6}
                   className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
-                  placeholder={t('contact.messagePlaceholder')}
+                  placeholder={tC('contact.messagePlaceholder')}
                 />
               </div>
               <button type="submit" className="btn-primary w-full">
-                {t('contact.send')}
+                {tC('contact.send')}
               </button>
             </form>
           </div>
 
           {/* Contact Information */}
           <div>
-            <h2 className="text-2xl font-bold text-secondary mb-6">{t('contact.contactInfo')}</h2>
+            <h2 className="text-2xl font-bold text-secondary mb-6">{tC('contact.contactInfo')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {contactInfo.map((info, index) => (
                 <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
@@ -148,7 +153,7 @@ export default async function KontaktPage() {
                       target={info.external ? '_blank' : undefined}
                       rel={info.external ? 'noopener noreferrer' : undefined}
                     >
-                      {t('contact.contactAction')}
+                      {tC('contact.contactAction')}
                     </a>
                   )}
                 </div>
@@ -169,12 +174,12 @@ export default async function KontaktPage() {
 
             {/* Company Info */}
             <div className="mt-8 bg-gray-50 rounded-2xl p-6">
-              <h3 className="text-lg font-semibold text-secondary mb-4">{t('contact.companyInfo')}</h3>
+              <h3 className="text-lg font-semibold text-secondary mb-4">{tC('contact.companyInfo')}</h3>
               <div className="space-y-2 text-gray-600">
                 <p>{settings.company_name}</p>
-                <p>Handelsregister: {settings.company_registration}</p>
-                <p>USt-IdNr.: {settings.company_vat_id}</p>
-                <p>Steuernummer: {settings.company_tax_id}</p>
+                <p>{tP('contact.registration')}: {settings.company_registration}</p>
+                <p>{tP('contact.vatId')}: {settings.company_vat_id}</p>
+                <p>{tP('contact.taxId')}: {settings.company_tax_id}</p>
               </div>
             </div>
           </div>

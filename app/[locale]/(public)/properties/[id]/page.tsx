@@ -198,7 +198,7 @@ export default async function PropertyDetailPage({ params }: Props) {
                       /* eslint-disable-next-line @next/next/no-img-element */
                       <img
                         src={ownerProfile.avatar_url}
-                        alt={ownerProfile.full_name ? `Profilbild von ${ownerProfile.full_name}` : 'Profilbild des Gastgebers'}
+                        alt={ownerProfile.full_name ? t('hostAvatarAlt', { name: ownerProfile.full_name }) : t('hostAvatarAltDefault')}
                         className="w-full h-full object-cover"
                       />
                     ) : (

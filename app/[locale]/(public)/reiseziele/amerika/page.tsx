@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import { DestinationPage } from '@/components/DestinationPage'
+import { DestinationPage, type Destination } from '@/components/DestinationPage'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -16,57 +16,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   }
 }
 
-const destinations = [
-  {
-    id: 1,
-    image: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9',
-    title: 'New York',
-    country: 'USA',
-    description: 'Erleben Sie den American Dream in der Stadt, die niemals schläft, mit ihrer ikonischen Skyline.',
-    rating: 4.8,
-    price: '999',
-    duration: '7 Tage',
-  },
-  {
-    id: 2,
-    image: 'https://images.unsplash.com/photo-1483729558449-99ef09a8c325',
-    title: 'Rio de Janeiro',
-    country: 'Brasilien',
-    description: 'Genießen Sie die brasilianische Lebensfreude zwischen Copacabana und Zuckerhut.',
-    rating: 4.7,
-    price: '849',
-    duration: '8 Tage',
-  },
-  {
-    id: 3,
-    image: 'https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f',
-    title: 'Vancouver',
-    country: 'Kanada',
-    description: 'Entdecken Sie die perfekte Harmonie zwischen Stadt und Natur an der kanadischen Westküste.',
-    rating: 4.6,
-    price: '929',
-    duration: '6 Tage',
-  },
-  {
-    id: 4,
-    image: 'https://images.unsplash.com/photo-1512813195386-6cf811ad3542',
-    title: 'Cancún',
-    country: 'Mexiko',
-    description: 'Entspannen Sie an traumhaften Karibikstränden und erkunden Sie Maya-Ruinen.',
-    rating: 4.7,
-    price: '799',
-    duration: '7 Tage',
-  },
-]
-
 export default async function AmerikaPage() {
-  const t = await getTranslations('common')
+  const [tC, tP] = await Promise.all([
+    getTranslations('common'),
+    getTranslations('pages'),
+  ])
+  const destinations = tP.raw('reiseziele.amerika.destinations') as Destination[]
   return (
     <DestinationPage
       heroImage="/images/destination-amerika-hero.jpg"
-      heroAlt="Amerika"
-      title={t('destinations.amerika.title')}
-      subtitle={t('destinations.amerika.subtitle')}
+      heroAlt={tP('reiseziele.amerikaAlt')}
+      title={tC('destinations.amerika.title')}
+      subtitle={tC('destinations.amerika.subtitle')}
       destinations={destinations}
       slug="amerika"
     />

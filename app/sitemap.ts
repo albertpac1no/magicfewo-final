@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { createClient } from '@supabase/supabase-js'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://magicfewo.de'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gesino-reisen.com'
 
   const staticRoutes = [
     { path: '', changeFrequency: 'daily' as const, priority: 1.0 },

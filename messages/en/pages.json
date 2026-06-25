@@ -1,0 +1,326 @@
+{
+  "relatedTopics": "Related Topics",
+  "contactCta": "Contact us",
+  "agb": {
+    "intro": "These Terms and Conditions govern the business relationship between Gesino Reisen and our customers. Please read them carefully.",
+    "keyPoints": [
+      { "title": "Transparent Terms", "text": "Clear and understandable rules for all services." },
+      { "title": "Fair Conditions", "text": "Balanced rights and obligations for both parties." },
+      { "title": "Legal Compliance", "text": "All regulations comply with legal requirements." }
+    ],
+    "sections": [
+      { "title": "1. Scope of Application", "content": "These General Terms and Conditions apply to all business relationships between GeSino GmbH (hereinafter \"Gesino Reisen\") and our customers. The version valid at the time of contract conclusion shall apply in each case." },
+      { "title": "2. Contract Formation", "content": "The contract is formed when Gesino Reisen accepts the customer's booking. Acceptance is confirmed by a booking confirmation via email. A mere confirmation of receipt of the booking request does not yet constitute acceptance." },
+      { "title": "3. Services", "subsections": [
+        { "title": "3.1 Scope of Services", "content": "The scope of the contractual services is determined by the service description in the offer and the details in the booking confirmation." },
+        { "title": "3.2 Service Changes", "content": "Changes or deviations from individual travel services agreed in the contract that become necessary after conclusion of the contract are only permitted if they are not significant and do not affect the overall structure of the booked trip." }
+      ]},
+      { "title": "4. Prices and Payment", "subsections": [
+        { "title": "4.1 Prices", "content": "The stated prices are final prices and include the applicable VAT." },
+        { "title": "4.2 Payment Terms", "content": "A deposit of 20% of the travel price is due upon conclusion of the contract. The remaining balance is due 30 days before the start of travel." }
+      ]},
+      { "title": "5. Cancellation and Withdrawal", "content": "The customer may withdraw from the trip at any time before the start of travel. The withdrawal must be declared to Gesino Reisen. The date of receipt of the withdrawal declaration is decisive. In the event of withdrawal, Gesino Reisen may claim appropriate compensation." },
+      { "title": "6. Liability", "content": "Gesino Reisen is liable for the conscientious preparation of the trip, the careful selection and monitoring of service providers, and the proper provision of the contractually agreed travel services." }
+    ],
+    "contactTitle": "Do you have questions about our Terms & Conditions?",
+    "contactText": "Our customer service team is available for any questions. Feel free to contact us for clarifications or specific questions.",
+    "related": {
+      "privacy": "Privacy Policy",
+      "bookingProcess": "Booking Process",
+      "faq": "FAQ"
+    },
+    "footnote": "As of: March 2024 • GeSino GmbH"
+  },
+  "datenschutz": {
+    "intro": "The protection of your personal data is important to us. Here you can find out how we handle your data.",
+    "keyPoints": [
+      { "title": "Secure Protection", "text": "Your data is protected to the highest security standards." },
+      { "title": "SSL Encryption", "text": "All data is transmitted encrypted." },
+      { "title": "Transparency", "text": "Full control over your personal data." },
+      { "title": "GDPR Compliant", "text": "Complies with all data protection guidelines." }
+    ],
+    "sections": [
+      { "title": "Privacy Policy", "content": "This privacy policy informs you about the nature, scope and purpose of the processing of personal data within our online offering. With regard to the terms used, such as \"processing\" or \"controller\", we refer to the definitions in Art. 4 of the General Data Protection Regulation (GDPR)." },
+      { "title": "Controller", "content": "GeSino GmbH\nMart-Stam-Str. 59\n60438 Frankfurt am Main\nGermany\n\nEmail: privacy@gesino-reisen.com" },
+      { "title": "Types of Processed Data", "list": [
+        "Inventory data (e.g. names, addresses)",
+        "Contact data (e.g. email, phone numbers)",
+        "Content data (e.g. text entries, photographs, videos)",
+        "Usage data (e.g. visited websites, interest in content)",
+        "Meta/communication data (e.g. device information, IP addresses)"
+      ]},
+      { "title": "Purpose of Processing", "list": [
+        "Provision of the online offering, its functions and content",
+        "Responding to contact requests and communication with users",
+        "Security measures",
+        "Reach measurement/marketing"
+      ]},
+      { "title": "Cookies", "content": "We use cookies to make our offering more user-friendly, effective and secure. Cookies are small text files stored on your computer by your browser. Most of the cookies we use are so-called \"session cookies\". They are automatically deleted after your visit ends." },
+      { "title": "Your Rights", "list": [
+        "Right to information about the personal data concerning you",
+        "Right to rectification or deletion",
+        "Right to restriction of processing",
+        "Right to object to processing",
+        "Right to data portability"
+      ]}
+    ],
+    "contactTitle": "Questions about privacy?",
+    "contactText": "Our data protection officer is available for all your questions.",
+    "related": {
+      "terms": "Terms & Conditions",
+      "faq": "FAQ",
+      "contact": "Contact"
+    }
+  },
+  "buchungsprozess": {
+    "intro": "Find out how easy it is to book your next trip with Gesino Reisen. Follow our clear booking process in just a few steps.",
+    "steps": [
+      { "title": "Choose your destination", "description": "Select from our diverse range of travel destinations worldwide." },
+      { "title": "Check availability", "description": "Enter your desired travel dates and check availability." },
+      { "title": "Personal details", "description": "Fill in the booking form with your personal information." },
+      { "title": "Payment", "description": "Choose your preferred payment method and complete the booking." },
+      { "title": "Confirmation", "description": "Receive your booking confirmation by email with all important details." }
+    ],
+    "related": {
+      "properties": "Browse accommodations",
+      "paymentMethods": "Payment Methods",
+      "faq": "FAQ"
+    },
+    "contactTitle": "Do you have questions about the booking process?",
+    "contactText": "Our customer service team is available for you at any time.",
+    "contactCta": "Contact us"
+  },
+  "zahlungsmethoden": {
+    "intro": "We offer you various secure payment options for your booking. Choose the method that suits you best.",
+    "methods": [
+      { "title": "Credit Card", "description": "Visa, Mastercard, American Express", "benefits": ["Instant confirmation", "Secure payment", "No additional fees"] },
+      { "title": "Bank Transfer", "description": "Direct transfer to our bank account", "benefits": ["No credit card required", "Flexible payment period", "Suitable for large amounts"] },
+      { "title": "PayPal", "description": "Pay quickly and securely with PayPal", "benefits": ["Buyer protection", "Fast processing", "Worldwide acceptance"] }
+    ],
+    "related": {
+      "bookingProcess": "Booking Process",
+      "faq": "FAQ"
+    },
+    "securityTitle": "Security is our highest priority",
+    "securityText": "All payments are processed via secure SSL-encrypted connections. Your data is safe with us."
+  },
+  "reiseversicherung": {
+    "intro": "Protect your trip optimally. With our insurance packages you travel worry-free and are well protected.",
+    "recommended": "Recommended",
+    "perTrip": "/ trip",
+    "cta": "Get started",
+    "advantagesTitle": "Your benefits",
+    "packages": [
+      { "title": "Basic Cover", "price": "29", "description": "Basic protection for your trip", "coverage": ["Trip cancellation insurance", "Travel interruption insurance", "Baggage insurance", "24h emergency service"] },
+      { "title": "Premium Cover", "price": "49", "description": "Comprehensive protection for worry-free travel", "coverage": ["All Basic Cover benefits", "International health insurance", "Search, rescue and recovery costs", "Delay protection", "COVID-19 protection"] },
+      { "title": "Business Cover", "price": "79", "description": "Specially designed for business travelers", "coverage": ["All Premium Cover benefits", "Electronics insurance", "Business document insurance", "Replacement business trip", "Business interruption insurance"] }
+    ],
+    "benefits": [
+      { "title": "Comprehensive Protection", "description": "Worldwide coverage for all types of travel" },
+      { "title": "Health Protection", "description": "Medical care worldwide" },
+      { "title": "Worldwide Validity", "description": "Insurance coverage in all countries" },
+      { "title": "24/7 Emergency Service", "description": "Available around the clock for you" }
+    ],
+    "faqTitle": "Frequently asked questions",
+    "faqItems": [
+      { "question": "When should I take out travel insurance?", "answer": "Ideally right when you book your trip, as the insurance coverage starts immediately and you are protected in case of cancellations." },
+      { "question": "Which types of travel are covered?", "answer": "Our insurance covers all types of travel: package tours, individual trips, business travel and more." },
+      { "question": "Where does the insurance coverage apply?", "answer": "The insurance coverage applies worldwide in all countries, except for areas with travel warnings." },
+      { "question": "What about COVID-19 illness?", "answer": "Our Premium and Business packages include comprehensive COVID-19 protection for cancellations and medical care." }
+    ],
+    "related": {
+      "travelPackages": "Travel Packages",
+      "faq": "FAQ"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find quick answers to your questions. If you need further assistance, please don't hesitate to contact us.",
+    "searchPlaceholder": "Search for questions...",
+    "noAnswerTitle": "Couldn't find an answer?",
+    "noAnswerText": "Our customer service team is available for further questions.",
+    "contactCta": "Contact us",
+    "categories": [
+      {
+        "category": "Booking",
+        "questions": [
+          { "q": "How can I book a trip?", "a": "You can easily book your trip online through our website. Choose your desired destination, check availability and follow the booking process." },
+          { "q": "Can I cancel my booking?", "a": "Yes, bookings can be cancelled subject to our cancellation policy. The exact terms can be found in your booking documents." }
+        ]
+      },
+      {
+        "category": "Payment",
+        "questions": [
+          { "q": "Which payment methods are accepted?", "a": "We accept credit cards (Visa, Mastercard, American Express), PayPal and bank transfer." },
+          { "q": "When do I have to pay for the trip?", "a": "A deposit of 20% of the travel price is due at the time of booking. The remaining balance must be paid no later than 30 days before departure." }
+        ]
+      },
+      {
+        "category": "Trip Details",
+        "questions": [
+          { "q": "What is included in the travel price?", "a": "The exact scope of services varies depending on the offer and is listed in the respective trip description. Generally, accommodation and listed activities are included." },
+          { "q": "Do I need travel insurance?", "a": "We recommend taking out travel insurance. This can optionally be added during the booking process." }
+        ]
+      }
+    ],
+    "related": {
+      "bookingProcess": "Booking Process",
+      "paymentMethods": "Payment Methods",
+      "travelInsurance": "Travel Insurance",
+      "terms": "Terms & Conditions"
+    }
+  },
+  "flugbuchung": {
+    "intro": "Find the best flight connections to your destination. We offer a wide selection of flights from renowned airlines.",
+    "search": {
+      "from": "From",
+      "fromPlaceholder": "Departure airport",
+      "to": "To",
+      "toPlaceholder": "Destination airport",
+      "outbound": "Outbound flight",
+      "return": "Return flight",
+      "passengers": "Passengers",
+      "passengersOptions": ["1 Adult", "2 Adults", "2 Adults, 1 Child", "2 Adults, 2 Children"],
+      "searchBtn": "Search flights"
+    },
+    "flightNumber": "Flight number",
+    "seatsAvailable": "{count} seats available",
+    "departure": "Departure",
+    "arrival": "Arrival",
+    "direct": "Direct flight",
+    "stops": "{count} stop",
+    "stopsPlural": "{count} stops",
+    "pricePerPerson": "Price per person",
+    "bookNow": "Book now",
+    "benefits": [
+      { "title": "Large Selection", "text": "Flights from all major airlines at the best prices." },
+      { "title": "Flexible Booking", "text": "Free rebooking and cancellation with many fares." },
+      { "title": "24/7 Service", "text": "Personal support around the clock." }
+    ],
+    "related": {
+      "travelPackages": "Travel Packages",
+      "travelInsurance": "Travel Insurance"
+    }
+  },
+  "hotelbuchung": {
+    "intro": "Find your perfect hotel for an unforgettable stay. We offer a wide selection of hand-picked hotels for every taste.",
+    "search": {
+      "destination": "Destination",
+      "destinationPlaceholder": "City or region",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "guests": "Guests",
+      "guestsOptions": ["2 Adults", "1 Adult", "2 Adults, 1 Child", "2 Adults, 2 Children"],
+      "searchBtn": "Search hotels"
+    },
+    "priceFrom": "Price per night from",
+    "bookRoom": "Select room",
+    "related": {
+      "properties": "All accommodations",
+      "offers": "Offers"
+    },
+    "benefits": [
+      { "title": "Best Selection", "text": "Hand-picked hotels for the highest quality and comfort." },
+      { "title": "Personal Service", "text": "Individual advice and support with your booking." },
+      { "title": "Top Locations", "text": "Hotels in the best locations for your perfect stay." }
+    ]
+  },
+  "reisepakete": {
+    "intro": "Discover our carefully curated travel packages for unforgettable experiences. Each package has been curated by our experts.",
+    "bestseller": "Bestseller",
+    "persons": "Persons",
+    "reviews": "Reviews",
+    "highlights": "Highlights:",
+    "from": "from",
+    "perPerson": "per person",
+    "bookNow": "Book now",
+    "related": {
+      "properties": "All accommodations",
+      "offers": "Offers"
+    }
+  },
+  "bewertungen": {
+    "intro": "Find out what our customers say about their trips with Gesino Reisen. Authentic reviews help you make your decision.",
+    "helpful": "{count} found this helpful",
+    "comment": "Comment",
+    "shareTitle": "Share your experiences",
+    "shareText": "Have you traveled with Gesino Reisen? We look forward to your feedback!",
+    "writeCta": "Write a review",
+    "related": {
+      "properties": "Accommodations",
+      "bookingProcess": "Booking Process",
+      "faq": "FAQ"
+    }
+  },
+  "reiseziele": {
+    "popularDestinations": "Popular Destinations",
+    "europaAlt": "Europe – Discover destinations",
+    "asienAlt": "Asia – Discover destinations",
+    "amerikaAlt": "Americas – Discover destinations",
+    "afrikaAlt": "Africa – Discover destinations",
+    "europa": {
+      "destinations": [
+        { "id": 1, "image": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a", "title": "Paris", "country": "France", "description": "Discover the city of love with its world-famous Eiffel Tower and unique atmosphere.", "rating": 4.8, "price": "599", "duration": "4 days" },
+        { "id": 2, "image": "https://images.unsplash.com/photo-1520175480921-4edfa2983e0f", "title": "Rome", "country": "Italy", "description": "Immerse yourself in the history of the eternal city with its ancient ruins and the Vatican.", "rating": 4.7, "price": "549", "duration": "5 days" },
+        { "id": 3, "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad", "title": "London", "country": "England", "description": "Experience the British capital with its rich culture and vibrant atmosphere.", "rating": 4.6, "price": "629", "duration": "4 days" },
+        { "id": 4, "image": "https://images.unsplash.com/photo-1542820229-081e0c12af0b", "title": "Barcelona", "country": "Spain", "description": "Enjoy Catalan culture, Gaudí's architecture and Mediterranean charm.", "rating": 4.7, "price": "579", "duration": "5 days" }
+      ]
+    },
+    "asien": {
+      "destinations": [
+        { "id": 1, "image": "https://images.unsplash.com/photo-1528164344705-47542687000d", "title": "Tokyo", "country": "Japan", "description": "Experience the perfect blend of tradition and modernity in Japan's vibrant metropolis.", "rating": 4.9, "price": "899", "duration": "7 days" },
+        { "id": 2, "image": "https://images.unsplash.com/photo-1549893072-8b3c7c5b9b05", "title": "Bangkok", "country": "Thailand", "description": "Immerse yourself in the vibrant culture of Thailand with its temples and world-famous cuisine.", "rating": 4.7, "price": "649", "duration": "6 days" },
+        { "id": 3, "image": "https://images.unsplash.com/photo-1536599424071-0b215a388ba7", "title": "Bali", "country": "Indonesia", "description": "Relax on the Island of the Gods with its stunning beaches and spiritual atmosphere.", "rating": 4.8, "price": "749", "duration": "8 days" },
+        { "id": 4, "image": "https://images.unsplash.com/photo-1547150492-da7ff1742941", "title": "Seoul", "country": "South Korea", "description": "Discover the dynamic capital of South Korea with its K-Pop culture and historic palaces.", "rating": 4.6, "price": "829", "duration": "6 days" }
+      ]
+    },
+    "afrika": {
+      "destinations": [
+        { "id": 1, "image": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5", "title": "Cape Town", "country": "South Africa", "description": "Experience the beauty of Table Mountain and the vibrant culture of the rainbow nation.", "rating": 4.8, "price": "899", "duration": "8 days" },
+        { "id": 2, "image": "https://images.unsplash.com/photo-1489392191049-fc10c97e64b6", "title": "Marrakech", "country": "Morocco", "description": "Immerse yourself in the colorful world of the medina and experience oriental charm.", "rating": 4.7, "price": "749", "duration": "6 days" },
+        { "id": 3, "image": "https://images.unsplash.com/photo-1527661591475-527312dd65f5", "title": "Zanzibar", "country": "Tanzania", "description": "Relax on stunning beaches and explore the historic Stone Town.", "rating": 4.9, "price": "829", "duration": "7 days" },
+        { "id": 4, "image": "https://images.unsplash.com/photo-1523805009345-7448845a9e53", "title": "Victoria Falls", "country": "Zimbabwe", "description": "Marvel at one of the world's greatest natural wonders in all its splendor.", "rating": 4.8, "price": "949", "duration": "6 days" }
+      ]
+    },
+    "amerika": {
+      "destinations": [
+        { "id": 1, "image": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9", "title": "New York", "country": "USA", "description": "Experience the American Dream in the city that never sleeps, with its iconic skyline.", "rating": 4.8, "price": "999", "duration": "7 days" },
+        { "id": 2, "image": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325", "title": "Rio de Janeiro", "country": "Brazil", "description": "Enjoy Brazilian joie de vivre between Copacabana and Sugarloaf Mountain.", "rating": 4.7, "price": "849", "duration": "8 days" },
+        { "id": 3, "image": "https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f", "title": "Vancouver", "country": "Canada", "description": "Discover the perfect harmony between city and nature on Canada's west coast.", "rating": 4.6, "price": "929", "duration": "6 days" },
+        { "id": 4, "image": "https://images.unsplash.com/photo-1512813195386-6cf811ad3542", "title": "Cancún", "country": "Mexico", "description": "Relax on stunning Caribbean beaches and explore Maya ruins.", "rating": 4.7, "price": "799", "duration": "7 days" }
+      ]
+    }
+  },
+  "about": {
+    "stats": [
+      { "label": "Satisfied customers", "value": "50,000+" },
+      { "label": "Years of experience", "value": "15+" },
+      { "label": "Destinations", "value": "100+" }
+    ],
+    "team": [
+      { "name": "Anna Schmidt", "position": "CEO & Founder", "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330", "description": "With over 20 years of experience in the travel industry, Anna leads our company with passion and vision." },
+      { "name": "Michael Weber", "position": "Travel Consultant", "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e", "description": "Michael is our expert for extraordinary travel experiences and tailor-made vacation planning." },
+      { "name": "Laura Müller", "position": "Customer Service", "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80", "description": "Laura ensures that our customers are well taken care of and their trip goes smoothly." }
+    ],
+    "heroAlt": "The Gesino Reisen Team – Your travel agency in Frankfurt",
+    "breadcrumb": "About us",
+    "registration": "Commercial Register",
+    "vatId": "VAT ID",
+    "taxId": "Tax Number"
+  },
+  "contact": {
+    "heroAlt": "Gesino Reisen Customer Service – Contact our team",
+    "breadcrumb": "Contact",
+    "firstNamePlaceholder": "John",
+    "lastNamePlaceholder": "Doe",
+    "emailPlaceholder": "john@example.com",
+    "hours": ["Mon–Fri: 9:00 AM – 6:00 PM", "Sat: 10:00 AM – 2:00 PM"],
+    "registration": "Commercial Register",
+    "vatId": "VAT ID",
+    "taxId": "Tax Number"
+  },
+  "offers": {
+    "heroAlt": "Current special offers and travel deals at Gesino Reisen",
+    "breadcrumb": "Offers"
+  }
+}

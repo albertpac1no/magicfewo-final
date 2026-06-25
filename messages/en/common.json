@@ -121,5 +121,47 @@
     "bankTransfer": "Bank Transfer",
     "paypal": "PayPal"
   },
-  "amount": "Amount"
+  "amount": "Amount",
+
+  "home": "Home",
+  "prev": "Previous",
+  "next": "Next",
+  "closeNavigation": "Close navigation",
+  "openNavigation": "Open navigation",
+  "testimonialNav": "Testimonial {index}",
+  "ctaBannerAlt": "Luxurious vacation villa",
+  "heroImages": {
+    "villa": "Luxurious villa with infinity pool on the Mediterranean",
+    "coastal": "Picturesque coastal village with turquoise sea",
+    "apartment": "Elegant vacation apartment with sea view",
+    "mountain": "Cozy mountain chalet by an alpine lake"
+  },
+  "cookies": {
+    "bannerTitle": "We value your privacy",
+    "bannerText": "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. For details, see our",
+    "privacyLink": "Privacy Policy",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject all",
+    "customize": "Customize",
+    "customizeTitle": "Cookie preferences",
+    "savePrefs": "Save preferences",
+    "alwaysOn": "Always on",
+    "back": "Back",
+    "necessary": {
+      "title": "Strictly necessary",
+      "description": "These cookies are essential for the website to function correctly. They enable core features like security, network management, and accessibility. You cannot opt out of these cookies."
+    },
+    "analytics": {
+      "title": "Analytics",
+      "description": "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. All information these cookies collect is aggregated and anonymous."
+    },
+    "marketing": {
+      "title": "Marketing",
+      "description": "These cookies may be set through our site by our advertising partners. They may be used to build a profile of your interests and show you relevant adverts on other sites."
+    },
+    "preferences": {
+      "title": "Preferences",
+      "description": "These cookies enable the website to remember choices you make (such as your language or region) to provide enhanced, more personalized features."
+    }
+  }
 }

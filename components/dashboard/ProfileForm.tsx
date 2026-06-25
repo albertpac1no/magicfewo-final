@@ -101,7 +101,7 @@ export function ProfileForm({ profile, email }: ProfileFormProps) {
               {avatarUrl ? (
                 <Image
                   src={avatarUrl}
-                  alt={profile?.full_name ?? 'Avatar'}
+                  alt={profile?.full_name ?? t('avatarAlt')}
                   width={96}
                   height={96}
                   className="w-full h-full object-cover"

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useLocale, useTranslations } from 'next-intl'
 import { createSupabaseClient } from '@/lib/supabase/client'
 
 interface AvailabilityCalendarProps {
@@ -18,7 +19,6 @@ function getDaysInMonth(year: number, month: number) {
 }
 
 function getFirstDayOfWeek(year: number, month: number) {
-  // 0=Sunday; we want Monday=0
   const day = new Date(year, month, 1).getDay()
   return day === 0 ? 6 : day - 1
 }
@@ -28,19 +28,29 @@ function isDateBlocked(date: Date, bookedRanges: BookedRange[]): boolean {
   return bookedRanges.some((r) => d >= r.check_in && d < r.check_out)
 }
 
-const MONTH_NAMES = [
-  'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
-  'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember',
-]
-
-const DAY_LABELS = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
-
 export function AvailabilityCalendar({ propertyId }: AvailabilityCalendarProps) {
+  const locale = useLocale()
+  const t = useTranslations('properties')
   const today = new Date()
   const [year, setYear] = useState(today.getFullYear())
   const [month, setMonth] = useState(today.getMonth())
   const [bookedRanges, setBookedRanges] = useState<BookedRange[]>([])
   const [loading, setLoading] = useState(true)
+
+  const monthName = useMemo(() => {
+    return new Intl.DateTimeFormat(locale, { month: 'long', year: 'numeric' }).format(
+      new Date(year, month, 1)
+    )
+  }, [locale, year, month])
+
+  const dayLabels = useMemo(() => {
+    const fmt = new Intl.DateTimeFormat(locale, { weekday: 'short' })
+    // Monday-first week: Mon=1..Sun=7
+    return [1, 2, 3, 4, 5, 6, 7].map((d) => {
+      const date = new Date(2024, 0, d) // Jan 1 2024 = Mon
+      return fmt.format(date)
+    })
+  }, [locale])
 
   useEffect(() => {
     async function fetchBookings() {
@@ -86,14 +96,14 @@ export function AvailabilityCalendar({ propertyId }: AvailabilityCalendarProps) 
 
   return (
     <div className="card p-6">
-      <h2 className="section-title mb-5">Verfügbarkeit</h2>
+      <h2 className="section-title mb-5">{t('availability')}</h2>
 
       <div className="flex items-center justify-between mb-4">
         <button onClick={prevMonth} className="p-1 hover:bg-gray-100 rounded-full transition-colors">
           <ChevronLeft className="w-5 h-5 text-gray-600" />
         </button>
-        <span className="font-semibold text-secondary">
-          {MONTH_NAMES[month]} {year}
+        <span className="font-semibold text-secondary capitalize">
+          {monthName}
         </span>
         <button onClick={nextMonth} className="p-1 hover:bg-gray-100 rounded-full transition-colors">
           <ChevronRight className="w-5 h-5 text-gray-600" />
@@ -107,8 +117,8 @@ export function AvailabilityCalendar({ propertyId }: AvailabilityCalendarProps) 
       ) : (
         <>
           <div className="grid grid-cols-7 gap-1 mb-2">
-            {DAY_LABELS.map((d) => (
-              <div key={d} className="text-center text-xs font-medium text-gray-400 py-1">
+            {dayLabels.map((d, i) => (
+              <div key={i} className="text-center text-xs font-medium text-gray-400 py-1">
                 {d}
               </div>
             ))}
@@ -139,11 +149,11 @@ export function AvailabilityCalendar({ propertyId }: AvailabilityCalendarProps) 
           <div className="flex items-center gap-4 mt-4 text-xs text-gray-500">
             <div className="flex items-center gap-1.5">
               <div className="w-3 h-3 rounded bg-red-50 border border-red-200" />
-              <span>Belegt</span>
+              <span>{t('booked')}</span>
             </div>
             <div className="flex items-center gap-1.5">
               <div className="w-3 h-3 rounded bg-white border border-gray-200" />
-              <span>Verfügbar</span>
+              <span>{t('available')}</span>
             </div>
           </div>
         </>

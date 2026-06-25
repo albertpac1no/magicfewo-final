@@ -1,5 +1,6 @@
 import { Link } from '@/i18n/navigation'
 import { ChevronRight, Home } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 import { breadcrumbJsonLd } from '@/lib/structured-data'
 
 interface BreadcrumbItem {
@@ -11,8 +12,9 @@ interface BreadcrumbsProps {
   items: BreadcrumbItem[]
 }
 
-export function Breadcrumbs({ items }: BreadcrumbsProps) {
-  const allItems = [{ label: 'Startseite', href: '/' }, ...items]
+export async function Breadcrumbs({ items }: BreadcrumbsProps) {
+  const t = await getTranslations('common')
+  const allItems = [{ label: t('home'), href: '/' }, ...items]
   const jsonLdItems = allItems.map((item) => ({ name: item.label, url: item.href }))
 
   return (

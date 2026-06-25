@@ -1,13 +1,13 @@
 import type { Settings } from './settings'
 import type { Property } from './types'
 
-const siteUrl = () => process.env.NEXT_PUBLIC_SITE_URL || 'https://magicfewo.de'
+const siteUrl = () => process.env.NEXT_PUBLIC_SITE_URL || 'https://gesino-reisen.com'
 
 export function organizationJsonLd(settings: Settings) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: settings.platform_name || 'MagicFewo',
+    name: settings.platform_name || 'Gesino Reisen',
     url: siteUrl(),
     ...(settings.logo_light_url && { logo: settings.logo_light_url }),
     contactPoint: {
@@ -31,7 +31,7 @@ export function webSiteJsonLd(settings: Settings) {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: settings.platform_name || 'MagicFewo',
+    name: settings.platform_name || 'Gesino Reisen',
     url: siteUrl(),
     potentialAction: {
       '@type': 'SearchAction',

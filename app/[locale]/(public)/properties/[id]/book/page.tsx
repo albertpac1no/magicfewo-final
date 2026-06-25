@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!property) return { title: t('propertyNotFound') }
 
-  const title = `${t('completeBooking')}: ${property.title} | MagicFewo`
+  const title = `${t('completeBooking')}: ${property.title} | Gesino Reisen`
   const description = tm('booking.description')
   return {
     title,

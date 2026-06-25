@@ -30,6 +30,7 @@ interface DashboardSidebarProps {
 export function DashboardSidebar({ profile, mobileOpen, onMobileClose }: DashboardSidebarProps) {
   const t = useTranslations('nav')
   const tDash = useTranslations('dashboard')
+  const tC = useTranslations('common')
   const pathname = usePathname()
 
   const isActive = (path: string) => {
@@ -50,7 +51,7 @@ export function DashboardSidebar({ profile, mobileOpen, onMobileClose }: Dashboa
             {profile?.avatar_url ? (
               <Image
                 src={profile.avatar_url}
-                alt={profile.full_name ?? 'Avatar'}
+                alt={profile.full_name ?? tDash('avatarAlt')}
                 width={44}
                 height={44}
                 className="w-full h-full object-cover"
@@ -108,7 +109,7 @@ export function DashboardSidebar({ profile, mobileOpen, onMobileClose }: Dashboa
           {tDash('backToSite')}
         </Link>
         <p className="text-xs text-gray-300 px-3 pt-2">
-          © 2026 MagicFeWo
+          © 2026 Gesino Reisen
         </p>
       </div>
     </div>
@@ -132,12 +133,12 @@ export function DashboardSidebar({ profile, mobileOpen, onMobileClose }: Dashboa
       >
         <div className="flex items-center justify-between px-5 h-16 border-b border-gray-100 shrink-0">
           <Link href="/" onClick={onMobileClose}>
-            <span className="text-lg font-bold text-secondary">MagicFeWo</span>
+            <span className="text-lg font-bold text-secondary">Gesino Reisen</span>
           </Link>
           <button
             onClick={onMobileClose}
             className="p-2 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-600 transition-colors"
-            aria-label="Close navigation"
+            aria-label={tC('closeNavigation')}
           >
             <X className="w-5 h-5" />
           </button>

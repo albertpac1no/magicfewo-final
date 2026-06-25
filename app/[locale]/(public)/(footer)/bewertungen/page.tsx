@@ -11,11 +11,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     getTranslations({ locale, namespace: 'footer' }),
     getTranslations({ locale, namespace: 'meta' }),
   ])
-  const title = `${t('pages.bewertungen')} | MagicFewo`
+  const title = `${t('pages.bewertungen')} | Gesino Reisen`
   const description = tm('footer.bewertungen.description')
   return { title, description, openGraph: { title, description, url: '/bewertungen' } }
 }
 
+// Demo data intentionally kept in German as per scope decision
 const reviews = [
   {
     id: 1,
@@ -24,7 +25,7 @@ const reviews = [
     rating: 5,
     date: '15. März 2024',
     title: 'Perfekter Urlaub in Thailand',
-    comment: 'Die Buchung über MagicFewo war unkompliziert und professionell. Der Kundenservice war ausgezeichnet und hat uns bei allen Fragen unterstützt.',
+    comment: 'Die Buchung über Gesino Reisen war unkompliziert und professionell. Der Kundenservice war ausgezeichnet und hat uns bei allen Fragen unterstützt.',
     helpful: 24,
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
   },
@@ -53,16 +54,17 @@ const reviews = [
 ]
 
 export default async function BewertungenPage() {
-  const t = await getTranslations('footer')
+  const [tF, tP] = await Promise.all([
+    getTranslations('footer'),
+    getTranslations('pages'),
+  ])
+
   return (
     <div className="py-16">
       <div className="container mx-auto px-4">
-        <Breadcrumbs items={[{ label: 'Bewertungen', href: '/bewertungen' }]} />
-        <h1 className="text-4xl font-bold text-secondary mb-4">{t('pages.bewertungen')}</h1>
-        <p className="text-gray-custom mb-12 max-w-2xl">
-          Erfahren Sie, was unsere Kunden über ihre Reisen mit MagicFewo berichten.
-          Authentische Bewertungen helfen Ihnen bei Ihrer Entscheidung.
-        </p>
+        <Breadcrumbs items={[{ label: tF('pages.bewertungen'), href: '/bewertungen' }]} />
+        <h1 className="text-4xl font-bold text-secondary mb-4">{tF('pages.bewertungen')}</h1>
+        <p className="text-gray-custom mb-12 max-w-2xl">{tP('bewertungen.intro')}</p>
 
         <div className="grid grid-cols-1 gap-8 mb-16">
           {reviews.map((review) => (
@@ -99,11 +101,11 @@ export default async function BewertungenPage() {
                   <div className="flex items-center gap-4">
                     <span className="flex items-center text-sm text-gray-custom">
                       <ThumbsUp className="w-4 h-4 mr-1" />
-                      {review.helpful} fanden dies hilfreich
+                      {tP('bewertungen.helpful', { count: review.helpful })}
                     </span>
                     <span className="flex items-center text-sm text-gray-custom">
                       <MessageCircle className="w-4 h-4 mr-1" />
-                      Kommentieren
+                      {tP('bewertungen.comment')}
                     </span>
                   </div>
                 </div>
@@ -113,21 +115,19 @@ export default async function BewertungenPage() {
         </div>
 
         <div className="bg-primary/5 rounded-2xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-secondary mb-4">Teilen Sie Ihre Erfahrungen</h2>
-          <p className="text-gray-custom mb-6">
-            Waren Sie mit MagicFewo auf Reisen? Wir freuen uns über Ihr Feedback!
-          </p>
-          <button className="btn-primary">Bewertung schreiben</button>
+          <h2 className="text-2xl font-bold text-secondary mb-4">{tP('bewertungen.shareTitle')}</h2>
+          <p className="text-gray-custom mb-6">{tP('bewertungen.shareText')}</p>
+          <button className="btn-primary">{tP('bewertungen.writeCta')}</button>
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-200">
-          <h2 className="text-lg font-semibold text-secondary mb-4">Verwandte Themen</h2>
+          <h2 className="text-lg font-semibold text-secondary mb-4">{tP('relatedTopics')}</h2>
           <div className="flex flex-wrap gap-3">
-            <Link href="/properties" className="text-sm text-primary hover:underline">Unterkünfte</Link>
+            <Link href="/properties" className="text-sm text-primary hover:underline">{tP('bewertungen.related.properties')}</Link>
             <span className="text-gray-300">|</span>
-            <Link href="/buchungsprozess" className="text-sm text-primary hover:underline">Buchungsprozess</Link>
+            <Link href="/buchungsprozess" className="text-sm text-primary hover:underline">{tP('bewertungen.related.bookingProcess')}</Link>
             <span className="text-gray-300">|</span>
-            <Link href="/faq" className="text-sm text-primary hover:underline">FAQ</Link>
+            <Link href="/faq" className="text-sm text-primary hover:underline">{tP('bewertungen.related.faq')}</Link>
           </div>
         </div>
       </div>

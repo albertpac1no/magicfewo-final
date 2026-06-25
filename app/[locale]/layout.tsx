@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import { getSettings } from '@/lib/settings'
 import { organizationJsonLd } from '@/lib/structured-data'
+import { CookieBanner } from '@/components/layout/CookieBanner'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -27,7 +28,7 @@ export async function generateMetadata({
   const settings = await getSettings()
   const t = await getTranslations({ locale, namespace: 'meta' })
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://magicfewo.de'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gesino-reisen.com'
 
   return {
     metadataBase: new URL(siteUrl),
@@ -36,7 +37,7 @@ export async function generateMetadata({
     icons: settings.favicon_url ? { icon: settings.favicon_url } : undefined,
     openGraph: {
       type: 'website',
-      siteName: settings.platform_name || 'MagicFewo',
+      siteName: settings.platform_name || 'Gesino Reisen',
       locale: locale === 'de' ? 'de_DE' : 'en_US',
     },
     twitter: {
@@ -86,6 +87,7 @@ export default async function LocaleLayout({
       <body className={`${plusJakartaSans.variable} font-sans antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
+          <CookieBanner />
         </NextIntlClientProvider>
         <Toaster position="top-right" richColors />
       </body>

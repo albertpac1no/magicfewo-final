@@ -2,11 +2,13 @@
 
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useCallback } from 'react'
+import { useTranslations } from 'next-intl'
 import { Search, Users, Bed, Bath, Euro, X, Tag, SlidersHorizontal } from 'lucide-react'
 
 export function PropertyFilters() {
   const router = useRouter()
   const searchParams = useSearchParams()
+  const t = useTranslations('properties')
 
   const location = searchParams.get('location') ?? ''
   const minPrice = searchParams.get('minPrice') ?? ''
@@ -44,7 +46,7 @@ export function PropertyFilters() {
           <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
             <SlidersHorizontal className="w-4 h-4 text-primary" />
           </div>
-          <h2 className="text-sm font-bold text-secondary uppercase tracking-wider">Filter</h2>
+          <h2 className="text-sm font-bold text-secondary uppercase tracking-wider">{t('filter')}</h2>
         </div>
         {activeFilterCount > 0 && (
           <button
@@ -52,7 +54,7 @@ export function PropertyFilters() {
             className="flex items-center gap-1.5 text-xs font-medium text-gray-500 hover:text-primary bg-gray-50 hover:bg-primary/5 px-3 py-1.5 rounded-lg transition-all duration-200"
           >
             <X className="w-3 h-3" />
-            Zurücksetzen ({activeFilterCount})
+            {t('reset', { count: activeFilterCount })}
           </button>
         )}
       </div>
@@ -62,7 +64,7 @@ export function PropertyFilters() {
         {/* Location */}
         <div>
           <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
-            Ort
+            {t('location')}
           </label>
           <div className="relative">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
@@ -70,7 +72,7 @@ export function PropertyFilters() {
               type="text"
               value={location}
               onChange={(e) => updateParam('location', e.target.value)}
-              placeholder="Stadt oder Region"
+              placeholder={t('locationPlaceholder')}
               className="input-base pl-10"
             />
           </div>
@@ -79,7 +81,7 @@ export function PropertyFilters() {
         {/* Price Range */}
         <div>
           <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
-            Preis pro Nacht
+            {t('pricePerNight')}
           </label>
           <div className="flex items-center gap-2">
             <div className="relative flex-1">
@@ -111,7 +113,7 @@ export function PropertyFilters() {
         {/* Guests */}
         <div>
           <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
-            Gäste
+            {t('gaesteLabel')}
           </label>
           <div className="relative">
             <Users className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
@@ -120,10 +122,10 @@ export function PropertyFilters() {
               onChange={(e) => updateParam('guests', e.target.value)}
               className="select-base pl-10"
             >
-              <option value="">Beliebig</option>
+              <option value="">{t('any')}</option>
               {[1, 2, 3, 4, 5, 6, 8, 10, 12].map((num) => (
                 <option key={num} value={num}>
-                  {num}+ Gäste
+                  {t('guestsFilter', { count: num })}
                 </option>
               ))}
             </select>
@@ -133,7 +135,7 @@ export function PropertyFilters() {
         {/* Bedrooms */}
         <div>
           <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
-            Schlafzimmer
+            {t('schlafzimmerLabel')}
           </label>
           <div className="relative">
             <Bed className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
@@ -142,10 +144,10 @@ export function PropertyFilters() {
               onChange={(e) => updateParam('bedrooms', e.target.value)}
               className="select-base pl-10"
             >
-              <option value="">Beliebig</option>
+              <option value="">{t('any')}</option>
               {[1, 2, 3, 4, 5].map((num) => (
                 <option key={num} value={num}>
-                  {num}+ Zimmer
+                  {t('rooms', { count: num })}
                 </option>
               ))}
             </select>
@@ -155,7 +157,7 @@ export function PropertyFilters() {
         {/* Bathrooms */}
         <div>
           <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
-            Badezimmer
+            {t('badezimmerLabel')}
           </label>
           <div className="relative">
             <Bath className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
@@ -164,10 +166,10 @@ export function PropertyFilters() {
               onChange={(e) => updateParam('bathrooms', e.target.value)}
               className="select-base pl-10"
             >
-              <option value="">Beliebig</option>
+              <option value="">{t('any')}</option>
               {[1, 2, 3, 4, 5].map((num) => (
                 <option key={num} value={num}>
-                  {num}+ Bäder
+                  {t('baths', { count: num })}
                 </option>
               ))}
             </select>
@@ -190,7 +192,7 @@ export function PropertyFilters() {
           </div>
           <Tag className="w-4 h-4 text-primary/70 group-hover:text-primary transition-colors" />
           <span className="text-sm text-gray-600 font-medium group-hover:text-gray-900 transition-colors">
-            Nur Sonderangebote anzeigen
+            {t('specialOffersOnly')}
           </span>
         </label>
       </div>

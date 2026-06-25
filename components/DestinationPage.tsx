@@ -45,7 +45,7 @@ export async function DestinationPage({ heroImage, heroAlt, title, subtitle, des
         <Breadcrumbs items={[
           { label: title, href: `/reiseziele/${slug}` },
         ]} />
-        <h2 className="text-2xl font-bold text-secondary mb-8">Beliebte Reiseziele</h2>
+        <h2 className="text-2xl font-bold text-secondary mb-8">{t('popularDestinations')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {destinations.map((destination) => (
             <div

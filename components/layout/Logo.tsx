@@ -19,14 +19,14 @@ export function Logo({
   logoDarkUrl,
 }: LogoProps) {
   const logoUrl = variant === 'light' ? logoLightUrl : logoDarkUrl
-  const nameParts = (platformName || 'MagicFewo').split(' ')
+  const nameParts = (platformName || 'Gesino Reisen').split(' ')
 
   if (logoUrl) {
     return (
       <Link href="/" className={cn('flex items-center gap-4', className)}>
         <Image
           src={logoUrl}
-          alt={`${platformName || 'MagicFewo'} Logo`}
+          alt={`${platformName || 'Gesino Reisen'} Logo`}
           width={120}
           height={40}
           className="h-8 w-auto object-contain"

@@ -4,23 +4,11 @@ import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
-const heroImages = [
-  {
-    url: '/images/hero-villa-pool.jpg',
-    alt: 'Luxuriöse Villa mit Infinity-Pool am Mittelmeer',
-  },
-  {
-    url: '/images/hero-coastal-village.jpg',
-    alt: 'Malerisches Küstendorf mit türkisblauem Meer',
-  },
-  {
-    url: '/images/hero-apartment-interior.jpg',
-    alt: 'Elegantes Ferienapartment mit Meerblick',
-  },
-  {
-    url: '/images/hero-mountain-retreat.jpg',
-    alt: 'Gemütliches Bergchalet am Alpensee',
-  },
+const heroImageKeys = [
+  { url: '/images/hero-villa-pool.jpg', key: 'villa' as const },
+  { url: '/images/hero-coastal-village.jpg', key: 'coastal' as const },
+  { url: '/images/hero-apartment-interior.jpg', key: 'apartment' as const },
+  { url: '/images/hero-mountain-retreat.jpg', key: 'mountain' as const },
 ]
 
 export function HeroSlider() {
@@ -28,7 +16,7 @@ export function HeroSlider() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const next = useCallback(() => {
-    setCurrentIndex((c) => (c + 1) % heroImages.length)
+    setCurrentIndex((c) => (c + 1) % heroImageKeys.length)
   }, [])
 
   useEffect(() => {
@@ -38,7 +26,7 @@ export function HeroSlider() {
 
   return (
     <div className="relative h-[600px] -mt-20 overflow-hidden">
-      {heroImages.map((image, index) => (
+      {heroImageKeys.map((image, index) => (
         <div
           key={image.url}
           className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
@@ -49,7 +37,7 @@ export function HeroSlider() {
         >
           <Image
             src={image.url}
-            alt={image.alt}
+            alt={t(`heroImages.${image.key}`)}
             fill
             sizes="100vw"
             className="object-cover"
@@ -70,7 +58,7 @@ export function HeroSlider() {
 
           {/* Image Indicators */}
           <div className="absolute bottom-32 flex space-x-2">
-            {heroImages.map((_, index) => (
+            {heroImageKeys.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}

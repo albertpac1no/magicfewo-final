@@ -1,0 +1,326 @@
+{
+  "relatedTopics": "Verwandte Themen",
+  "contactCta": "Kontakt aufnehmen",
+  "agb": {
+    "intro": "Diese AGB regeln die Geschäftsbeziehung zwischen Gesino Reisen und unseren Kunden. Bitte lesen Sie diese sorgfältig durch.",
+    "keyPoints": [
+      { "title": "Transparente Bedingungen", "text": "Klare und verständliche Regelungen für alle Leistungen." },
+      { "title": "Faire Konditionen", "text": "Ausgewogene Rechte und Pflichten für beide Seiten." },
+      { "title": "Rechtssicherheit", "text": "Alle Regelungen entsprechen den gesetzlichen Vorgaben." }
+    ],
+    "sections": [
+      { "title": "1. Geltungsbereich", "content": "Diese Allgemeinen Geschäftsbedingungen gelten für alle Geschäftsbeziehungen zwischen GeSino GmbH (nachfolgend \"Gesino Reisen\") und unseren Kunden. Maßgeblich ist jeweils die zum Zeitpunkt des Vertragsschlusses gültige Fassung." },
+      { "title": "2. Vertragsschluss", "content": "Der Vertrag kommt durch die Annahme der Buchung des Kunden durch Gesino Reisen zustande. Die Annahme erfolgt durch eine Buchungsbestätigung per E-Mail. Die bloße Bestätigung des Eingangs der Buchungsanfrage stellt noch keine Annahme dar." },
+      { "title": "3. Leistungen", "subsections": [
+        { "title": "3.1 Leistungsumfang", "content": "Der Umfang der vertraglichen Leistungen ergibt sich aus der Leistungsbeschreibung im Angebot und den Angaben in der Buchungsbestätigung." },
+        { "title": "3.2 Leistungsänderungen", "content": "Änderungen oder Abweichungen einzelner Reiseleistungen von dem vereinbarten Inhalt des Vertrages, die nach Vertragsschluss notwendig werden, sind nur gestattet, soweit sie nicht erheblich sind und den Gesamtzuschnitt der gebuchten Reise nicht beeinträchtigen." }
+      ]},
+      { "title": "4. Preise und Zahlung", "subsections": [
+        { "title": "4.1 Preise", "content": "Die angegebenen Preise sind Endpreise und enthalten die gesetzliche Mehrwertsteuer." },
+        { "title": "4.2 Zahlungsbedingungen", "content": "Bei Vertragsabschluss ist eine Anzahlung in Höhe von 20% des Reisepreises zu leisten. Die Restzahlung ist 30 Tage vor Reisebeginn fällig." }
+      ]},
+      { "title": "5. Rücktritt und Stornierung", "content": "Der Kunde kann jederzeit vor Reisebeginn von der Reise zurücktreten. Der Rücktritt ist gegenüber Gesino Reisen zu erklären. Maßgeblich ist der Zugang der Rücktrittserklärung. Im Falle des Rücktritts kann Gesino Reisen eine angemessene Entschädigung verlangen." },
+      { "title": "6. Haftung", "content": "Gesino Reisen haftet für die gewissenhafte Reisevorbereitung, die sorgfältige Auswahl und Überwachung der Leistungsträger und die ordnungsgemäße Erbringung der vertraglich vereinbarten Reiseleistungen." }
+    ],
+    "contactTitle": "Haben Sie Fragen zu unseren AGB?",
+    "contactText": "Unser Kundenservice-Team steht Ihnen für Rückfragen zur Verfügung. Kontaktieren Sie uns gerne bei Unklarheiten oder spezifischen Fragen.",
+    "related": {
+      "privacy": "Datenschutz",
+      "bookingProcess": "Buchungsprozess",
+      "faq": "FAQ"
+    },
+    "footnote": "Stand: März 2024 • GeSino GmbH"
+  },
+  "datenschutz": {
+    "intro": "Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Hier erfahren Sie, wie wir mit Ihren Daten umgehen.",
+    "keyPoints": [
+      { "title": "Sicherer Schutz", "text": "Ihre Daten werden nach höchsten Sicherheitsstandards geschützt." },
+      { "title": "SSL Verschlüsselung", "text": "Alle Daten werden verschlüsselt übertragen." },
+      { "title": "Transparenz", "text": "Volle Kontrolle über Ihre persönlichen Daten." },
+      { "title": "DSGVO konform", "text": "Entspricht allen Datenschutzrichtlinien." }
+    ],
+    "sections": [
+      { "title": "Datenschutzerklärung", "content": "Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten innerhalb unseres Onlineangebotes auf. Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. \"Verarbeitung\" oder \"Verantwortlicher\", verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO)." },
+      { "title": "Verantwortlicher", "content": "GeSino GmbH\nMart-Stam-Str. 59\n60438 Frankfurt am Main\nDeutschland\n\nE-Mail: datenschutz@gesino-reisen.com" },
+      { "title": "Arten der verarbeiteten Daten", "list": [
+        "Bestandsdaten (z.B. Namen, Adressen)",
+        "Kontaktdaten (z.B. E-Mail, Telefonnummern)",
+        "Inhaltsdaten (z.B. Texteingaben, Fotografien, Videos)",
+        "Nutzungsdaten (z.B. besuchte Webseiten, Interesse an Inhalten)",
+        "Meta-/Kommunikationsdaten (z.B. Geräte-Informationen, IP-Adressen)"
+      ]},
+      { "title": "Zweck der Verarbeitung", "list": [
+        "Zurverfügungstellung des Onlineangebotes, seiner Funktionen und Inhalte",
+        "Beantwortung von Kontaktanfragen und Kommunikation mit Nutzern",
+        "Sicherheitsmaßnahmen",
+        "Reichweitenmessung/Marketing"
+      ]},
+      { "title": "Cookies", "content": "Wir verwenden Cookies, um unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert. Die meisten der von uns verwendeten Cookies sind so genannte \"Session-Cookies\". Sie werden nach Ende Ihres Besuchs automatisch gelöscht." },
+      { "title": "Ihre Rechte", "list": [
+        "Recht auf Auskunft über die Sie betreffenden personenbezogenen Daten",
+        "Recht auf Berichtigung oder Löschung",
+        "Recht auf Einschränkung der Verarbeitung",
+        "Recht auf Widerspruch gegen die Verarbeitung",
+        "Recht auf Datenübertragbarkeit"
+      ]}
+    ],
+    "contactTitle": "Fragen zum Datenschutz?",
+    "contactText": "Unser Datenschutzbeauftragter steht Ihnen für alle Fragen zur Verfügung.",
+    "related": {
+      "terms": "AGB",
+      "faq": "FAQ",
+      "contact": "Kontakt"
+    }
+  },
+  "buchungsprozess": {
+    "intro": "Erfahren Sie, wie einfach es ist, Ihre nächste Reise mit Gesino Reisen zu buchen. Folgen Sie unserem übersichtlichen Buchungsprozess in nur wenigen Schritten.",
+    "steps": [
+      { "title": "Reiseziel auswählen", "description": "Wählen Sie aus unserer vielfältigen Auswahl an Reisezielen weltweit." },
+      { "title": "Verfügbarkeit prüfen", "description": "Geben Sie Ihre gewünschten Reisedaten ein und prüfen Sie die Verfügbarkeit." },
+      { "title": "Persönliche Daten", "description": "Füllen Sie das Buchungsformular mit Ihren persönlichen Daten aus." },
+      { "title": "Zahlungsabwicklung", "description": "Wählen Sie Ihre bevorzugte Zahlungsmethode und schließen Sie die Buchung ab." },
+      { "title": "Bestätigung", "description": "Erhalten Sie Ihre Buchungsbestätigung per E-Mail mit allen wichtigen Details." }
+    ],
+    "related": {
+      "properties": "Unterkünfte durchsuchen",
+      "paymentMethods": "Zahlungsmethoden",
+      "faq": "FAQ"
+    },
+    "contactTitle": "Haben Sie Fragen zum Buchungsprozess?",
+    "contactText": "Unser Kundenservice-Team steht Ihnen jederzeit zur Verfügung.",
+    "contactCta": "Kontaktieren Sie uns"
+  },
+  "zahlungsmethoden": {
+    "intro": "Wir bieten Ihnen verschiedene sichere Zahlungsmöglichkeiten für Ihre Buchung. Wählen Sie die für Sie passende Methode.",
+    "methods": [
+      { "title": "Kreditkarte", "description": "Visa, Mastercard, American Express", "benefits": ["Sofortige Bestätigung", "Sichere Zahlung", "Keine zusätzlichen Gebühren"] },
+      { "title": "Banküberweisung", "description": "Direkte Überweisung auf unser Bankkonto", "benefits": ["Keine Kreditkarte erforderlich", "Flexible Zahlungsfrist", "Für große Beträge geeignet"] },
+      { "title": "PayPal", "description": "Schnell und sicher mit PayPal bezahlen", "benefits": ["Käuferschutz", "Schnelle Abwicklung", "Weltweite Akzeptanz"] }
+    ],
+    "related": {
+      "bookingProcess": "Buchungsprozess",
+      "faq": "FAQ"
+    },
+    "securityTitle": "Sicherheit hat höchste Priorität",
+    "securityText": "Alle Zahlungen werden über sichere SSL-verschlüsselte Verbindungen abgewickelt. Ihre Daten sind bei uns sicher."
+  },
+  "reiseversicherung": {
+    "intro": "Sichern Sie Ihre Reise optimal ab. Mit unseren Versicherungspaketen reisen Sie sorgenfrei und sind bestens geschützt.",
+    "recommended": "Empfohlen",
+    "perTrip": "/ Reise",
+    "cta": "Jetzt abschließen",
+    "advantagesTitle": "Ihre Vorteile",
+    "packages": [
+      { "title": "Basis-Schutz", "price": "29", "description": "Grundlegende Absicherung für Ihre Reise", "coverage": ["Reiserücktrittsversicherung", "Reiseabbruchversicherung", "Reisegepäckversicherung", "24h Notfall-Service"] },
+      { "title": "Premium-Schutz", "price": "49", "description": "Umfassender Schutz für sorgenfreies Reisen", "coverage": ["Alle Leistungen des Basis-Schutzes", "Auslands-Krankenversicherung", "Such-, Rettungs- und Bergungskosten", "Verspätungsschutz", "Corona-Schutz"] },
+      { "title": "Business-Schutz", "price": "79", "description": "Speziell für Geschäftsreisende", "coverage": ["Alle Leistungen des Premium-Schutzes", "Elektronik-Versicherung", "Geschäftspapiere-Versicherung", "Ersatzgeschäftsreise", "Geschäftsausfall-Versicherung"] }
+    ],
+    "benefits": [
+      { "title": "Umfassender Schutz", "description": "Weltweite Absicherung für alle Reisearten" },
+      { "title": "Gesundheitsschutz", "description": "Medizinische Versorgung weltweit" },
+      { "title": "Weltweite Gültigkeit", "description": "Versicherungsschutz in allen Ländern" },
+      { "title": "24/7 Notfall-Service", "description": "Rund um die Uhr für Sie erreichbar" }
+    ],
+    "faqTitle": "Häufig gestellte Fragen",
+    "faqItems": [
+      { "question": "Wann sollte ich eine Reiseversicherung abschließen?", "answer": "Am besten direkt bei der Buchung Ihrer Reise, da der Versicherungsschutz sofort beginnt und Sie bei Stornierungen abgesichert sind." },
+      { "question": "Welche Reisearten sind versichert?", "answer": "Unsere Versicherungen decken alle Reisearten ab: Pauschalreisen, Individual-reisen, Geschäftsreisen und mehr." },
+      { "question": "Wo gilt der Versicherungsschutz?", "answer": "Der Versicherungsschutz gilt weltweit in allen Ländern, ausgenommen sind nur Gebiete, für die eine Reisewarnung besteht." },
+      { "question": "Was ist bei Corona-Erkrankung?", "answer": "Unsere Premium- und Business-Pakete beinhalten einen umfassenden Corona-Schutz für Stornierung und medizinische Versorgung." }
+    ],
+    "related": {
+      "travelPackages": "Reisepakete",
+      "faq": "FAQ"
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Finden Sie schnell Antworten auf Ihre Fragen. Falls Sie weitere Unterstützung benötigen, kontaktieren Sie uns gerne.",
+    "searchPlaceholder": "Suchen Sie nach Fragen...",
+    "noAnswerTitle": "Keine Antwort gefunden?",
+    "noAnswerText": "Unser Kundenservice-Team steht Ihnen für weitere Fragen zur Verfügung.",
+    "contactCta": "Kontakt aufnehmen",
+    "categories": [
+      {
+        "category": "Buchung",
+        "questions": [
+          { "q": "Wie kann ich eine Reise buchen?", "a": "Sie können Ihre Reise einfach online über unsere Website buchen. Wählen Sie Ihr gewünschtes Reiseziel, prüfen Sie die Verfügbarkeit und folgen Sie dem Buchungsprozess." },
+          { "q": "Kann ich meine Buchung stornieren?", "a": "Ja, Buchungen können unter Berücksichtigung unserer Stornierungsbedingungen storniert werden. Die genauen Bedingungen finden Sie in Ihren Buchungsunterlagen." }
+        ]
+      },
+      {
+        "category": "Zahlung",
+        "questions": [
+          { "q": "Welche Zahlungsmethoden werden akzeptiert?", "a": "Wir akzeptieren Kreditkarten (Visa, Mastercard, American Express), PayPal und Banküberweisung." },
+          { "q": "Wann muss ich die Reise bezahlen?", "a": "Bei Buchung ist eine Anzahlung von 20% des Reisepreises fällig. Der Restbetrag muss spätestens 30 Tage vor Reiseantritt bezahlt werden." }
+        ]
+      },
+      {
+        "category": "Reisedetails",
+        "questions": [
+          { "q": "Was ist im Reisepreis enthalten?", "a": "Der genaue Leistungsumfang variiert je nach Angebot und ist in der jeweiligen Reisebeschreibung aufgeführt. Grundsätzlich sind Unterkunft und aufgeführte Aktivitäten inklusive." },
+          { "q": "Brauche ich eine Reiseversicherung?", "a": "Wir empfehlen den Abschluss einer Reiseversicherung. Diese kann optional bei der Buchung hinzugefügt werden." }
+        ]
+      }
+    ],
+    "related": {
+      "bookingProcess": "Buchungsprozess",
+      "paymentMethods": "Zahlungsmethoden",
+      "travelInsurance": "Reiseversicherung",
+      "terms": "AGB"
+    }
+  },
+  "flugbuchung": {
+    "intro": "Finden Sie die besten Flugverbindungen zu Ihrem Reiseziel. Wir bieten eine große Auswahl an Flügen von renommierten Airlines.",
+    "search": {
+      "from": "Von",
+      "fromPlaceholder": "Abflughafen",
+      "to": "Nach",
+      "toPlaceholder": "Zielflughafen",
+      "outbound": "Hinflug",
+      "return": "Rückflug",
+      "passengers": "Passagiere",
+      "passengersOptions": ["1 Erwachsener", "2 Erwachsene", "2 Erwachsene, 1 Kind", "2 Erwachsene, 2 Kinder"],
+      "searchBtn": "Flüge suchen"
+    },
+    "flightNumber": "Flugnummer",
+    "seatsAvailable": "{count} Plätze verfügbar",
+    "departure": "Abflug",
+    "arrival": "Ankunft",
+    "direct": "Direktflug",
+    "stops": "{count} Stopp",
+    "stopsPlural": "{count} Stopps",
+    "pricePerPerson": "Preis pro Person",
+    "bookNow": "Jetzt buchen",
+    "benefits": [
+      { "title": "Große Auswahl", "text": "Flüge von allen namhaften Airlines zu den besten Preisen." },
+      { "title": "Flexible Buchung", "text": "Kostenlose Umbuchung und Stornierung bei vielen Tarifen." },
+      { "title": "24/7 Service", "text": "Persönliche Unterstützung rund um die Uhr." }
+    ],
+    "related": {
+      "travelPackages": "Reisepakete",
+      "travelInsurance": "Reiseversicherung"
+    }
+  },
+  "hotelbuchung": {
+    "intro": "Finden Sie Ihr perfektes Hotel für einen unvergesslichen Aufenthalt. Wir bieten eine große Auswahl an handverlesenen Hotels für jeden Geschmack.",
+    "search": {
+      "destination": "Reiseziel",
+      "destinationPlaceholder": "Stadt oder Region",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "guests": "Gäste",
+      "guestsOptions": ["2 Erwachsene", "1 Erwachsener", "2 Erwachsene, 1 Kind", "2 Erwachsene, 2 Kinder"],
+      "searchBtn": "Hotels suchen"
+    },
+    "priceFrom": "Preis pro Nacht ab",
+    "bookRoom": "Zimmer auswählen",
+    "related": {
+      "properties": "Alle Unterkünfte",
+      "offers": "Angebote"
+    },
+    "benefits": [
+      { "title": "Beste Auswahl", "text": "Handverlesene Hotels für höchste Qualität und Komfort." },
+      { "title": "Persönlicher Service", "text": "Individuelle Beratung und Unterstützung bei der Buchung." },
+      { "title": "Top Locations", "text": "Hotels an den besten Standorten für Ihren perfekten Aufenthalt." }
+    ]
+  },
+  "reisepakete": {
+    "intro": "Entdecken Sie unsere sorgfältig zusammengestellten Reisepakete für unvergessliche Erlebnisse. Jedes Paket wurde von unseren Experten kuratiert.",
+    "bestseller": "Bestseller",
+    "persons": "Personen",
+    "reviews": "Bewertungen",
+    "highlights": "Highlights:",
+    "from": "ab",
+    "perPerson": "pro Person",
+    "bookNow": "Jetzt buchen",
+    "related": {
+      "properties": "Alle Unterkünfte",
+      "offers": "Angebote"
+    }
+  },
+  "bewertungen": {
+    "intro": "Erfahren Sie, was unsere Kunden über ihre Reisen mit Gesino Reisen berichten. Authentische Bewertungen helfen Ihnen bei Ihrer Entscheidung.",
+    "helpful": "{count} fanden dies hilfreich",
+    "comment": "Kommentieren",
+    "shareTitle": "Teilen Sie Ihre Erfahrungen",
+    "shareText": "Waren Sie mit Gesino Reisen auf Reisen? Wir freuen uns über Ihr Feedback!",
+    "writeCta": "Bewertung schreiben",
+    "related": {
+      "properties": "Unterkünfte",
+      "bookingProcess": "Buchungsprozess",
+      "faq": "FAQ"
+    }
+  },
+  "reiseziele": {
+    "popularDestinations": "Beliebte Reiseziele",
+    "europaAlt": "Europa – Reiseziele entdecken",
+    "asienAlt": "Asien – Reiseziele entdecken",
+    "amerikaAlt": "Amerika – Reiseziele entdecken",
+    "afrikaAlt": "Afrika – Reiseziele entdecken",
+    "europa": {
+      "destinations": [
+        { "id": 1, "image": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a", "title": "Paris", "country": "Frankreich", "description": "Entdecken Sie die Stadt der Liebe mit ihrem weltberühmten Eiffelturm und der einzigartigen Atmosphäre.", "rating": 4.8, "price": "599", "duration": "4 Tage" },
+        { "id": 2, "image": "https://images.unsplash.com/photo-1520175480921-4edfa2983e0f", "title": "Rom", "country": "Italien", "description": "Tauchen Sie ein in die Geschichte der ewigen Stadt mit ihren antiken Ruinen und dem Vatikan.", "rating": 4.7, "price": "549", "duration": "5 Tage" },
+        { "id": 3, "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad", "title": "London", "country": "England", "description": "Erleben Sie die britische Hauptstadt mit ihrer reichen Kultur und modernen Atmosphäre.", "rating": 4.6, "price": "629", "duration": "4 Tage" },
+        { "id": 4, "image": "https://images.unsplash.com/photo-1542820229-081e0c12af0b", "title": "Barcelona", "country": "Spanien", "description": "Genießen Sie die katalanische Kultur, Gaudís Architektur und mediterranes Flair.", "rating": 4.7, "price": "579", "duration": "5 Tage" }
+      ]
+    },
+    "asien": {
+      "destinations": [
+        { "id": 1, "image": "https://images.unsplash.com/photo-1528164344705-47542687000d", "title": "Tokyo", "country": "Japan", "description": "Erleben Sie die perfekte Mischung aus Tradition und Moderne in der pulsierenden Metropole Japans.", "rating": 4.9, "price": "899", "duration": "7 Tage" },
+        { "id": 2, "image": "https://images.unsplash.com/photo-1549893072-8b3c7c5b9b05", "title": "Bangkok", "country": "Thailand", "description": "Tauchen Sie ein in die lebendige Kultur Thailands mit seinen Tempeln und der weltberühmten Küche.", "rating": 4.7, "price": "649", "duration": "6 Tage" },
+        { "id": 3, "image": "https://images.unsplash.com/photo-1536599424071-0b215a388ba7", "title": "Bali", "country": "Indonesien", "description": "Entspannen Sie auf der Insel der Götter mit ihren traumhaften Stränden und der spirituellen Atmosphäre.", "rating": 4.8, "price": "749", "duration": "8 Tage" },
+        { "id": 4, "image": "https://images.unsplash.com/photo-1547150492-da7ff1742941", "title": "Seoul", "country": "Südkorea", "description": "Entdecken Sie die dynamische Hauptstadt Südkoreas mit ihrer K-Pop Kultur und historischen Palästen.", "rating": 4.6, "price": "829", "duration": "6 Tage" }
+      ]
+    },
+    "afrika": {
+      "destinations": [
+        { "id": 1, "image": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5", "title": "Kapstadt", "country": "Südafrika", "description": "Erleben Sie die Schönheit des Tafelbergs und die pulsierende Kultur der Regenbogennation.", "rating": 4.8, "price": "899", "duration": "8 Tage" },
+        { "id": 2, "image": "https://images.unsplash.com/photo-1489392191049-fc10c97e64b6", "title": "Marrakesch", "country": "Marokko", "description": "Tauchen Sie ein in die farbenfrohe Welt der Medina und erleben Sie orientalisches Flair.", "rating": 4.7, "price": "749", "duration": "6 Tage" },
+        { "id": 3, "image": "https://images.unsplash.com/photo-1527661591475-527312dd65f5", "title": "Sansibar", "country": "Tansania", "description": "Entspannen Sie an traumhaften Stränden und erkunden Sie die historische Stone Town.", "rating": 4.9, "price": "829", "duration": "7 Tage" },
+        { "id": 4, "image": "https://images.unsplash.com/photo-1523805009345-7448845a9e53", "title": "Viktoriafälle", "country": "Simbabwe", "description": "Bestaunen Sie eines der größten Naturwunder der Welt in seiner ganzen Pracht.", "rating": 4.8, "price": "949", "duration": "6 Tage" }
+      ]
+    },
+    "amerika": {
+      "destinations": [
+        { "id": 1, "image": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9", "title": "New York", "country": "USA", "description": "Erleben Sie den American Dream in der Stadt, die niemals schläft, mit ihrer ikonischen Skyline.", "rating": 4.8, "price": "999", "duration": "7 Tage" },
+        { "id": 2, "image": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325", "title": "Rio de Janeiro", "country": "Brasilien", "description": "Genießen Sie die brasilianische Lebensfreude zwischen Copacabana und Zuckerhut.", "rating": 4.7, "price": "849", "duration": "8 Tage" },
+        { "id": 3, "image": "https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f", "title": "Vancouver", "country": "Kanada", "description": "Entdecken Sie die perfekte Harmonie zwischen Stadt und Natur an der kanadischen Westküste.", "rating": 4.6, "price": "929", "duration": "6 Tage" },
+        { "id": 4, "image": "https://images.unsplash.com/photo-1512813195386-6cf811ad3542", "title": "Cancún", "country": "Mexiko", "description": "Entspannen Sie an traumhaften Karibikstränden und erkunden Sie Maya-Ruinen.", "rating": 4.7, "price": "799", "duration": "7 Tage" }
+      ]
+    }
+  },
+  "about": {
+    "stats": [
+      { "label": "Zufriedene Kunden", "value": "50.000+" },
+      { "label": "Jahre Erfahrung", "value": "15+" },
+      { "label": "Reiseziele", "value": "100+" }
+    ],
+    "team": [
+      { "name": "Anna Schmidt", "position": "CEO & Gründerin", "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330", "description": "Mit über 20 Jahren Erfahrung in der Reisebranche leitet Anna unser Unternehmen mit Leidenschaft und Vision." },
+      { "name": "Michael Weber", "position": "Reiseberater", "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e", "description": "Michael ist unser Experte für außergewöhnliche Reiseerlebnisse und maßgeschneiderte Urlaubsplanung." },
+      { "name": "Laura Müller", "position": "Kundenservice", "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80", "description": "Laura sorgt dafür, dass unsere Kunden rundum betreut werden und ihre Reise reibungslos verläuft." }
+    ],
+    "heroAlt": "Das Gesino Reisen Team – Ihr Reisebüro in Frankfurt",
+    "breadcrumb": "Über uns",
+    "registration": "Handelsregister",
+    "vatId": "USt-IdNr.",
+    "taxId": "Steuernummer"
+  },
+  "contact": {
+    "heroAlt": "Gesino Reisen Kundenservice – Kontaktieren Sie unser Team",
+    "breadcrumb": "Kontakt",
+    "firstNamePlaceholder": "Max",
+    "lastNamePlaceholder": "Mustermann",
+    "emailPlaceholder": "max@beispiel.de",
+    "hours": ["Mo-Fr: 9:00 - 18:00", "Sa: 10:00 - 14:00"],
+    "registration": "Handelsregister",
+    "vatId": "USt-IdNr.",
+    "taxId": "Steuernummer"
+  },
+  "offers": {
+    "heroAlt": "Aktuelle Sonderangebote und Reiseangebote bei Gesino Reisen",
+    "breadcrumb": "Angebote"
+  }
+}

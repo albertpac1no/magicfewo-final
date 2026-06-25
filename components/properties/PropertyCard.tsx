@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { MapPin, Bed, Bath, Users, Star } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 import type { Property } from '@/lib/types'
 
 const FALLBACK_IMAGE = '/images/hero-apartment-interior.jpg'
@@ -9,7 +10,8 @@ interface PropertyCardProps {
   property: Property
 }
 
-export function PropertyCard({ property }: PropertyCardProps) {
+export async function PropertyCard({ property }: PropertyCardProps) {
+  const t = await getTranslations('properties')
   const imageUrl = property.images?.[0] || FALLBACK_IMAGE
 
   return (
@@ -21,7 +23,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
       <div className="relative h-56 overflow-hidden">
         <Image
           src={imageUrl}
-          alt={`${property.title} – Ferienwohnung in ${property.location}`}
+          alt={t('propertyAlt', { title: property.title, location: property.location })}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -32,7 +34,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
         {property.is_special_offer && property.special_offer_price && (
           <div className="absolute top-3 left-3">
             <span className="bg-primary text-white text-[11px] font-bold px-3 py-1.5 rounded-lg shadow-lg shadow-primary/30 uppercase tracking-wide">
-              Angebot
+              {t('specialOfferBadge')}
             </span>
           </div>
         )}
@@ -94,10 +96,10 @@ export function PropertyCard({ property }: PropertyCardProps) {
                 {property.price_per_night} €
               </span>
             )}
-            <span className="text-[11px] text-gray-400 block mt-0.5">pro Nacht</span>
+            <span className="text-[11px] text-gray-400 block mt-0.5">{t('perNightLabel')}</span>
           </div>
           <span className="text-xs font-semibold text-primary bg-primary/5 border border-primary/20 px-3.5 py-2 rounded-lg group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-200">
-            Ansehen
+            {t('viewProperty')}
           </span>
         </div>
       </div>

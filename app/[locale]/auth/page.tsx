@@ -224,14 +224,14 @@ function AuthContent() {
 
           <div className="mt-8 space-y-4 text-sm text-gray-500">
             <p>
-              Mit der Anmeldung akzeptieren Sie unsere{' '}
-              <Link href="/agb" className="text-[var(--color-primary)] hover:opacity-80">
-                AGB
-              </Link>{' '}
-              und{' '}
-              <Link href="/datenschutz" className="text-[var(--color-primary)] hover:opacity-80">
-                Datenschutzerklärung
-              </Link>
+              {t.rich('termsNotice', {
+                termsLink: (chunks) => (
+                  <Link href="/agb" className="text-[var(--color-primary)] hover:opacity-80">{chunks}</Link>
+                ),
+                privacyLink: (chunks) => (
+                  <Link href="/datenschutz" className="text-[var(--color-primary)] hover:opacity-80">{chunks}</Link>
+                ),
+              })}
             </p>
             <p>
               {t('needHelp')}{' '}
@@ -248,7 +248,7 @@ function AuthContent() {
         <Image
           className="absolute inset-0 h-full w-full object-cover"
           src="/images/auth-vacation-entrance.jpg"
-          alt="Willkommen bei Ihrer Traumunterkunft"
+          alt={t('imageAlt')}
           fill
           sizes="50vw"
           priority

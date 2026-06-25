@@ -11,11 +11,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     getTranslations({ locale, namespace: 'footer' }),
     getTranslations({ locale, namespace: 'meta' }),
   ])
-  const title = `${t('pages.hotelbuchung')} | MagicFewo`
+  const title = `${t('pages.hotelbuchung')} | Gesino Reisen`
   const description = tm('footer.hotelbuchung.description')
   return { title, description, openGraph: { title, description, url: '/hotelbuchung' } }
 }
 
+// Demo data intentionally kept in German as per scope decision
 const hotels = [
   {
     id: 1,
@@ -52,45 +53,49 @@ const hotels = [
   },
 ]
 
+const BENEFIT_ICONS = [Star, Users, MapPin]
+
 export default async function HotelbuchungPage() {
-  const t = await getTranslations('footer')
+  const [tF, tP] = await Promise.all([
+    getTranslations('footer'),
+    getTranslations('pages'),
+  ])
+
+  type Benefit = { title: string; text: string }
+  const benefits = tP.raw('hotelbuchung.benefits') as Benefit[]
+  const guestsOptions = tP.raw('hotelbuchung.search.guestsOptions') as string[]
+
   return (
     <div className="py-16">
       <div className="container mx-auto px-4">
-        <Breadcrumbs items={[{ label: 'Hotelbuchung', href: '/hotelbuchung' }]} />
-        <h1 className="text-4xl font-bold text-secondary mb-4">{t('pages.hotelbuchung')}</h1>
-        <p className="text-gray-custom mb-12 max-w-2xl">
-          Finden Sie Ihr perfektes Hotel für einen unvergesslichen Aufenthalt.
-          Wir bieten eine große Auswahl an handverlesenen Hotels für jeden Geschmack.
-        </p>
+        <Breadcrumbs items={[{ label: tF('pages.hotelbuchung'), href: '/hotelbuchung' }]} />
+        <h1 className="text-4xl font-bold text-secondary mb-4">{tF('pages.hotelbuchung')}</h1>
+        <p className="text-gray-custom mb-12 max-w-2xl">{tP('hotelbuchung.intro')}</p>
 
         {/* Search Section */}
         <div className="bg-white rounded-2xl shadow-lg p-6 mb-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Reiseziel</label>
-              <input type="text" placeholder="Stadt oder Region" className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" />
+              <label className="block text-sm font-medium text-gray-700 mb-2">{tP('hotelbuchung.search.destination')}</label>
+              <input type="text" placeholder={tP('hotelbuchung.search.destinationPlaceholder')} className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Check-in</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">{tP('hotelbuchung.search.checkIn')}</label>
               <input type="date" className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Check-out</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">{tP('hotelbuchung.search.checkOut')}</label>
               <input type="date" className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Gäste</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">{tP('hotelbuchung.search.guests')}</label>
               <select className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
-                <option>2 Erwachsene</option>
-                <option>1 Erwachsener</option>
-                <option>2 Erwachsene, 1 Kind</option>
-                <option>2 Erwachsene, 2 Kinder</option>
+                {guestsOptions.map((opt) => <option key={opt}>{opt}</option>)}
               </select>
             </div>
           </div>
           <div className="mt-6 flex justify-center">
-            <button className="btn-primary px-8">Hotels suchen</button>
+            <button className="btn-primary px-8">{tP('hotelbuchung.search.searchBtn')}</button>
           </div>
         </div>
 
@@ -127,10 +132,10 @@ export default async function HotelbuchungPage() {
                   </div>
                   <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                     <div>
-                      <div className="text-gray-500 text-sm">Preis pro Nacht ab</div>
+                      <div className="text-gray-500 text-sm">{tP('hotelbuchung.priceFrom')}</div>
                       <div className="text-primary font-bold text-2xl">{hotel.price} €</div>
                     </div>
-                    <button className="btn-primary">Zimmer auswählen</button>
+                    <button className="btn-primary">{tP('hotelbuchung.bookRoom')}</button>
                   </div>
                 </div>
               </div>
@@ -139,29 +144,28 @@ export default async function HotelbuchungPage() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-200">
-          <h2 className="text-lg font-semibold text-secondary mb-4">Verwandte Themen</h2>
+          <h2 className="text-lg font-semibold text-secondary mb-4">{tP('relatedTopics')}</h2>
           <div className="flex flex-wrap gap-3">
-            <Link href="/properties" className="text-sm text-primary hover:underline">Alle Unterkünfte</Link>
+            <Link href="/properties" className="text-sm text-primary hover:underline">{tP('hotelbuchung.related.properties')}</Link>
             <span className="text-gray-300">|</span>
-            <Link href="/angebote" className="text-sm text-primary hover:underline">Angebote</Link>
+            <Link href="/angebote" className="text-sm text-primary hover:underline">{tP('hotelbuchung.related.offers')}</Link>
           </div>
         </div>
 
         {/* Benefits Section */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            { icon: Star, title: 'Beste Auswahl', text: 'Handverlesene Hotels für höchste Qualität und Komfort.' },
-            { icon: Users, title: 'Persönlicher Service', text: 'Individuelle Beratung und Unterstützung bei der Buchung.' },
-            { icon: MapPin, title: 'Top Locations', text: 'Hotels an den besten Standorten für Ihren perfekten Aufenthalt.' },
-          ].map((item, idx) => (
-            <div key={idx} className="bg-white p-6 rounded-2xl shadow-lg text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <item.icon className="w-6 h-6 text-primary" />
+          {benefits.map((item, idx) => {
+            const Icon = BENEFIT_ICONS[idx]
+            return (
+              <div key={idx} className="bg-white p-6 rounded-2xl shadow-lg text-center">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-secondary mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.text}</p>
               </div>
-              <h3 className="font-semibold text-secondary mb-2">{item.title}</h3>
-              <p className="text-gray-600 text-sm">{item.text}</p>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </div>

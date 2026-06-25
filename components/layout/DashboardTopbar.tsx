@@ -27,6 +27,7 @@ const PAGE_TITLES: Record<string, string> = {
 export function DashboardTopbar({ profile, email, isAdmin, onMenuClick }: DashboardTopbarProps) {
   const t = useTranslations('nav')
   const tDash = useTranslations('dashboard')
+  const tC = useTranslations('common')
   const pathname = usePathname()
   const router = useRouter()
   const [userMenuOpen, setUserMenuOpen] = useState(false)
@@ -60,7 +61,7 @@ export function DashboardTopbar({ profile, email, isAdmin, onMenuClick }: Dashbo
           <button
             onClick={onMenuClick}
             className="lg:hidden p-2 -ml-1 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition-colors"
-            aria-label="Open navigation"
+            aria-label={tC('openNavigation')}
           >
             <Menu className="w-5 h-5" />
           </button>
@@ -86,7 +87,7 @@ export function DashboardTopbar({ profile, email, isAdmin, onMenuClick }: Dashbo
                 {profile?.avatar_url ? (
                   <Image
                     src={profile.avatar_url}
-                    alt={profile.full_name ?? 'Avatar'}
+                    alt={profile.full_name ?? tDash('avatarAlt')}
                     width={32}
                     height={32}
                     className="w-full h-full object-cover"

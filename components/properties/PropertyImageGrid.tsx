@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 const FALLBACK_IMAGE = '/images/hero-apartment-interior.jpg'
 
@@ -64,9 +65,6 @@ function getRepresentativeImages(sorted: ProcessedImage[]): ProcessedImage[] {
   return gridImages
 }
 
-/* ------------------------------------------------------------------ */
-/* Lightbox Modal                                                      */
-/* ------------------------------------------------------------------ */
 function ImageGalleryModal({
   images,
   title,
@@ -78,6 +76,7 @@ function ImageGalleryModal({
   startIndex: number
   onClose: () => void
 }) {
+  const t = useTranslations('properties')
   const [currentIndex, setCurrentIndex] = useState(startIndex)
   const [fadeIn, setFadeIn] = useState(true)
 
@@ -129,7 +128,7 @@ function ImageGalleryModal({
         <button
           onClick={onClose}
           className="p-2 rounded-full hover:bg-white/10 transition-colors"
-          aria-label="Galerie schließen"
+          aria-label={t('closeGallery')}
         >
           <X className="w-6 h-6" />
         </button>
@@ -145,7 +144,7 @@ function ImageGalleryModal({
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={current.url}
-            alt={`${title} - ${current.category || 'Bild'}`}
+            alt={`${title} - ${current.category || t('imageFallback')}`}
             className="max-h-full max-w-full object-contain mx-auto"
           />
         </div>
@@ -155,14 +154,14 @@ function ImageGalleryModal({
             <button
               onClick={() => navigate('prev')}
               className="absolute left-4 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
-              aria-label="Vorheriges Bild"
+              aria-label={t('prevImage')}
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={() => navigate('next')}
               className="absolute right-4 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
-              aria-label="Nächstes Bild"
+              aria-label={t('nextImage')}
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -187,17 +186,15 @@ function ImageGalleryModal({
   )
 }
 
-/* ------------------------------------------------------------------ */
-/* Main Grid Component                                                 */
-/* ------------------------------------------------------------------ */
 export function PropertyImageGrid({ images, title }: PropertyImageGridProps) {
+  const t = useTranslations('properties')
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [startImageIndex, setStartImageIndex] = useState(0)
 
   if (!images || images.length === 0) {
     return (
       <div className="relative mb-12 h-[400px] bg-gray-100 rounded-2xl flex items-center justify-center">
-        <p className="text-gray-500">Keine Bilder verfügbar</p>
+        <p className="text-gray-500">{t('noImages')}</p>
       </div>
     )
   }
@@ -222,7 +219,7 @@ export function PropertyImageGrid({ images, title }: PropertyImageGridProps) {
           >
             <Image
               src={gridImages[0].url || FALLBACK_IMAGE}
-              alt={`${title} - ${gridImages[0].category || 'Hauptbild'}`}
+              alt={`${title} - ${gridImages[0].category || t('mainImage')}`}
               fill
               sizes="(max-width: 768px) 100vw, 66vw"
               className="object-cover"
@@ -245,7 +242,7 @@ export function PropertyImageGrid({ images, title }: PropertyImageGridProps) {
           >
             <Image
               src={image.url || FALLBACK_IMAGE}
-              alt={`${title} - ${image.category || `Bild ${idx + 2}`}`}
+              alt={`${title} - ${image.category || t('imageFallback')}`}
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover"
@@ -267,7 +264,7 @@ export function PropertyImageGrid({ images, title }: PropertyImageGridProps) {
           >
             <Image
               src={image.url || FALLBACK_IMAGE}
-              alt={`${title} - ${image.category || `Bild ${idx + 4}`}`}
+              alt={`${title} - ${image.category || t('imageFallback')}`}
               fill
               sizes="33vw"
               className="object-cover"
@@ -294,7 +291,7 @@ export function PropertyImageGrid({ images, title }: PropertyImageGridProps) {
           <circle cx="8.5" cy="8.5" r="1.5" />
           <polyline points="21 15 16 10 5 21" />
         </svg>
-        Alle Fotos anzeigen
+        {t('showAllPhotos')}
       </button>
 
       {/* Modal Gallery */}

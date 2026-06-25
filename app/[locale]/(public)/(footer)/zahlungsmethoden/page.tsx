@@ -10,80 +10,65 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     getTranslations({ locale, namespace: 'footer' }),
     getTranslations({ locale, namespace: 'meta' }),
   ])
-  const title = `${t('pages.zahlungsmethoden')} | MagicFewo`
+  const title = `${t('pages.zahlungsmethoden')} | Gesino Reisen`
   const description = tm('footer.zahlungsmethoden.description')
   return { title, description, openGraph: { title, description, url: '/zahlungsmethoden' } }
 }
 
-const paymentMethods = [
-  {
-    icon: CreditCard,
-    title: 'Kreditkarte',
-    description: 'Visa, Mastercard, American Express',
-    benefits: ['Sofortige Bestätigung', 'Sichere Zahlung', 'Keine zusätzlichen Gebühren'],
-  },
-  {
-    icon: Building2,
-    title: 'Banküberweisung',
-    description: 'Direkte Überweisung auf unser Bankkonto',
-    benefits: ['Keine Kreditkarte erforderlich', 'Flexible Zahlungsfrist', 'Für große Beträge geeignet'],
-  },
-  {
-    icon: Wallet,
-    title: 'PayPal',
-    description: 'Schnell und sicher mit PayPal bezahlen',
-    benefits: ['Käuferschutz', 'Schnelle Abwicklung', 'Weltweite Akzeptanz'],
-  },
-]
+const METHOD_ICONS = [CreditCard, Building2, Wallet]
 
 export default async function ZahlungsmethodenPage() {
-  const t = await getTranslations('footer')
+  const [tF, tP] = await Promise.all([
+    getTranslations('footer'),
+    getTranslations('pages'),
+  ])
+
+  type Method = { title: string; description: string; benefits: string[] }
+  const methods = tP.raw('zahlungsmethoden.methods') as Method[]
+
   return (
     <div className="py-16">
       <div className="container mx-auto px-4">
-        <Breadcrumbs items={[{ label: 'Zahlungsmethoden', href: '/zahlungsmethoden' }]} />
-        <h1 className="text-4xl font-bold text-secondary mb-4">{t('pages.zahlungsmethoden')}</h1>
-        <p className="text-gray-custom mb-12 max-w-2xl">
-          Wir bieten Ihnen verschiedene sichere Zahlungsmöglichkeiten für Ihre Buchung.
-          Wählen Sie die für Sie passende Methode.
-        </p>
+        <Breadcrumbs items={[{ label: tF('pages.zahlungsmethoden'), href: '/zahlungsmethoden' }]} />
+        <h1 className="text-4xl font-bold text-secondary mb-4">{tF('pages.zahlungsmethoden')}</h1>
+        <p className="text-gray-custom mb-12 max-w-2xl">{tP('zahlungsmethoden.intro')}</p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {paymentMethods.map((method, index) => (
-            <div key={index} className="bg-white p-6 rounded-2xl shadow-lg">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <method.icon className="w-6 h-6 text-primary" />
+          {methods.map((method, index) => {
+            const Icon = METHOD_ICONS[index]
+            return (
+              <div key={index} className="bg-white p-6 rounded-2xl shadow-lg">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                  <Icon className="w-6 h-6 text-primary" />
+                </div>
+                <h2 className="text-xl font-semibold text-secondary mb-2">{method.title}</h2>
+                <p className="text-gray-custom mb-4">{method.description}</p>
+                <ul className="space-y-2">
+                  {method.benefits.map((benefit, i) => (
+                    <li key={i} className="flex items-center text-sm text-gray-custom">
+                      <ShieldCheck className="w-4 h-4 text-primary mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h2 className="text-xl font-semibold text-secondary mb-2">{method.title}</h2>
-              <p className="text-gray-custom mb-4">{method.description}</p>
-              <ul className="space-y-2">
-                {method.benefits.map((benefit, i) => (
-                  <li key={i} className="flex items-center text-sm text-gray-custom">
-                    <ShieldCheck className="w-4 h-4 text-primary mr-2" />
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-200">
-          <h2 className="text-lg font-semibold text-secondary mb-4">Verwandte Themen</h2>
+          <h2 className="text-lg font-semibold text-secondary mb-4">{tP('relatedTopics')}</h2>
           <div className="flex flex-wrap gap-3">
-            <Link href="/buchungsprozess" className="text-sm text-primary hover:underline">Buchungsprozess</Link>
+            <Link href="/buchungsprozess" className="text-sm text-primary hover:underline">{tP('zahlungsmethoden.related.bookingProcess')}</Link>
             <span className="text-gray-300">|</span>
-            <Link href="/faq" className="text-sm text-primary hover:underline">FAQ</Link>
+            <Link href="/faq" className="text-sm text-primary hover:underline">{tP('zahlungsmethoden.related.faq')}</Link>
           </div>
         </div>
 
         <div className="mt-12 bg-primary/5 rounded-2xl p-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-secondary mb-4">Sicherheit hat höchste Priorität</h2>
-            <p className="text-gray-custom mb-6">
-              Alle Zahlungen werden über sichere SSL-verschlüsselte Verbindungen abgewickelt.
-              Ihre Daten sind bei uns sicher.
-            </p>
+            <h2 className="text-2xl font-bold text-secondary mb-4">{tP('zahlungsmethoden.securityTitle')}</h2>
+            <p className="text-gray-custom mb-6">{tP('zahlungsmethoden.securityText')}</p>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { z } from 'zod'
 import { createSupabaseServer } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
 import { differenceInDays } from 'date-fns'
+import { getTranslations } from 'next-intl/server'
 
 const BookingSchema = z.object({
   property_id: z.string().uuid(),
@@ -17,12 +18,13 @@ const BookingSchema = z.object({
 })
 
 export async function createBooking(formData: FormData) {
+  const t = await getTranslations('booking')
   const supabase = await createSupabaseServer()
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) return { error: 'Nicht angemeldet' }
+  if (!user) return { error: t('errors.notLoggedIn') }
 
   const parsed = BookingSchema.safeParse(Object.fromEntries(formData))
-  if (!parsed.success) return { error: 'Ungültige Eingabe', issues: parsed.error.issues }
+  if (!parsed.success) return { error: t('errors.invalidInput'), issues: parsed.error.issues }
 
   const { check_in, check_out, property_id, payment_method } = parsed.data
 
@@ -30,7 +32,7 @@ export async function createBooking(formData: FormData) {
   if (payment_method !== 'bank-transfer') {
     const { data: completedBooking } = await supabase
       .from('bookings').select('id').eq('user_id', user.id).eq('status', 'completed').limit(1).single()
-    if (!completedBooking) return { error: 'Diese Zahlungsmethode ist erst nach einer erfolgreichen Buchung verfügbar.' }
+    if (!completedBooking) return { error: t('errors.paymentMethodRestricted') }
   }
 
   // Recalculate price server-side — NEVER trust client
@@ -38,11 +40,11 @@ export async function createBooking(formData: FormData) {
     supabase.from('properties').select('price_per_night, special_offer_price, is_special_offer, max_guests').eq('id', property_id).single(),
     supabase.from('settings').select('service_fee, cleaning_fee').single(),
   ])
-  if (!property || !settings) return { error: 'Unterkunft nicht gefunden' }
-  if (parsed.data.guests > property.max_guests) return { error: `Maximal ${property.max_guests} Gäste erlaubt` }
+  if (!property || !settings) return { error: t('errors.propertyNotFound') }
+  if (parsed.data.guests > property.max_guests) return { error: t('errors.maxGuestsExceeded', { count: property.max_guests }) }
 
   const nights = differenceInDays(new Date(check_out), new Date(check_in))
-  if (nights <= 0) return { error: 'Ungültige Daten' }
+  if (nights <= 0) return { error: t('errors.invalidDates') }
 
   const pricePerNight = property.is_special_offer && property.special_offer_price
     ? property.special_offer_price : property.price_per_night
@@ -61,7 +63,7 @@ export async function createBooking(formData: FormData) {
   })
 
   if (error?.message?.includes('Diese Daten sind bereits gebucht'))
-    return { error: 'Der gewählte Zeitraum ist bereits gebucht. Bitte wählen Sie andere Daten.' }
+    return { error: t('errors.dateAlreadyBooked') }
   if (error) return { error: error.message }
 
   // Update profile if name/phone provided
@@ -75,17 +77,18 @@ export async function createBooking(formData: FormData) {
 }
 
 export async function cancelBooking(bookingId: string) {
+  const t = await getTranslations('booking')
   const supabase = await createSupabaseServer()
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) return { error: 'Nicht angemeldet' }
+  if (!user) return { error: t('errors.notLoggedIn') }
 
   // Verify ownership and status
   const { data: booking } = await supabase
     .from('bookings').select('id, user_id, status').eq('id', bookingId).single()
 
-  if (!booking) return { error: 'Buchung nicht gefunden' }
-  if (booking.user_id !== user.id) return { error: 'Keine Berechtigung' }
-  if (booking.status !== 'pending') return { error: 'Nur ausstehende Buchungen können storniert werden' }
+  if (!booking) return { error: t('errors.bookingNotFound') }
+  if (booking.user_id !== user.id) return { error: t('errors.unauthorized') }
+  if (booking.status !== 'pending') return { error: t('errors.onlyPendingCanBeCancelled') }
 
   const { error } = await supabase
     .from('bookings').update({ status: 'cancelled' }).eq('id', bookingId)

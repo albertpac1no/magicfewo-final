@@ -1,3 +1,6 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import { formatPrice } from '@/lib/utils'
 
 interface PriceBreakdownProps {
@@ -17,6 +20,7 @@ export function PriceBreakdown({
   isSpecialOffer,
   specialOfferPrice,
 }: PriceBreakdownProps) {
+  const t = useTranslations('properties')
   const effectivePrice =
     isSpecialOffer && specialOfferPrice ? specialOfferPrice : pricePerNight
   const accommodationTotal = effectivePrice * nights
@@ -26,20 +30,20 @@ export function PriceBreakdown({
     <div className="space-y-2 text-sm">
       <div className="flex justify-between text-gray-600">
         <span>
-          {formatPrice(effectivePrice)} × {nights} {nights === 1 ? 'Nacht' : 'Nächte'}
+          {formatPrice(effectivePrice)} × {nights} {nights === 1 ? t('night') : t('nights')}
         </span>
         <span>{formatPrice(accommodationTotal)}</span>
       </div>
       <div className="flex justify-between text-gray-600">
-        <span>Reinigungsgebühr</span>
+        <span>{t('cleaningFee')}</span>
         <span>{formatPrice(cleaningFee)}</span>
       </div>
       <div className="flex justify-between text-gray-600">
-        <span>Servicegebühr</span>
+        <span>{t('serviceFee')}</span>
         <span>{formatPrice(serviceFee)}</span>
       </div>
       <div className="border-t border-gray-200 pt-2 flex justify-between font-semibold text-secondary">
-        <span>Gesamt</span>
+        <span>{t('total')}</span>
         <span>{formatPrice(total)}</span>
       </div>
     </div>

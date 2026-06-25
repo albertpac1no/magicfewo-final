@@ -2,9 +2,9 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'MagicFewo - Ferienwohnungen & Unterkünfte',
-    short_name: 'MagicFewo',
-    description: 'Finden Sie die perfekte Ferienwohnung für Ihren nächsten Urlaub. Buchen Sie sicher und einfach bei MagicFewo.',
+    name: 'Gesino Reisen – Ihr Reisebüro in Frankfurt',
+    short_name: 'Gesino Reisen',
+    description: 'Ihr Reisebüro in Frankfurt. Buchen Sie Urlaub, Reisepakete und Ferienwohnungen sicher und einfach bei Gesino Reisen.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

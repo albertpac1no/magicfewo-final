@@ -121,5 +121,47 @@
     "bankTransfer": "Banküberweisung",
     "paypal": "PayPal"
   },
-  "amount": "Betrag"
+  "amount": "Betrag",
+
+  "home": "Startseite",
+  "prev": "Zurück",
+  "next": "Weiter",
+  "closeNavigation": "Navigation schließen",
+  "openNavigation": "Navigation öffnen",
+  "testimonialNav": "Testimonial {index}",
+  "ctaBannerAlt": "Luxuriöse Ferienvilla",
+  "heroImages": {
+    "villa": "Luxuriöse Villa mit Infinity-Pool am Mittelmeer",
+    "coastal": "Malerisches Küstendorf mit türkisblauem Meer",
+    "apartment": "Elegantes Ferienapartment mit Meerblick",
+    "mountain": "Gemütliches Bergchalet am Alpensee"
+  },
+  "cookies": {
+    "bannerTitle": "Ihre Privatsphäre ist uns wichtig",
+    "bannerText": "Wir verwenden Cookies, um Ihr Browsererlebnis zu verbessern, personalisierte Inhalte bereitzustellen und unseren Datenverkehr zu analysieren. Weitere Informationen finden Sie in unserer",
+    "privacyLink": "Datenschutzerklärung",
+    "acceptAll": "Alle akzeptieren",
+    "rejectAll": "Alle ablehnen",
+    "customize": "Anpassen",
+    "customizeTitle": "Cookie-Einstellungen",
+    "savePrefs": "Einstellungen speichern",
+    "alwaysOn": "Immer aktiv",
+    "back": "Zurück",
+    "necessary": {
+      "title": "Technisch notwendig",
+      "description": "Diese Cookies sind für die ordnungsgemäße Funktion der Website unerlässlich. Sie ermöglichen grundlegende Funktionen wie Sicherheit, Netzwerkverwaltung und Barrierefreiheit. Diese Cookies können nicht deaktiviert werden."
+    },
+    "analytics": {
+      "title": "Analyse",
+      "description": "Diese Cookies ermöglichen es uns, Besuche und Zugriffsquellen zu zählen, um die Leistung unserer Website zu messen und zu verbessern. Alle von diesen Cookies gesammelten Informationen sind aggregiert und anonym."
+    },
+    "marketing": {
+      "title": "Marketing",
+      "description": "Diese Cookies können von unseren Werbepartnern über unsere Website gesetzt werden. Sie können verwendet werden, um ein Profil Ihrer Interessen zu erstellen und Ihnen relevante Werbeanzeigen auf anderen Websites zu zeigen."
+    },
+    "preferences": {
+      "title": "Einstellungen",
+      "description": "Diese Cookies ermöglichen es der Website, Entscheidungen, die Sie treffen (z. B. Ihre Sprache oder Region), zu speichern, um erweiterte, personalisierte Funktionen bereitzustellen."
+    }
+  }
 }

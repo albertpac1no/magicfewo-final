@@ -73,5 +73,17 @@
     "paypalInfo": "With PayPal buyer protection. You will be redirected to PayPal.",
     "firstBookingWarning": "For your first booking, only bank transfer is available as a payment method. After a successful booking, additional payment methods will be unlocked.",
     "lockedMethod": "Available after your first successful booking"
+  },
+  "errors": {
+    "notLoggedIn": "You are not logged in",
+    "invalidInput": "Invalid input",
+    "paymentMethodRestricted": "This payment method is only available after a successful booking.",
+    "propertyNotFound": "Property not found",
+    "maxGuestsExceeded": "Maximum {count} guests allowed",
+    "invalidDates": "Invalid dates",
+    "dateAlreadyBooked": "The selected period is already booked. Please choose different dates.",
+    "bookingNotFound": "Booking not found",
+    "unauthorized": "Unauthorized",
+    "onlyPendingCanBeCancelled": "Only pending bookings can be cancelled"
   }
 }

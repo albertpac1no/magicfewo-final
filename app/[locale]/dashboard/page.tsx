@@ -81,7 +81,7 @@ export default async function DashboardHomePage() {
               {profileData?.avatar_url ? (
                 <Image
                   src={profileData.avatar_url}
-                  alt={profileData.full_name ?? 'Avatar'}
+                  alt={profileData.full_name ?? t('avatarAlt')}
                   width={56}
                   height={56}
                   className="w-full h-full object-cover"
@@ -241,7 +241,7 @@ export default async function DashboardHomePage() {
                 {profileData?.avatar_url ? (
                   <Image
                     src={profileData.avatar_url}
-                    alt={profileData.full_name ?? 'Avatar'}
+                    alt={profileData.full_name ?? t('avatarAlt')}
                     width={48}
                     height={48}
                     className="w-full h-full object-cover"

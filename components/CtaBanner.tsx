@@ -11,7 +11,7 @@ export async function CtaBanner() {
       <div className="relative rounded-3xl overflow-hidden shadow-2xl">
         <Image
           src="/images/hero-villa-pool.jpg"
-          alt="Luxuriöse Ferienvilla"
+          alt={t('ctaBannerAlt')}
           fill
           sizes="100vw"
           className="object-cover"

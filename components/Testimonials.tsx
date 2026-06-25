@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 
 const testimonials = [
   {
@@ -49,6 +49,7 @@ const testimonials = [
 
 export function Testimonials() {
   const t = useTranslations('common')
+  const locale = useLocale()
   const [current, setCurrent] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 
@@ -66,7 +67,7 @@ export function Testimonials() {
     return () => clearInterval(id)
   }, [next, isAutoPlaying])
 
-  const isDE = t('from') === 'ab'
+  const isDE = locale === 'de'
   const review = testimonials[current]
 
   return (
@@ -118,7 +119,7 @@ export function Testimonials() {
           <button
             onClick={prev}
             className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
-            aria-label="Previous"
+            aria-label={t('prev')}
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
@@ -131,7 +132,7 @@ export function Testimonials() {
                 className={`h-2 rounded-full transition-all duration-300 ${
                   idx === current ? 'bg-primary w-6' : 'bg-gray-200 w-2'
                 }`}
-                aria-label={`Testimonial ${idx + 1}`}
+                aria-label={t('testimonialNav', { index: idx + 1 })}
               />
             ))}
           </div>
@@ -139,7 +140,7 @@ export function Testimonials() {
           <button
             onClick={next}
             className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
-            aria-label="Next"
+            aria-label={t('next')}
           >
             <ChevronRight className="w-5 h-5" />
           </button>
