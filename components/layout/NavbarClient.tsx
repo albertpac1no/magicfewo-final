@@ -167,6 +167,7 @@ export function NavbarClient({
           {/* Desktop Auth */}
           <div className="hidden lg:flex items-center gap-3">
             <LanguageSwitcher />
+            <div className="w-px h-6 bg-gray-200" aria-hidden="true" />
             {user ? (
               <div className="relative" ref={userMenuRef}>
                 <button
