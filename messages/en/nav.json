@@ -1,0 +1,23 @@
+{
+  "home": "Home",
+  "properties": "Properties",
+  "destinations": "Destinations",
+  "europe": "Europe",
+  "asia": "Asia",
+  "americas": "Americas",
+  "africa": "Africa",
+  "offers": "Offers",
+  "about": "About Us",
+  "contact": "Contact",
+  "dashboard": "Dashboard",
+  "admin": "Admin",
+  "settings": "Settings",
+  "signOut": "Sign Out",
+  "signIn": "Sign In",
+  "register": "Register",
+  "overview": "Overview",
+  "bookings": "Bookings",
+  "profile": "Profile",
+  "users": "Users",
+  "bankAccounts": "Bank Accounts"
+}

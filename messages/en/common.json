@@ -1,0 +1,111 @@
+{
+  "howItWorks": "How It Works",
+  "step1Label": "Step 1",
+  "step1Title": "Search Accommodation",
+  "step1Text": "Enter your destination, travel dates and number of guests to discover suitable accommodations.",
+  "step2Label": "Step 2",
+  "step2Title": "Book Securely",
+  "step2Text": "Choose your favorite accommodation and book securely and conveniently through our encrypted payment system.",
+  "step3Label": "Step 3",
+  "step3Title": "Enjoy Your Vacation",
+  "step3Text": "Receive all details via email and enjoy your unforgettable dream vacation stress-free.",
+  "offers": {
+    "heroTitle": "Current Offers",
+    "heroSubtitle": "Discover our best travel deals and secure your dream vacation at a special price.",
+    "noOffersTitle": "No Current Offers",
+    "noOffersText": "There are currently no special offers available. Check back later!"
+  },
+  "about": {
+    "heroTitle": "About {name}",
+    "heroSubtitle": "Your trusted partner for unforgettable travel experiences since 2009.",
+    "missionTitle": "Our Mission",
+    "missionText": "At {name}, we believe that travel is more than just a vacation. It's an opportunity to gain new perspectives, understand cultures, and create unforgettable memories.",
+    "teamTitle": "Our Team",
+    "questionsTitle": "Have Questions?",
+    "questionsText": "Our team is available to help you anytime.",
+    "companyInfoTitle": "Company Information"
+  },
+  "contact": {
+    "heroTitle": "Contact Us",
+    "heroSubtitle": "We're here for you and look forward to your message.",
+    "writeUs": "Write to Us",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "subject": "Subject",
+    "subjectPlaceholder": "How can we help you?",
+    "message": "Message",
+    "messagePlaceholder": "Your message...",
+    "send": "Send Message",
+    "contactInfo": "Contact Information",
+    "phone": "Phone",
+    "address": "Address",
+    "hours": "Business Hours",
+    "contactAction": "Contact →",
+    "companyInfo": "Company Information"
+  },
+  "destinations": {
+    "europa": {
+      "title": "Discover Europe",
+      "subtitle": "From historic cities to picturesque landscapes - Europe offers countless destinations for unforgettable experiences."
+    },
+    "asien": {
+      "title": "Discover Asia",
+      "subtitle": "From modern metropolises to spiritual temples - Asia offers a unique blend of tradition and modernity."
+    },
+    "amerika": {
+      "title": "Discover the Americas",
+      "subtitle": "From vibrant metropolises to breathtaking nature - the Americas offer endless possibilities for unforgettable journeys."
+    },
+    "afrika": {
+      "title": "Discover Africa",
+      "subtitle": "From majestic wildlife to vibrant cities - Africa offers unique adventures and unforgettable moments."
+    }
+  },
+  "heroTitle": "Discover the world around you",
+  "heroSubtitle": "Take a break from everyday life, plan trips and explore your favorite destinations",
+  "newsletterTitle": "Subscribe to our newsletter\nfor the latest updates",
+  "newsletterSubtitle": "Get the latest information about our offers",
+  "newsletterPlaceholder": "Your email address",
+  "subscribe": "Subscribe",
+  "from": "from",
+  "bookNow": "Book now",
+  "status": {
+    "pending": "Pending",
+    "confirmed": "Confirmed",
+    "cancelled": "Cancelled",
+    "completed": "Completed",
+    "all": "All",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "actions": {
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "cancelBooking": "Cancel",
+    "complete": "Complete",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "back": "Back"
+  },
+  "search": "Search...",
+  "noEntries": "No entries found",
+  "pagination": {
+    "pageOf": "Page {current} of {total} ({count} entries)",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "saving": "Saving...",
+  "notProvided": "Not provided",
+  "name": "Name",
+  "email": "Email",
+  "phone": "Phone",
+  "paymentMethods": {
+    "creditCard": "Credit Card",
+    "bankTransfer": "Bank Transfer",
+    "paypal": "PayPal"
+  },
+  "amount": "Amount"
+}

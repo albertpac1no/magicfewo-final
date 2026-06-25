@@ -1,0 +1,49 @@
+{
+  "companyDescription": "Your trusted partner for unforgettable vacation experiences. Discover the most beautiful accommodations with us and let our expertise and first-class service convince you.",
+  "businessHours": "Mon-Fri: 9:00 AM - 6:00 PM",
+  "sections": {
+    "about": "About Us",
+    "services": "Services",
+    "company": "Company",
+    "newsletter": "Newsletter"
+  },
+  "links": {
+    "bookingProcess": "Booking Process",
+    "paymentMethods": "Payment Methods",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "travelPackages": "Travel Packages",
+    "hotelBooking": "Hotel Booking",
+    "flightBooking": "Flight Booking",
+    "travelInsurance": "Travel Insurance",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
+  },
+  "newsletter": {
+    "text": "Subscribe to our newsletter and receive exclusive offers.",
+    "placeholder": "Your email",
+    "subscribe": "Subscribe"
+  },
+  "downloadApp": "Download App",
+  "trustBadges": {
+    "secure": "Safe & Trustworthy",
+    "securePayment": "Secure Payment",
+    "worldwideService": "Worldwide Service"
+  },
+  "copyright": "© {year} {company}. All rights reserved.",
+  "cookieSettings": "Cookie Settings",
+  "pages": {
+    "buchungsprozess": "Booking Process",
+    "zahlungsmethoden": "Payment Methods",
+    "bewertungen": "Reviews",
+    "faq": "Frequently Asked Questions",
+    "reisepakete": "Travel Packages",
+    "hotelbuchung": "Hotel Booking",
+    "flugbuchung": "Flight Booking",
+    "reiseversicherung": "Travel Insurance",
+    "datenschutz": "Privacy Policy",
+    "agb": "Terms & Conditions"
+  }
+}

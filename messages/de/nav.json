@@ -1,0 +1,23 @@
+{
+  "home": "Startseite",
+  "properties": "Unterkünfte",
+  "destinations": "Reiseziele",
+  "europe": "Europa",
+  "asia": "Asien",
+  "americas": "Amerika",
+  "africa": "Afrika",
+  "offers": "Angebote",
+  "about": "Über uns",
+  "contact": "Kontakt",
+  "dashboard": "Dashboard",
+  "admin": "Admin",
+  "settings": "Einstellungen",
+  "signOut": "Abmelden",
+  "signIn": "Anmelden",
+  "register": "Registrieren",
+  "overview": "Übersicht",
+  "bookings": "Buchungen",
+  "profile": "Profil",
+  "users": "Benutzer",
+  "bankAccounts": "Bankverbindungen"
+}

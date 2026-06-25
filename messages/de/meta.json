@@ -1,0 +1,110 @@
+{
+  "home": {
+    "title": "MagicFewo – Ferienwohnungen & Unterkünfte günstig buchen",
+    "description": "Finden Sie die perfekte Ferienwohnung für Ihren nächsten Urlaub. Vergleichen Sie Ferienhäuser, Apartments und Unterkünfte weltweit – beste Angebote, sichere Buchung bei MagicFewo.",
+    "keywords": "Ferienwohnung buchen, Ferienhaus mieten, Urlaub Unterkunft, Ferienwohnung günstig, Urlaubsangebote, Ferienwohnung vergleichen"
+  },
+  "properties": {
+    "title": "Ferienwohnungen & Unterkünfte entdecken | MagicFewo",
+    "description": "Durchsuchen und vergleichen Sie Ferienwohnungen, Ferienhäuser und Unterkünfte weltweit. Filtern Sie nach Preis, Lage, Ausstattung und Gästeanzahl – jetzt bei MagicFewo.",
+    "keywords": "Ferienwohnung suchen, Unterkunft vergleichen, Ferienhaus buchen, günstige Ferienwohnung"
+  },
+  "propertyDetail": {
+    "title": "{title} | MagicFewo",
+    "description": "{title} in {location} buchen – komfortable Ferienwohnung ab {price} € pro Nacht. Fotos, Ausstattung, Bewertungen und sofortige Verfügbarkeit bei MagicFewo."
+  },
+  "booking": {
+    "title": "Buchung abschließen | MagicFewo",
+    "description": "Schließen Sie Ihre Buchung sicher und einfach bei MagicFewo ab. Flexible Zahlungsmethoden und kostenlose Stornierung."
+  },
+  "bookingSuccess": {
+    "title": "Buchung erfolgreich! | MagicFewo",
+    "description": "Ihre Buchung wurde erfolgreich übermittelt. Sie erhalten in Kürze eine Bestätigung per E-Mail."
+  },
+  "dashboard": {
+    "title": "Mein Dashboard | MagicFewo",
+    "description": "Verwalten Sie Ihre Buchungen, Ihr Profil und Ihre Einstellungen bei MagicFewo."
+  },
+  "admin": {
+    "title": "Admin-Dashboard | MagicFewo",
+    "description": "Verwaltungsbereich für MagicFewo – Unterkünfte, Buchungen und Benutzer verwalten."
+  },
+  "auth": {
+    "title": "Anmelden oder Registrieren | MagicFewo",
+    "description": "Melden Sie sich bei MagicFewo an oder erstellen Sie ein kostenloses Konto, um Ferienwohnungen zu buchen und Ihre Reisen zu verwalten."
+  },
+  "about": {
+    "title": "Über uns – Wer ist MagicFewo? | MagicFewo",
+    "description": "Erfahren Sie mehr über MagicFewo, unser Team und unsere Mission: die besten Ferienwohnungen und Unterkünfte für Ihren Traumurlaub."
+  },
+  "contact": {
+    "title": "Kontakt – Hilfe & Support | MagicFewo",
+    "description": "Haben Sie Fragen? Nehmen Sie Kontakt mit dem MagicFewo-Team auf. Wir helfen Ihnen bei Buchungen, Stornierungen und allen Reisefragen."
+  },
+  "offers": {
+    "title": "Sonderangebote & Last-Minute-Deals | MagicFewo",
+    "description": "Entdecken Sie aktuelle Sonderangebote, Rabatte und Last-Minute-Deals für Ferienwohnungen und Unterkünfte bei MagicFewo."
+  },
+  "destinations": {
+    "europa": {
+      "title": "Ferienwohnungen in Europa buchen | MagicFewo",
+      "description": "Entdecken Sie traumhafte Ferienwohnungen in Europa – von Mittelmeervillen bis zu Alpenchalets. Jetzt bei MagicFewo buchen."
+    },
+    "asien": {
+      "title": "Ferienwohnungen in Asien buchen | MagicFewo",
+      "description": "Finden Sie exotische Ferienwohnungen und Unterkünfte in Asien – Bali, Thailand, Japan und mehr. Jetzt bei MagicFewo buchen."
+    },
+    "amerika": {
+      "title": "Ferienwohnungen in Amerika buchen | MagicFewo",
+      "description": "Entdecken Sie Ferienwohnungen in Nord- und Südamerika – von New York bis Rio de Janeiro. Jetzt bei MagicFewo buchen."
+    },
+    "afrika": {
+      "title": "Ferienwohnungen in Afrika buchen | MagicFewo",
+      "description": "Erleben Sie Afrika in einzigartigen Ferienwohnungen – Safari-Lodges, Strandvillen und mehr. Jetzt bei MagicFewo buchen."
+    }
+  },
+  "footer": {
+    "agb": {
+      "description": "Lesen Sie die Allgemeinen Geschäftsbedingungen (AGB) von MagicFewo – Buchungsbedingungen, Stornierungsregeln und Ihre Rechte."
+    },
+    "datenschutz": {
+      "description": "Informieren Sie sich über den Datenschutz bei MagicFewo – wie wir Ihre persönlichen Daten schützen und verwenden."
+    },
+    "faq": {
+      "description": "Antworten auf häufig gestellte Fragen zu Buchung, Zahlung, Stornierung und Reisedetails bei MagicFewo."
+    },
+    "buchungsprozess": {
+      "description": "So funktioniert die Buchung bei MagicFewo: Schritt-für-Schritt-Anleitung von der Suche bis zur Bestätigung Ihrer Ferienwohnung."
+    },
+    "zahlungsmethoden": {
+      "description": "Alle Zahlungsmethoden bei MagicFewo im Überblick – Kreditkarte, PayPal, Banküberweisung. Sicher und flexibel bezahlen."
+    },
+    "bewertungen": {
+      "description": "Lesen Sie echte Kundenbewertungen und Erfahrungsberichte über Ferienwohnungen und den Service von MagicFewo."
+    },
+    "hotelbuchung": {
+      "description": "Buchen Sie Hotels und Unterkünfte weltweit über MagicFewo – beste Preise, Top-Auswahl und sichere Buchung."
+    },
+    "flugbuchung": {
+      "description": "Finden und buchen Sie günstige Flüge weltweit über MagicFewo. Vergleichen Sie Airlines und sichern Sie sich die besten Preise."
+    },
+    "reisepakete": {
+      "description": "Entdecken Sie komplette Reisepakete bei MagicFewo – Unterkunft, Flug und Aktivitäten in einem Paket zum Sparpreis."
+    },
+    "reiseversicherung": {
+      "description": "Schützen Sie Ihre Reise mit einer Reiseversicherung von MagicFewo – Reiserücktritt, Krankenversicherung und mehr."
+    }
+  },
+  "notFound": {
+    "title": "404 - Seite nicht gefunden | MagicFewo",
+    "heading": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht.",
+    "backHome": "Zurück zur Startseite"
+  },
+  "error": {
+    "title": "Fehler | MagicFewo",
+    "heading": "Etwas ist schiefgelaufen",
+    "description": "Ein unerwarteter Fehler ist aufgetreten.",
+    "retry": "Erneut versuchen"
+  }
+}

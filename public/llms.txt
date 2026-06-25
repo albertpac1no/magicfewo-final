@@ -1,0 +1,43 @@
+# MagicFewo
+
+> MagicFewo is a vacation rental booking platform offering holiday apartments, villas, and accommodations across Europe, Asia, the Americas, and Africa. We help travelers find the perfect vacation rental at the best price with secure online booking.
+
+## About
+MagicFewo connects travelers with vacation rentals worldwide. We offer a curated selection of holiday apartments, beach houses, mountain chalets, city apartments, and luxury villas. Our platform supports German and English with secure payment options including bank transfer, credit card, and PayPal.
+
+## Key Pages
+- /properties - Browse and search all vacation rentals with filters for location, price, guests, bedrooms, and amenities
+- /angebote - Special offers, last-minute deals, and discounted vacation rentals
+- /reiseziele/europa - Vacation rentals in Europe (Mediterranean, Alps, Nordic countries)
+- /reiseziele/asien - Vacation rentals in Asia (Bali, Thailand, Japan)
+- /reiseziele/amerika - Vacation rentals in the Americas (USA, Caribbean, South America)
+- /reiseziele/afrika - Vacation rentals in Africa (Safari lodges, beach villas)
+- /kontakt - Contact our customer service team
+- /ueber-uns - About MagicFewo and our team
+- /faq - Frequently asked questions about booking, payment, and cancellation
+- /buchungsprozess - Step-by-step booking guide
+- /zahlungsmethoden - Available payment methods
+- /reiseversicherung - Travel insurance options
+- /reisepakete - Complete travel packages (accommodation + flights + activities)
+- /bewertungen - Customer reviews and testimonials
+
+## Booking Process
+1. Search for your destination and travel dates
+2. Browse available properties and compare prices
+3. Select your preferred accommodation
+4. Complete secure booking with flexible payment options
+5. Receive confirmation and travel details via email
+
+## Features
+- Vacation rentals in 4 continents
+- Secure online booking with SSL encryption
+- Flexible payment: bank transfer, credit card, PayPal
+- Free cancellation options available
+- Detailed property descriptions with photos
+- Guest reviews and ratings
+- Multi-language support (German, English)
+- 24/7 customer service
+
+## Contact
+- Website: https://magicfewo.de
+- Email: info@magicfewo.de

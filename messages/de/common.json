@@ -1,0 +1,111 @@
+{
+  "heroTitle": "Entdecke die Welt um dich herum",
+  "heroSubtitle": "Mache eine Pause vom Alltag, plane Reisen und erkunde deine Lieblingsziele",
+  "newsletterTitle": "Abonnieren Sie unseren Newsletter\nfür die neuesten Updates",
+  "newsletterSubtitle": "Erhalten Sie die aktuellsten Informationen über unsere Angebote",
+  "newsletterPlaceholder": "Ihre E-Mail-Adresse",
+  "subscribe": "Abonnieren",
+  "from": "ab",
+  "bookNow": "Jetzt buchen",
+  "howItWorks": "So einfach funktioniert's",
+  "step1Label": "Schritt 1",
+  "step1Title": "Unterkunft suchen",
+  "step1Text": "Geben Sie Ihr Reiseziel, Ihre Reisedaten und die Anzahl der Gäste ein und entdecken Sie passende Unterkünfte.",
+  "step2Label": "Schritt 2",
+  "step2Title": "Sicher buchen",
+  "step2Text": "Wählen Sie Ihre Lieblings-Unterkunft aus und buchen Sie sicher und bequem über unser verschlüsseltes Zahlungssystem.",
+  "step3Label": "Schritt 3",
+  "step3Title": "Urlaub genießen",
+  "step3Text": "Erhalten Sie alle Details per E-Mail und genießen Sie Ihren unvergesslichen Traumurlaub ohne Stress.",
+  "offers": {
+    "heroTitle": "Aktuelle Angebote",
+    "heroSubtitle": "Entdecken Sie unsere besten Reiseangebote und sichern Sie sich Ihren Traumurlaub zum Sonderpreis.",
+    "noOffersTitle": "Keine aktuellen Angebote",
+    "noOffersText": "Derzeit sind keine Sonderangebote verfügbar. Schauen Sie später wieder vorbei!"
+  },
+  "about": {
+    "heroTitle": "Über {name}",
+    "heroSubtitle": "Ihr vertrauenswürdiger Partner für unvergessliche Reiseerlebnisse seit 2009.",
+    "missionTitle": "Unsere Mission",
+    "missionText": "Wir bei {name} glauben daran, dass Reisen mehr ist als nur Urlaub. Es ist eine Möglichkeit, neue Perspektiven zu gewinnen, Kulturen zu verstehen und unvergessliche Erinnerungen zu schaffen.",
+    "teamTitle": "Unser Team",
+    "questionsTitle": "Haben Sie Fragen?",
+    "questionsText": "Unser Team steht Ihnen jederzeit zur Verfügung.",
+    "companyInfoTitle": "Unternehmensinformationen"
+  },
+  "contact": {
+    "heroTitle": "Kontaktieren Sie uns",
+    "heroSubtitle": "Wir sind für Sie da und freuen uns auf Ihre Nachricht.",
+    "writeUs": "Schreiben Sie uns",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "E-Mail",
+    "subject": "Betreff",
+    "subjectPlaceholder": "Wie können wir Ihnen helfen?",
+    "message": "Nachricht",
+    "messagePlaceholder": "Ihre Nachricht...",
+    "send": "Nachricht senden",
+    "contactInfo": "Kontaktinformationen",
+    "phone": "Telefon",
+    "address": "Adresse",
+    "hours": "Öffnungszeiten",
+    "contactAction": "Kontaktieren →",
+    "companyInfo": "Unternehmensinformationen"
+  },
+  "destinations": {
+    "europa": {
+      "title": "Entdecken Sie Europa",
+      "subtitle": "Von historischen Städten bis zu malerischen Landschaften - Europa bietet unzählige Reiseziele für unvergessliche Erlebnisse."
+    },
+    "asien": {
+      "title": "Entdecken Sie Asien",
+      "subtitle": "Von modernen Metropolen bis zu spirituellen Tempeln - Asien bietet eine einzigartige Mischung aus Tradition und Moderne."
+    },
+    "amerika": {
+      "title": "Entdecken Sie Amerika",
+      "subtitle": "Von pulsierenden Metropolen bis zu atemberaubender Natur - Amerika bietet endlose Möglichkeiten für unvergessliche Reisen."
+    },
+    "afrika": {
+      "title": "Entdecken Sie Afrika",
+      "subtitle": "Von majestätischen Wildtieren bis zu pulsierenden Städten - Afrika bietet einzigartige Abenteuer und unvergessliche Momente."
+    }
+  },
+  "status": {
+    "pending": "Ausstehend",
+    "confirmed": "Bestätigt",
+    "cancelled": "Storniert",
+    "completed": "Abgeschlossen",
+    "all": "Alle",
+    "active": "Aktiv",
+    "inactive": "Inaktiv"
+  },
+  "actions": {
+    "confirm": "Bestätigen",
+    "cancel": "Abbrechen",
+    "cancelBooking": "Stornieren",
+    "complete": "Abschließen",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "add": "Hinzufügen",
+    "back": "Zurück"
+  },
+  "search": "Suchen...",
+  "noEntries": "Keine Einträge gefunden",
+  "pagination": {
+    "pageOf": "Seite {current} von {total} ({count} Einträge)",
+    "previous": "Vorherige",
+    "next": "Nächste"
+  },
+  "saving": "Wird gespeichert...",
+  "notProvided": "Nicht angegeben",
+  "name": "Name",
+  "email": "E-Mail",
+  "phone": "Telefon",
+  "paymentMethods": {
+    "creditCard": "Kreditkarte",
+    "bankTransfer": "Banküberweisung",
+    "paypal": "PayPal"
+  },
+  "amount": "Betrag"
+}

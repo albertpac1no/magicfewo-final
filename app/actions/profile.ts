@@ -1,0 +1,69 @@
+'use server'
+
+import { z } from 'zod'
+import { createSupabaseServer } from '@/lib/supabase/server'
+import { revalidatePath } from 'next/cache'
+
+export async function uploadAvatar(formData: FormData) {
+  const supabase = await createSupabaseServer()
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) return { error: 'Nicht angemeldet' }
+
+  const file = formData.get('file') as File
+  if (!file || file.size === 0) return { error: 'Keine Datei ausgewählt' }
+  if (file.size > 5 * 1024 * 1024) return { error: 'Datei ist zu groß (max. 5 MB)' }
+
+  const ext = file.name.split('.').pop()?.toLowerCase() ?? 'jpg'
+  const filePath = `${user.id}/avatar-${Date.now()}.${ext}`
+
+  const { error: uploadError } = await supabase.storage
+    .from('profile-images')
+    .upload(filePath, file, { cacheControl: '3600', upsert: true })
+
+  if (uploadError) return { error: uploadError.message }
+
+  const { data: { publicUrl } } = supabase.storage
+    .from('profile-images')
+    .getPublicUrl(filePath)
+
+  const { error: updateError } = await supabase
+    .from('profiles')
+    .update({ avatar_url: publicUrl, updated_at: new Date().toISOString() })
+    .eq('id', user.id)
+
+  if (updateError) return { error: updateError.message }
+
+  revalidatePath('/dashboard')
+  revalidatePath('/dashboard/profile')
+  return { success: true, url: publicUrl }
+}
+
+const ProfileSchema = z.object({
+  full_name: z.string().min(2).optional(),
+  phone: z.string().optional(),
+  address: z.string().optional(),
+  city: z.string().optional(),
+  postal_code: z.string().optional(),
+  country: z.string().optional(),
+})
+
+export async function updateProfile(formData: FormData) {
+  const supabase = await createSupabaseServer()
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) return { error: 'Nicht angemeldet' }
+
+  const raw = Object.fromEntries(formData)
+  const parsed = ProfileSchema.safeParse(raw)
+  if (!parsed.success) return { error: 'Ungültige Eingabe' }
+
+  const { error } = await supabase
+    .from('profiles')
+    .update({ ...parsed.data, updated_at: new Date().toISOString() })
+    .eq('id', user.id)
+
+  if (error) return { error: error.message }
+
+  revalidatePath('/dashboard/profile')
+  revalidatePath('/dashboard')
+  return { success: true }
+}

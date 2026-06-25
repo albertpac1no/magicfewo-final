@@ -1,0 +1,77 @@
+{
+  "completeBooking": "Buchung abschließen",
+  "backToProperty": "Zurück zur Unterkunft",
+  "successTitle": "Buchung erfolgreich!",
+  "successMessage": "Ihre Anfrage wurde erfolgreich übermittelt. Sie erhalten in Kürze eine Bestätigung per E-Mail.",
+  "bookingReference": "Buchungsreferenz:",
+  "checkIn": "Check-in",
+  "checkOut": "Check-out",
+  "totalAmount": "Gesamtbetrag",
+  "nextStepsTitle": "Was passiert als nächstes?",
+  "reviewStep": "Prüfung innerhalb von 24 Stunden",
+  "reviewStepText": "Unser Team prüft Ihre Buchungsanfrage und gibt Ihnen schnellstmöglich Rückmeldung.",
+  "paymentStep": "Zahlungsdaten per E-Mail",
+  "paymentStepText": "Sie erhalten alle Zahlungsinformationen (IBAN, Verwendungszweck) direkt an Ihre E-Mail-Adresse.",
+  "confirmStep": "Bestätigung nach Zahlungseingang",
+  "confirmStepText": "Nach Eingang Ihrer Zahlung wird die Buchung endgültig bestätigt und Ihre Unterkunft reserviert.",
+  "myBookings": "Zu meinen Buchungen",
+  "contact": "Kontakt",
+  "homepage": "Startseite",
+  "propertyNotFound": "Unterkunft nicht gefunden",
+  "steps": {
+    "details": "Buchungsdetails",
+    "payment": "Zahlung"
+  },
+  "labels": {
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "guests": "Anzahl der Gäste",
+    "guestSingular": "{count} Gast",
+    "guestPlural": "{count} Gäste",
+    "fullName": "Vollständiger Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "specialRequests": "Besondere Wünsche (optional)",
+    "totalPrice": "Gesamtpreis",
+    "totalAmount": "Gesamtbetrag",
+    "perNight": "/ Nacht",
+    "maxGuests": "Max. {count}"
+  },
+  "placeholders": {
+    "fullName": "Ihr vollständiger Name",
+    "phone": "Ihre Telefonnummer",
+    "specialRequests": "Haben Sie besondere Wünsche oder Anfragen?"
+  },
+  "buttons": {
+    "continueToPayment": "Weiter zur Zahlung",
+    "back": "Zurück",
+    "bookNow": "Jetzt buchen"
+  },
+  "validation": {
+    "required": "Pflichtfeld",
+    "minChars": "Min. {count} Zeichen",
+    "checkOutAfterCheckIn": "Check-out muss nach dem Check-in liegen.",
+    "selectPaymentMethod": "Bitte wählen Sie eine Zahlungsmethode."
+  },
+  "info": {
+    "freeCancellation": "Kostenlose Stornierung bis {hours}h vor Check-in",
+    "freeCancellationLong": "Kostenlose Stornierung bis {hours} Stunden vor Check-in",
+    "termsPrefix": "Mit der Buchung akzeptieren Sie unsere",
+    "termsLink": "AGB",
+    "and": "und",
+    "privacyLink": "Datenschutzerklärung"
+  },
+  "payment": {
+    "bankTransfer": "Banküberweisung",
+    "bankTransferDesc": "IBAN-Überweisung – Zahlungsdaten erhalten Sie per E-Mail",
+    "bankTransferInfo": "Buchung wird nach Zahlungseingang bestätigt. Gültig für alle europäischen Banken.",
+    "creditCard": "Kreditkarte",
+    "creditCardDesc": "Visa, Mastercard, American Express",
+    "creditCardInfo": "Sichere Zahlung mit SSL-Verschlüsselung. Ihre Kartendaten werden niemals gespeichert.",
+    "paypal": "PayPal",
+    "paypalDesc": "Schnell und sicher mit Ihrem PayPal-Konto bezahlen",
+    "paypalInfo": "Mit PayPal-Käuferschutz. Sie werden zu PayPal weitergeleitet.",
+    "firstBookingWarning": "Bei Ihrer ersten Buchung ist nur Banküberweisung als Zahlungsmethode verfügbar. Nach erfolgreicher Buchung werden weitere Zahlungsmethoden freigeschaltet.",
+    "lockedMethod": "Verfügbar nach Ihrer ersten erfolgreichen Buchung"
+  }
+}

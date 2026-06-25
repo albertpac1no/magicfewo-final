@@ -1,0 +1,49 @@
+{
+  "companyDescription": "Ihr vertrauenswürdiger Partner für unvergessliche Urlaubserlebnisse. Entdecken Sie die schönsten Unterkünfte bei uns und lassen Sie sich von unserer Expertise und erstklassigem Service überzeugen.",
+  "businessHours": "Mo-Fr: 9:00 - 18:00 Uhr",
+  "sections": {
+    "about": "Über uns",
+    "services": "Unsere Dienste",
+    "company": "Unternehmen",
+    "newsletter": "Newsletter"
+  },
+  "links": {
+    "bookingProcess": "Buchungsprozess",
+    "paymentMethods": "Zahlungsmethoden",
+    "reviews": "Bewertungen",
+    "faq": "FAQ",
+    "travelPackages": "Reisepakete",
+    "hotelBooking": "Hotelbuchung",
+    "flightBooking": "Flugbuchung",
+    "travelInsurance": "Reiseversicherung",
+    "aboutUs": "Über uns",
+    "contact": "Kontakt",
+    "privacy": "Datenschutz",
+    "terms": "AGB"
+  },
+  "newsletter": {
+    "text": "Abonnieren Sie unseren Newsletter und erhalten Sie exklusive Angebote.",
+    "placeholder": "Ihre E-Mail",
+    "subscribe": "Abonnieren"
+  },
+  "downloadApp": "App herunterladen",
+  "trustBadges": {
+    "secure": "Sicher & Vertrauenswürdig",
+    "securePayment": "Sichere Zahlung",
+    "worldwideService": "Weltweiter Service"
+  },
+  "copyright": "© {year} {company}. Alle Rechte vorbehalten.",
+  "cookieSettings": "Cookie-Einstellungen",
+  "pages": {
+    "buchungsprozess": "Buchungsprozess",
+    "zahlungsmethoden": "Zahlungsmethoden",
+    "bewertungen": "Kundenbewertungen",
+    "faq": "Häufig gestellte Fragen",
+    "reisepakete": "Reisepakete",
+    "hotelbuchung": "Hotelbuchung",
+    "flugbuchung": "Flugbuchung",
+    "reiseversicherung": "Reiseversicherung",
+    "datenschutz": "Datenschutz",
+    "agb": "Allgemeine Geschäftsbedingungen"
+  }
+}
