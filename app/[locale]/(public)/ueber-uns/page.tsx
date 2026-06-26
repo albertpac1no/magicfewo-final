@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { Users, Award, Globe2, Phone } from 'lucide-react'
+import { Home, MapPin, Globe2, Phone } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 import { getSettings } from '@/lib/settings'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   }
 }
 
-const STAT_ICONS = [Users, Award, Globe2]
+const STAT_ICONS = [Home, MapPin, Globe2]
 
 export default async function UeberUnsPage() {
   const settings = await getSettings()

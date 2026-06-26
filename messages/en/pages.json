@@ -293,9 +293,9 @@
   },
   "about": {
     "stats": [
-      { "label": "Satisfied customers", "value": "50,000+" },
-      { "label": "Years of experience", "value": "15+" },
-      { "label": "Destinations", "value": "100+" }
+      { "label": "Properties worldwide", "value": "300+" },
+      { "label": "Destinations", "value": "60+" },
+      { "label": "Countries", "value": "20+" }
     ],
     "team": [
       { "name": "Liang Li", "position": "CEO & Founder", "image": "/images/team/liang-li.jpg", "description": "With over 20 years of experience in the travel industry, Liang leads our company with passion and vision." },

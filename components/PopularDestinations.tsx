@@ -1,36 +1,48 @@
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { getTranslations } from 'next-intl/server'
+import { createSupabaseServer } from '@/lib/supabase/server'
 
 const destinations = [
   {
     slug: '/reiseziele/europa',
     image: '/images/hero-coastal-village.jpg',
     labelKey: 'europa' as const,
-    propertyCount: '2.400+',
+    countries: ['Griechenland', 'Spanien', 'Kroatien', 'Italien', 'Zypern', 'Malta', 'Frankreich', 'Monaco', 'Albanien', 'Türkei'],
   },
   {
     slug: '/reiseziele/asien',
     image: '/images/destination-asien-hero.jpg',
     labelKey: 'asien' as const,
-    propertyCount: '1.800+',
+    countries: ['Bali, Indonesien', 'Thailand', 'Japan', 'Vereinigte Arabische Emirate'],
   },
   {
     slug: '/reiseziele/amerika',
     image: '/images/destination-amerika-hero.jpg',
     labelKey: 'amerika' as const,
-    propertyCount: '1.200+',
+    countries: ['Karibik', 'Mexiko'],
   },
   {
     slug: '/reiseziele/afrika',
     image: '/images/destination-afrika-hero.jpg',
     labelKey: 'afrika' as const,
-    propertyCount: '900+',
+    countries: ['Südafrika', 'Marokko', 'Tunesien', 'Ägypten'],
   },
 ]
 
 export async function PopularDestinations() {
   const t = await getTranslations('common')
+  const supabase = await createSupabaseServer()
+
+  const counts = await Promise.all(
+    destinations.map((dest) =>
+      supabase
+        .from('properties')
+        .select('*', { count: 'exact', head: true })
+        .in('country', dest.countries)
+        .then((res) => res.count ?? 0)
+    )
+  )
 
   return (
     <section className="py-20">
@@ -44,7 +56,7 @@ export async function PopularDestinations() {
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-        {destinations.map((dest) => (
+        {destinations.map((dest, idx) => (
           <Link
             key={dest.slug}
             href={dest.slug}
@@ -62,7 +74,11 @@ export async function PopularDestinations() {
               <h3 className="text-white font-bold text-lg mb-1 group-hover:translate-y-[-2px] transition-transform duration-300">
                 {t(`destinations.${dest.labelKey}.title`).replace('Entdecken Sie ', '').replace('Discover ', '')}
               </h3>
-              <p className="text-white/70 text-sm">{dest.propertyCount} {t('properties')}</p>
+              {counts[idx] > 0 && (
+                <p className="text-white/70 text-sm">
+                  {counts[idx].toLocaleString('de-DE')} {t('properties')}
+                </p>
+              )}
             </div>
           </Link>
         ))}

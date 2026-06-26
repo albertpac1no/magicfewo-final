@@ -1,32 +1,37 @@
 import Image from 'next/image'
 import { createSupabaseServer } from '@/lib/supabase/server'
 import { getTranslations } from 'next-intl/server'
-import { Home, Globe2, Users, Clock } from 'lucide-react'
+import { Home, Globe2, MapPin, Clock } from 'lucide-react'
 
 export async function TrustStats() {
   const t = await getTranslations('common')
   const supabase = await createSupabaseServer()
 
-  const [{ count: propertyCount }, { count: bookingCount }] = await Promise.all([
-    supabase.from('properties').select('*', { count: 'exact', head: true }),
-    supabase.from('bookings').select('*', { count: 'exact', head: true }),
-  ])
+  const { data: rows } = await supabase.from('properties').select('country, city')
+
+  const propertyCount = rows?.length ?? 0
+  const countryCount = new Set(
+    (rows ?? []).map((r) => r.country?.trim()).filter(Boolean)
+  ).size
+  const cityCount = new Set(
+    (rows ?? []).map((r) => r.city?.trim()).filter(Boolean)
+  ).size
 
   const stats = [
     {
       icon: Home,
-      value: propertyCount ? `${propertyCount.toLocaleString('de-DE')}+` : '500+',
+      value: propertyCount.toLocaleString('de-DE'),
       label: t('stats.propertiesWorldwide'),
     },
     {
-      icon: Users,
-      value: bookingCount ? `${(bookingCount * 3).toLocaleString('de-DE')}+` : '10.000+',
-      label: t('stats.happyGuests'),
+      icon: Globe2,
+      value: countryCount.toLocaleString('de-DE'),
+      label: t('stats.countries'),
     },
     {
-      icon: Globe2,
-      value: '30+',
-      label: t('stats.countries'),
+      icon: MapPin,
+      value: cityCount.toLocaleString('de-DE'),
+      label: t('stats.cities'),
     },
     {
       icon: Clock,

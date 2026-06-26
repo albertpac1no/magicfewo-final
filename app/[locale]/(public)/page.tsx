@@ -7,7 +7,6 @@ import { PopularDestinations } from '@/components/PopularDestinations'
 import { TrustStats } from '@/components/TrustStats'
 import { ValueProps } from '@/components/ValueProps'
 import { TravelRecommendations } from '@/components/TravelRecommendations'
-import { Testimonials } from '@/components/Testimonials'
 import { CtaBanner } from '@/components/CtaBanner'
 import { Newsletter } from '@/components/Newsletter'
 import type { Property } from '@/lib/types'
@@ -65,11 +64,6 @@ export default async function HomePage() {
       {/* Premium / Special Offer Properties */}
       <div className="container mx-auto px-4">
         <TravelRecommendations properties={(recommended ?? []) as Property[]} />
-      </div>
-
-      {/* Testimonials */}
-      <div className="container mx-auto px-4">
-        <Testimonials />
       </div>
 
       {/* CTA Banner */}
