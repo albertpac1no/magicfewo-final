@@ -1,58 +1,65 @@
 'use client'
 
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useState, useCallback } from 'react'
 import { useRouter } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
-import { MapPin, Search, Minus, Plus, Users, BedDouble, Euro, ChevronDown } from 'lucide-react'
+import { MapPin, Search, Minus, Plus, Users, BedDouble, Euro } from 'lucide-react'
 
-const MAX_PRICE_OPTIONS = [150, 250, 500, 750, 1000, 1500, 2000, 3000]
+function FieldLabel({
+  icon: Icon,
+  children,
+}: {
+  icon: React.ComponentType<{ className?: string }>
+  children: React.ReactNode
+}) {
+  return (
+    <span className="flex items-center gap-1.5 text-[10px] font-bold text-gray-500 uppercase tracking-[0.08em]">
+      <Icon className="w-3.5 h-3.5 text-primary" />
+      {children}
+    </span>
+  )
+}
 
 function Stepper({
-  icon: Icon,
   label,
   value,
   display,
   min,
   max,
+  step = 1,
   onChange,
 }: {
-  icon: React.ComponentType<{ className?: string }>
   label: string
   value: number
   display: string
   min: number
   max: number
+  step?: number
   onChange: (next: number) => void
 }) {
   return (
-    <div className="flex items-center justify-between gap-4">
-      <div className="flex items-center gap-2.5 min-w-0">
-        <Icon className="w-4 h-4 text-gray-400 flex-shrink-0" />
-        <span className="text-sm font-medium text-gray-700 truncate">{label}</span>
-      </div>
-      <div className="flex items-center gap-3 flex-shrink-0">
-        <button
-          type="button"
-          aria-label={`${label} -`}
-          disabled={value <= min}
-          onClick={() => onChange(Math.max(min, value - 1))}
-          className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:border-primary hover:text-primary disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-gray-300 disabled:hover:text-gray-600 transition-colors"
-        >
-          <Minus className="w-3.5 h-3.5" />
-        </button>
-        <span className="text-sm font-semibold text-gray-800 w-12 text-center tabular-nums whitespace-nowrap">
-          {display}
-        </span>
-        <button
-          type="button"
-          aria-label={`${label} +`}
-          disabled={value >= max}
-          onClick={() => onChange(Math.min(max, value + 1))}
-          className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:border-primary hover:text-primary disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-gray-300 disabled:hover:text-gray-600 transition-colors"
-        >
-          <Plus className="w-3.5 h-3.5" />
-        </button>
-      </div>
+    <div className="flex items-center gap-2.5">
+      <button
+        type="button"
+        aria-label={`${label} −`}
+        disabled={value <= min}
+        onClick={() => onChange(Math.max(min, value - step))}
+        className="w-8 h-8 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:border-primary hover:text-primary active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-gray-200 disabled:hover:text-gray-500 transition-all"
+      >
+        <Minus className="w-3.5 h-3.5" />
+      </button>
+      <span className="text-base font-bold text-secondary min-w-[4rem] text-center tabular-nums whitespace-nowrap">
+        {display}
+      </span>
+      <button
+        type="button"
+        aria-label={`${label} +`}
+        disabled={value >= max}
+        onClick={() => onChange(Math.min(max, value + step))}
+        className="w-8 h-8 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:border-primary hover:text-primary active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-gray-200 disabled:hover:text-gray-500 transition-all"
+      >
+        <Plus className="w-3.5 h-3.5" />
+      </button>
     </div>
   )
 }
@@ -64,28 +71,7 @@ export function SearchBar() {
   const [location, setLocation] = useState('')
   const [guests, setGuests] = useState(2)
   const [bedrooms, setBedrooms] = useState(0)
-  const [maxPrice, setMaxPrice] = useState('')
-  const [open, setOpen] = useState(false)
-
-  const popoverRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (!open) return
-    const onPointerDown = (e: MouseEvent) => {
-      if (popoverRef.current && !popoverRef.current.contains(e.target as Node)) {
-        setOpen(false)
-      }
-    }
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpen(false)
-    }
-    document.addEventListener('mousedown', onPointerDown)
-    document.addEventListener('keydown', onKey)
-    return () => {
-      document.removeEventListener('mousedown', onPointerDown)
-      document.removeEventListener('keydown', onKey)
-    }
-  }, [open])
+  const [maxPrice, setMaxPrice] = useState(0)
 
   const handleSearch = useCallback(
     (e: React.FormEvent) => {
@@ -94,141 +80,88 @@ export function SearchBar() {
       if (location.trim()) params.set('location', location.trim())
       if (guests) params.set('guests', String(guests))
       if (bedrooms > 0) params.set('bedrooms', String(bedrooms))
-      if (maxPrice) params.set('maxPrice', maxPrice)
+      if (maxPrice > 0) params.set('maxPrice', String(maxPrice))
       router.push(`/properties?${params.toString()}`)
     },
     [location, guests, bedrooms, maxPrice, router]
   )
 
-  const optionsSummary = [
-    t('guestsCount', { count: guests }),
-    bedrooms > 0 ? t('bedroomsCount', { count: bedrooms }) : t('heroAnyRooms'),
-  ].join(' · ')
+  const divider = <div className="hidden lg:block w-px self-stretch my-4 bg-gray-200/80" />
+  const dividerMobile = <div className="h-px bg-gray-100 lg:hidden mx-5" />
 
   return (
     <form onSubmit={handleSearch} className="relative z-10">
-      <div className="bg-white rounded-3xl lg:rounded-full shadow-2xl shadow-black/10 ring-1 ring-black/5 flex flex-col lg:flex-row lg:items-stretch overflow-visible">
+      <div className="bg-white rounded-[28px] lg:rounded-full shadow-2xl shadow-black/10 ring-1 ring-black/5 flex flex-col lg:flex-row lg:items-stretch">
         {/* Destination */}
-        <div className="flex items-center gap-3 px-5 sm:px-6 py-3.5 flex-1 min-w-0">
-          <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-          <div className="min-w-0 flex-1">
-            <label htmlFor="search-destination" className="block text-[10px] font-bold text-gray-700 uppercase tracking-wider mb-0.5">
-              {t('searchDestination')}
-            </label>
-            <input
-              id="search-destination"
-              type="text"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-              placeholder={t('searchPlaceholder')}
-              className="w-full focus:outline-none text-sm text-gray-800 placeholder-gray-400 bg-transparent"
-            />
-          </div>
+        <div className="flex flex-col justify-center gap-1.5 px-6 py-4 lg:py-3.5 flex-1 min-w-0">
+          <FieldLabel icon={MapPin}>{t('searchDestination')}</FieldLabel>
+          <input
+            id="search-destination"
+            type="text"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+            placeholder={t('searchPlaceholder')}
+            className="w-full focus:outline-none text-[15px] text-secondary font-medium placeholder-gray-400 bg-transparent"
+          />
         </div>
 
-        {/* Divider */}
-        <div className="h-px bg-gray-100 lg:hidden mx-5" />
-        <div className="hidden lg:block w-px self-stretch my-3 bg-gray-200" />
+        {dividerMobile}
+        {divider}
 
-        {/* Guests & rooms popover */}
-        <div ref={popoverRef} className="relative lg:flex lg:items-stretch">
-          <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            aria-haspopup="dialog"
-            aria-expanded={open}
-            className="w-full flex items-center gap-3 px-5 sm:px-6 py-3.5 lg:w-60 text-left hover:bg-gray-50/80 lg:rounded-none transition-colors"
-          >
-            <Users className="w-5 h-5 text-primary flex-shrink-0" />
-            <div className="min-w-0 flex-1">
-              <span className="block text-[10px] font-bold text-gray-700 uppercase tracking-wider mb-0.5">
-                {t('heroOptions')}
-              </span>
-              <span className="block text-sm text-gray-800 truncate">{optionsSummary}</span>
-            </div>
-            <ChevronDown className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
-          </button>
+        {/* Guests */}
+        <div className="flex items-center justify-between gap-4 px-6 py-4 lg:py-2.5 lg:flex-col lg:items-start lg:justify-center lg:gap-1.5">
+          <FieldLabel icon={Users}>{t('gaesteLabel')}</FieldLabel>
+          <Stepper
+            label={t('gaesteLabel')}
+            value={guests}
+            display={String(guests)}
+            min={1}
+            max={16}
+            onChange={setGuests}
+          />
+        </div>
 
-          {open && (
-            <div
-              role="dialog"
-              aria-label={t('heroOptions')}
-              className="absolute z-30 left-4 right-4 lg:left-auto lg:right-0 top-full mt-2 lg:mt-3 w-auto lg:w-80 bg-white rounded-2xl shadow-2xl shadow-black/15 ring-1 ring-black/5 p-5 space-y-5"
-            >
-              <Stepper
-                icon={Users}
-                label={t('gaesteLabel')}
-                value={guests}
-                display={String(guests)}
-                min={1}
-                max={16}
-                onChange={setGuests}
-              />
-              <div className="h-px bg-gray-100" />
-              <Stepper
-                icon={BedDouble}
-                label={t('schlafzimmerLabel')}
-                value={bedrooms}
-                display={bedrooms === 0 ? t('any') : String(bedrooms)}
-                min={0}
-                max={8}
-                onChange={setBedrooms}
-              />
-              <div className="h-px bg-gray-100" />
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex items-center gap-2.5 min-w-0">
-                  <Euro className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                  <span className="text-sm font-medium text-gray-700 truncate">{t('heroMaxPrice')}</span>
-                </div>
-                <div className="relative flex-shrink-0">
-                  <select
-                    value={maxPrice}
-                    onChange={(e) => setMaxPrice(e.target.value)}
-                    className="appearance-none text-sm font-semibold text-gray-800 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg py-1.5 pl-3 pr-8 focus:outline-none focus:ring-2 focus:ring-primary/30 cursor-pointer transition-colors"
-                  >
-                    <option value="">{t('any')}</option>
-                    {MAX_PRICE_OPTIONS.map((p) => (
-                      <option key={p} value={p}>
-                        € {p.toLocaleString('de-DE')}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown className="w-4 h-4 text-gray-400 absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none" />
-                </div>
-              </div>
+        {dividerMobile}
+        {divider}
 
-              <div className="flex items-center justify-between gap-3 pt-1">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setGuests(2)
-                    setBedrooms(0)
-                    setMaxPrice('')
-                  }}
-                  className="text-sm font-medium text-gray-500 hover:text-gray-800 transition-colors"
-                >
-                  {t('heroClear')}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setOpen(false)}
-                  className="text-sm font-semibold text-white bg-primary hover:opacity-90 rounded-lg px-4 py-2 transition-opacity"
-                >
-                  {t('heroApply')}
-                </button>
-              </div>
-            </div>
-          )}
+        {/* Bedrooms */}
+        <div className="flex items-center justify-between gap-4 px-6 py-4 lg:py-2.5 lg:flex-col lg:items-start lg:justify-center lg:gap-1.5">
+          <FieldLabel icon={BedDouble}>{t('schlafzimmerLabel')}</FieldLabel>
+          <Stepper
+            label={t('schlafzimmerLabel')}
+            value={bedrooms}
+            display={bedrooms === 0 ? t('any') : String(bedrooms)}
+            min={0}
+            max={8}
+            onChange={setBedrooms}
+          />
+        </div>
+
+        {dividerMobile}
+        {divider}
+
+        {/* Max price */}
+        <div className="flex items-center justify-between gap-4 px-6 py-4 lg:py-2.5 lg:flex-col lg:items-start lg:justify-center lg:gap-1.5">
+          <FieldLabel icon={Euro}>{t('heroPriceLabel')}</FieldLabel>
+          <Stepper
+            label={t('heroPriceLabel')}
+            value={maxPrice}
+            display={maxPrice === 0 ? t('any') : `€${maxPrice.toLocaleString('de-DE')}`}
+            min={0}
+            max={3000}
+            step={250}
+            onChange={setMaxPrice}
+          />
         </div>
 
         {/* Search button */}
-        <div className="p-2 lg:p-2 lg:flex lg:items-center">
+        <div className="p-2 lg:flex lg:items-center">
           <button
             type="submit"
-            className="w-full lg:w-12 lg:h-12 h-12 bg-primary text-white rounded-2xl lg:rounded-full flex items-center justify-center gap-2 font-semibold hover:opacity-90 transition-opacity shadow-md hover:shadow-lg"
+            className="w-full lg:w-auto h-12 lg:h-auto lg:self-stretch lg:my-2 lg:mr-1 lg:px-7 bg-primary text-white rounded-2xl lg:rounded-full flex items-center justify-center gap-2 font-semibold tracking-wide hover:shadow-lg hover:shadow-primary/30 hover:brightness-105 active:scale-[0.98] transition-all"
           >
             <Search className="w-5 h-5" />
-            <span className="lg:hidden">{t('heroSearchButton')}</span>
+            <span>{t('heroSearchButton')}</span>
           </button>
         </div>
       </div>

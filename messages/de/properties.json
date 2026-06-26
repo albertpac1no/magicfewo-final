@@ -33,6 +33,7 @@
   "heroSearchButton": "Suchen",
   "heroAnyRooms": "Alle Zimmer",
   "heroMaxPrice": "Max. Preis / Nacht",
+  "heroPriceLabel": "Max. Preis",
   "heroApply": "Übernehmen",
   "heroClear": "Zurücksetzen",
   "guestsCount": "{count, plural, one {# Gast} other {# Gäste}}",

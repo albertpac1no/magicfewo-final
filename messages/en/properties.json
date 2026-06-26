@@ -33,6 +33,7 @@
   "heroSearchButton": "Search",
   "heroAnyRooms": "Any rooms",
   "heroMaxPrice": "Max. price / night",
+  "heroPriceLabel": "Max. price",
   "heroApply": "Apply",
   "heroClear": "Clear",
   "guestsCount": "{count, plural, one {# guest} other {# guests}}",
